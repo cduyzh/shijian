@@ -1,0 +1,28 @@
+# 食间公开仓库仅发布产品说明，默认忽略所有文件。
+# 增加公开文件前必须明确审查，禁止使用 git add -f 上传应用或私人数据。
+/*
+!/.gitignore
+!/README.md
+!/docs/
+
+/docs/*
+!/docs/PRODUCT.md
+!/docs/PRIVACY.md
+!/docs/LOCAL-DEVELOPMENT.md
+!/docs/NUTRITION-SOURCES.md
+!/docs/visual-assets.md
+
+# 核心应用、生成图片、配置、缓存和私人菜单均不在公开范围。
+# 上面的 allowlist 已覆盖这些目录，此处保留可读的说明性规则。
+/dist/
+/src/
+/assets/
+/node_modules/
+/.openai/
+/.env*
+/.DS_Store
+/*.log
+/*.json
+/*.sqlite*
+/*.db
+
