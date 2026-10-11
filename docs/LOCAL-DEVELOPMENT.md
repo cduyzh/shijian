@@ -15,12 +15,14 @@
 │   ├── PRIVACY.md
 │   ├── LOCAL-DEVELOPMENT.md
 │   ├── NUTRITION-SOURCES.md
-│   └── visual-assets.md
+│   ├── visual-assets.md
+│   └── COOKED-REFERENCES.md
 └── dist/                   # 本地应用，不提交
     ├── index.html
     ├── app.js
     ├── styles.css
     ├── data.js
+    ├── visuals.js
     └── assets/             # 本地图片与图标，不提交
 ```
 
@@ -46,7 +48,7 @@ python3 -m http.server 4173 --bind 127.0.0.1 --directory dist
 
 ## 发布文档到 GitHub
 
-`.gitignore` 使用默认忽略的 allowlist，只允许本说明中的 README、`.gitignore` 和五份 `docs/` 文档进入 Git。
+`.gitignore` 使用默认忽略的 allowlist，只允许本说明中的 README、`.gitignore` 和六份 `docs/` 文档进入 Git。
 
 提交前先检查：
 
