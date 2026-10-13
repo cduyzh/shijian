@@ -290,3 +290,117 @@ Lighting/mood: soft warm morning window sunlight, luminous ivory, delicate shado
 Constraints: exactly one plate holding all three foods; no separate ingredient photography, no raw vegetables, no raw meat, no text, no logo, no UI, no border, no watermark, no person, no face, no cutlery, no chopsticks, no additional bowls or food.
 ```
 
+
+
+## 2026-10-13 十二道扩展熟菜图集 v3
+
+本次按数据整理负责人的最终配方与外观规范，使用 Codex 内置 `image_gen` 一次独立生成，设置 `transparent_background: true`。没有补充重绘或轮廓修改，没有用本地图像工具做裁切、去背景或有损转换。
+
+- 最终文件：`dist/assets/cooked-extra-v3-atlas.png`。
+- 尺寸：1448×1086，严格 4:3；4 列 × 3 行，每格 362×362，共 12 道菜。
+- 文件大小：2,076,881 bytes，约 2.1 MB。
+- 透明通道：`sips` 确认 `hasAlpha: yes`；只读像素检查为 RGBA、alpha 范围 0–255，完全透明像素占 48.53%。
+- 原图：`dist/assets/originals/cooked-extra-v3-atlas-original.png`。
+- 本地完整生成记录：`dist/assets/originals/cooked-extra-v3-prompts.json`。原图与记录不在 GitHub 公开或发行范围内。
+
+格序固定如下，按行从左到右读取：
+
+| 行 | 第 1 列 | 第 2 列 | 第 3 列 | 第 4 列 |
+| --- | --- | --- | --- | --- |
+| 1 | `celeryPork` 芹菜肉丝 | `gingerDuck` 仔姜鸭胸 | `radishChicken` 白萝卜炖鸡 | `lotusPork` 藕片炒里脊 |
+| 2 | `luffaEgg` 丝瓜炒蛋 | `shrimpTofu` 河虾仁豆腐煲 | `stirShanghaibok` 清炒上海青 | `garlicPeaTender` 蒜蓉豌豆尖 |
+| 3 | `snowPeaMushroom` 荷兰豆杏鲍菇 | `stirNapa` 清炒大白菜 | `wellCookedGreenBean` 蒜香四季豆 | `zucchiniMushroom` 西葫芦炒金针菇 |
+
+CSS 图集定位为 `background-size:400% 300%`，横向 `0% / 33.333333% / 66.666667% / 100%`，纵向 `0% / 50% / 100%`。提示词要求紧凑小堆占单格 65%–70%；生成轮廓实际略大，显示时可沿现有组合层缩放保留餐盘空间，不拉伸食物形状。
+
+配方和外观限制：
+
+- 所有格只有熟食，没有盘子、碗、煲、桌面或文字；炖菜与豆腐煲只展示固体食材及少量附着的汁，不形成悬空汤块。
+- 仔姜鸭胸使用熟去皮鸭胸薄片、仔姜薄片与二荆条段，不画鸭腿、鸭皮或鸭骨。白萝卜鸡肉为去皮去骨熟鸡腿块、白萝卜和鲜香菇。
+- 河虾仁豆腐煲仅使用熟去壳河虾仁、老豆腐和上海青，不混入丝瓜、金针菇、番茄或胡萝卜。
+- 上海青、豌豆尖、大白菜各自保留叶梗特征；荷兰豆为扁荚，四季豆为完全熟透的橄榄绿斜段，不能互相替代或画成生豆荚。
+- 西葫芦为浅绿带皮半月片，金针菇为细茎小帽束，不借用黄瓜、杏鲍菇或香菇形态。
+- 少油家常成品，不加入跨菜配料或配方外装饰；肉、虾与蛋均为熟制形态。AI 图片不作为实拍、份量或营养精确测量依据。
+
+实际生成提示词：
+
+```text
+Use case: photorealistic-natural
+Asset type: transparent RGBA cooked-food sprite atlas, twelve new Sichuan home-style finished dishes for CSS compositing onto a separate shared dinner plate.
+Canvas and layout: landscape EXACT 4:3 aspect ratio, strict invisible 4-column by 3-row equal SQUARE cells. Cell centers x=12.5%,37.5%,62.5%,87.5%; y=16.6667%,50%,83.3333%. Exactly 12 food subjects, one in each cell, reading order fixed below. IMPORTANT FOOD SCALE: small compact mounds ONLY 65-70% of one cell width AND height, so each mound is about 17% of the TOTAL canvas width and 22% of total canvas height, with at least 15% of its cell as clear padding on all sides. Do NOT enlarge them to fill the grid. Each food has a natural irregular edge and stays completely inside its cell, ample transparent separation. True overhead camera at exactly 90 degrees, consistent size and lighting.
+Exact cells, left to right top to bottom:
+ROW 1 CELL 1 celeryPork 芹菜肉丝: slender thoroughly cooked light-brown pork tenderloin SHREDS mixed with THIN green Chinese celery STEM segments and a small amount of fine orange carrot threads. Chinese celery is slender rather than thick Western celery. No bean pods, no duck, no mushrooms.
+ROW 1 CELL 2 gingerDuck 仔姜鸭胸: fully cooked light-brown skinless boneless DUCK BREAST thin slices, tender young ginger ivory thin slices and slender green Sichuan Erjingtiao pepper sections, lightly coated with a thin reddish-brown Sichuan sauce. No duck skin, bones, drumsticks or whole duck. Ginger slices must be visible and distinct, not onion.
+ROW 1 CELL 3 radishChicken 白萝卜炖鸡: fully cooked beige SKINLESS BONELESS chicken thigh small chunks with soft translucent WHITE RADISH chunks and fresh brown SHIITAKE slices, a little pale clear stew moisture clinging to the solids. No potato, carrot, corn or bones, NO vessel or floating broth disk.
+ROW 1 CELL 4 lotusPork 藕片炒里脊: thin ivory LOTUS ROOT round slices with recognizable NATURAL HOLES, thin fully cooked light-brown PORK tenderloin slices and slender green ERJINGTIAO pepper sections, lightly moist. No potato, carrot, mushroom or chicken.
+ROW 2 CELL 1 luffaEgg 丝瓜炒蛋: tender cooked PALE GREEN LUFFA angled chunks with fully set golden-yellow SCRAMBLED EGG curds, very slight natural clear cooking juice clinging around the compact food. No tomato, tofu, cucumber, chili or raw egg.
+ROW 2 CELL 2 shrimpTofu 河虾仁豆腐煲: small pink-orange FULLY COOKED PEELED RIVER SHRIMP kernels mixed with creamy-white firm TOFU cubes and softened SHANGHAI BOK CHOY dark green leaves with short pale-green stems. Little clear pale cooking moisture clinging to the solids. No shells, tails, meat, tomato or mushrooms. NO bowl, no pot, no floating soup puddle.
+ROW 2 CELL 3 stirShanghaibok 清炒上海青: fully cooked Shanghai bok choy with THICK dark-green intact leafy portions and SHORT PALE-GREEN stems, a little minced garlic. Distinct from thin green-stem small cabbage, not a raw ornamental rosette. No meat, tofu, peas, pepper or carrot.
+ROW 2 CELL 4 garlicPeaTender 蒜蓉豌豆尖: gently wilted cooked tender GREEN PEA SHOOT small leaflets, fine stems and clearly visible delicate CURLING TENDRILS, tiny minced garlic. Pea shoots, not spinach, not bok choy. No bean pods or carrots.
+ROW 3 CELL 1 snowPeaMushroom 荷兰豆杏鲍菇: fully cooked green FLAT SNOW PEA PODS mixed with IVORY KING OYSTER MUSHROOM thin slices with pale tan edges. The peas are flat intact pods, NOT loose green peas, NOT round green beans. No shiitake, meat or carrot.
+ROW 3 CELL 2 stirNapa 清炒大白菜: softened cooked short pieces of PALE YELLOW-GREEN NAPA CABBAGE leaves and TRANSLUCENT THICK WHITE cabbage ribs, tiny minced garlic. No whole plant, no Shanghai bok choy, no meat, no carrot.
+ROW 3 CELL 3 wellCookedGreenBean 蒜香四季豆: fully and thoroughly COOKED OLIVE-GREEN ROUND GREEN BEAN diagonal segments with tiny minced garlic. Cooked softened olive-green beans, NOT hard bright raw green pods, not flat snow peas. No meat or other garnish.
+ROW 3 CELL 4 zucchiniMushroom 西葫芦炒金针菇: thin cooked pale-green-skinned ZUCCHINI HALF-MOON slices with moist softened ivory ENOKI MUSHROOM fine STEM CLUSTERS and tiny small caps, tiny minced garlic. Enoki are slender needle mushrooms, NOT oyster or shiitake. Zucchini, NOT cucumber.
+Style: real premium finished-food photography, gentle soft diffuse upper-left studio light, fine appetizing cooked textures, natural warm colors, low-oil everyday Sichuan home dishes. Pretty compact natural food portions rather than cartoon or CGI. Very faint close contact shadows only.
+Required background: genuinely transparent alpha, clear empty negative space. NO backdrop of any color, no tabletop, no baked checkerboard, no white matte. Subjects are FOOD ONLY. The separate plate will be added later by web code.
+Hard constraints: ABSOLUTELY NO plates, dishes, bowls, pots, saucers, cups, vessels, containers, serving trays or decorative circles beneath ANY of the twelve dishes. No cutlery, hands, table, plants, symbols, labels, text, grid lines, borders, watermark, cartoon faces, raw meat or raw eggs. Only the exact listed ingredients in each cell; no mixing ingredients across cells. No sesame, cilantro, scallion, red chili, peanuts, butter, cheese or other decorative garnish. Stew and tofu dishes are solid cooked food lightly coated by their own reduced/clinging moisture, NOT a free-floating circular liquid puddle. No subject overlaps or touches a cell boundary. Keep the precise 4x3 reading order and the requested SMALL 65-70% food scale.
+```
+
+
+## v3 水果透明图集
+
+文件：`dist/assets/fruits-v3-atlas.png`，1402×1122，约 1.6 MB。5 列 × 4 行，前 18 格为水果，最后两格透明空白；原图归档为 `dist/assets/originals/fruits-v3-atlas.png`。使用 Codex 内置 `image_gen` 一次生成，`transparent_background:true`；以 `sips -g hasAlpha` 确认透明通道存在。未裁切、去背景、重绘或有损压缩。
+
+| 行 | 第 1 列 | 第 2 列 | 第 3 列 | 第 4 列 | 第 5 列 |
+| --- | --- | --- | --- | --- | --- |
+| 1 | `apple` 红富士苹果 | `pear` 丰水梨 | `orange` 脐橙 | `mandarin` 蜜橘 | `kiwi` 绿心猕猴桃 |
+| 2 | `banana` 普通香芽蕉 | `grape` 巨峰葡萄 | `strawberry` 红颜草莓 | `peach` 水蜜桃 | `nectarine` 油桃 |
+| 3 | `plum` 青脆李 | `watermelon` 普通红瓤西瓜 | `pomelo` 白肉蜜柚 | `loquat` 大五星枇杷 | `apricot` 黄杏 |
+| 4 | `cantaloupe` 西州蜜瓜 | `dragonFruit` 白心火龙果 | `persimmon` 脆柿 | 透明空白 | 透明空白 |
+
+目标构图为每格 45° 同角度、几何中心对齐、主体约 65% 尺寸。模型实际水果主体有部分偏满格，首行位置较理想中心略下偏；应用展示需通过各水果裁切定位与统一居中容器处理，不能把提示词目标当作已达到的像素级结果。图像在黑底预览可见少量彩色 alpha 羽边，应以真实页面底色验收。基础等格采样参数为 `background-size:500% 400%`，横向 `0% / 25% / 50% / 75% / 100%`，纵向 `0% / 33.333333% / 66.666667% / 100%`；实际映射可依展示框调整。品种文字及营养资料仍以数据说明为准，图片不构成植物品种鉴定依据。
+
+最终提示词：
+
+```text
+Use case: product-mockup
+Asset type: transparent RGBA fruit sprite atlas for a refined Sichuan home nutrition web app.
+Primary request: A photographic FRUIT SPRITE SHEET, exactly FIVE COLUMNS × FOUR ROWS of equal SQUARE invisible cells, with true TRANSPARENT BACKGROUND. Canvas landscape aspect ratio EXACTLY 5:4. There are eighteen fruit types in exact listed order, last two cells completely empty transparent. Each fruit arrangement is geometrically CENTERED inside its own cell: horizontal centers at 10%,30%,50%,70%,90%; vertical centers at 12.5%,37.5%,62.5%,87.5%. The overall bounding box of each arrangement occupies ONLY 60-65% of cell width AND cell height. Wide transparent padding on every side; no clipping and no crossing cell boundaries. All subjects shown from the SAME 45-degree slightly elevated front camera angle, clean warm diffuse light from upper left, real accurate food textures and cute small scale but no cartoon styling. Each arrangement is one whole fruit with a small cut section ONLY where specified, grouped closely and centered together.
+Exact grid order left to right:
+ROW 1: 1 apple: one Red Fuji apple, true red-pink streaked skin with subtle yellow-green undertones, short brown stem. 2 pear: one Hosui Asian pear, round golden-brown russet speckled skin, not apple or elongated European pear. 3 orange: one navel orange, orange finely dimpled skin with a small attached cut wedge showing orange flesh. 4 mandarin: one ordinary honey mandarin, slightly flattened round easy-peel orange fruit with one small peeled mandarin segment beside it. 5 kiwi: one fuzzy brown GREEN-FLESH kiwifruit plus a small half exposing vivid green flesh and black seeds, not yellow or red kiwi.
+ROW 2: 1 banana: one ordinary yellow curved Cavendish banana with tapered tips. 2 grape: one small compact bunch of large round dark purple Kyoho grapes with natural bloom. 3 strawberry: two Hongyan red strawberries, conical heart-like natural shape, tiny real seeds and green calyx. 4 peach: one ripe Chinese honey peach, pale cream pink blush fuzzy skin, one small section showing creamy pale white flesh and the brown stone. 5 nectarine: one red-yellow smooth-skinned nectarine with one small wedge exposing yellow flesh, clearly smooth and shiny rather than fuzzy peach.
+ROW 3: 1 plum: two crisp GREEN plums (Qingcui Li), smooth light green skin, one cut half showing pale green flesh and brown stone, not purple plums. 2 watermelon: one small ordinary striped green WATERMELON with one compact triangular cut section revealing vivid red flesh and small black seeds, no huge slice. 3 pomelo: one pale yellow-green white-fleshed honey POMELO with one small peeled thick-rind section revealing ivory white juicy segments, not pink/red pomelo. 4 loquat: three big orange-yellow Daxingxing LOQUATS, oval shape with distinctive small dark calyx at bottom, one cut half showing glossy brown seeds. 5 apricot: two yellow-orange apricots with slight red blush and velvety skin, one cut half showing orange flesh and one brown stone, visibly smaller than peaches.
+ROW 4: 1 cantaloupe: one small oval Xizhou honey melon with fine netted beige-green skin and a compact wedge showing orange cantaloupe flesh and light seeds, not a smooth yellow melon. 2 dragonFruit: one pink-red dragon fruit with natural green-tipped scales plus one small half exposing WHITE flesh dotted with tiny BLACK seeds, not purple flesh. 3 persimmon: one firm crisp orange persimmon with a natural broad brown-green leaf-like calyx, squat smooth orange shape, no leaves attached beyond calyx. 4 empty transparent. 5 empty transparent.
+Materials: authentic fresh fruit with realistic peel, fuzz, seeds and moisture. Exact recognizable varieties, no imitation generic food. Style: high-end gentle real product photography, refined cute miniature scale, warm natural color palette. Lighting uniform between every cell. No background or surface is visible; only each fruit with a very faint small soft alpha shadow if necessary.
+Constraints: exact 5x4 equally spaced grid with SQUARE cells, EIGHTEEN centered fruit arrangements and TWO empty bottom-right cells. Genuine transparent PNG alpha, never white matte or painted checkerboard. No plates, bowls, trays, props, labels, text, watermark, dividers, card frames, decorative sparkle, face, eyes or mouths. Complete subjects never clipped, at most 65% of cell dimensions, substantial transparent margins.
+```
+
+## v3 新食材透明图集
+
+文件：`dist/assets/ingredients-v3-atlas.png`，1254×1254，约 1.7 MB。4 列 × 4 行，16 格全部为生鲜原料；原图归档为 `dist/assets/originals/ingredients-v3-atlas.png`。使用 Codex 内置 `image_gen` 一次生成，`transparent_background:true`；`sips -g hasAlpha` 已确认透明通道存在。PNG 原尺寸已适合网页图集，未进行破坏 alpha 的格式转换。
+
+| 行 | 第 1 列 | 第 2 列 | 第 3 列 | 第 4 列 |
+| --- | --- | --- | --- | --- |
+| 1 | `shanghaiBok` 上海青 | `napaCabbage` 大白菜 | `whiteRadish` 白萝卜 | `lotusRoot` 白花藕 |
+| 2 | `greenBean` 四季豆 | `peaTender` 豌豆尖 | `snowPea` 荷兰豆 | `zucchini` 西葫芦 |
+| 3 | `luffa` 丝瓜 | `celeryChinese` 中国芹菜 | `tenderGinger` 仔姜 | `enoki` 金针菇 |
+| 4 | `kingOyster` 杏鲍菇 | `duckBreast` 去皮鸭胸肉 | `silverCarp` 去刺鲢鱼净肉 | `shrimp` 鲜河虾仁 |
+
+上海青按青梗厚叶呈现，大白菜为长圆浅绿白梗；四季豆为圆形长豆荚，荷兰豆为扁豆荚；仔姜为乳白嫩皮带自然红尖；鸭胸为去皮深红生肉，鲢鱼为白色净鱼肉，虾仁为灰白半透明生鲜。主体有部分偏满格，边缘有模型产生的彩色 alpha 羽边，需由真实页面检验裁切留白与底色效果。基础等格采样为 `background-size:400% 400%`，横纵均为 `0% / 33.333333% / 66.666667% / 100%`。未启动浏览器，也未修改应用代码。
+
+最终提示词：
+
+```text
+Use case: product-mockup
+Asset type: fresh ingredient transparent RGBA atlas for a Sichuan home cooking planner.
+Primary request: A perfectly regular FOUR COLUMNS × FOUR ROWS photographic sprite sheet of SIXTEEN raw fresh ingredient types, true transparent background. Square canvas, 4x4 equal invisible square cells. Exact geometric cell centers: x and y at 12.5%,37.5%,62.5%,87.5%. Each food arrangement is precisely centered at its own cell center, combined object bounding box occupies ONLY 60-65% of cell width AND height, generous completely transparent padding on all sides. Complete objects, no clipping, no cross-cell overlap. All subjects shown from same 45-degree slightly elevated front angle with uniform soft warm diffuse upper-left studio light, realistically true food anatomy and textures, delicate cute small scale but not illustration. Arrange each ingredient in a small compact isolated group, accurately recognizable regional types.
+Exact sequence left to right:
+ROW 1: 1 shanghaiBok: one compact SHANGHAI BOK CHOY, broad rounded spoon-like dark green leaves and thick curved PALE GREEN fleshy stems, compact rosette, not white-stem napa cabbage. 2 napaCabbage: one small complete NAPA CABBAGE, elongated dense oval head with softly ruffled pale green leaves and broad white ribs; short thick compact shape, not round cabbage. 3 whiteRadish: one WHITE DAIKON RADISH, long smooth tapered white root with a few short green leaf stems, plus one small white round cut section. 4 lotusRoot: two short beige-white sections of WHITE-FLOWER LOTUS ROOT, one small round cut slice prominently shows the natural characteristic ring of about nine clean holes, realistic starchy white flesh, not ginger.
+ROW 2: 1 greenBean: small tidy group of five Chinese GREEN STRING BEANS, slender long ROUND CROSS-SECTION green pods, no exposed peas, no flat pods. 2 peaTender: compact bunch of TENDER PEA SHOOTS, soft light green round leaves with delicate curly tendrils and slender stems, distinct from spinach. 3 snowPea: three flat crisp green SNOW PEA PODS, broad thin flat edible pods with tiny young peas under skin, visibly FLAT and not round string beans. 4 zucchini: one short ordinary GREEN ZUCCHINI, smooth slightly speckled cylindrical green skin with broad rounded ends, one small round cut slice showing pale cream flesh and tiny seeds.
+ROW 3: 1 luffa: one slender green LUFFA SPONGE GOURD, long cylinder with pronounced parallel ridges, tapering ends, one small angled cut showing pale soft inner flesh; not cucumber or zucchini. 2 celeryChinese: a small bunch of CHINESE CELERY, many thin pale green ribbed stalks and delicate small deeply lobed green leaves, narrow stems not thick Western celery. 3 tenderGinger: a small piece of YOUNG TENDER GINGER (Zijiang), smooth creamy ivory skin, plump branching rhizome, naturally pink-red pointed young tips, not mature rough tan ginger. 4 enoki: a small compact cluster of ENOKI MUSHROOMS, many delicate very thin creamy white long stems and tiny pale cream round caps, trimmed clean base.
+ROW 4: 1 kingOyster: two KING OYSTER MUSHROOMS, thick cylindrical creamy white stems and small broad brown-gray caps, one lying horizontally, not thin-stem shiitake. 2 duckBreast: one RAW SKINLESS DUCK BREAST meat fillet, realistic deep wine-red dense muscle, elongated thick breast shape, absolutely no yellow duck skin and no cooking, no beef marbling. 3 silverCarp: one RAW BONELESS SILVER CARP FISH FLESH fillet and a small thick cut section, pearly pale white translucent freshwater fish flesh with fine visible muscle lines, skinless and clean, NOT red salmon, no fish head, no bones, no whole fish. 4 shrimp: small compact pile of RAW PEELED FRESH RIVER SHRIMP MEAT, realistic small curved gray-translucent off-white shrimp kernels with tiny subtle pale pink hints, shelled and deveined, no heads/tails/shells, not cooked orange prawns.
+Scene/backdrop: absolutely no surface or colored background; true clear alpha transparency around every isolated arrangement, minimal very faint natural contact shadow in alpha only if necessary.
+Style: premium real studio ingredient product photography, authentic vegetable varieties and raw fresh meat/fish/prawns, warm gentle natural color, realistic texture, same angle and scale throughout.
+Constraints: exactly sixteen cells in the exact sequence, strict 4x4 equally spaced square grid, every arrangement centered and at most 65% cell dimensions, no food crosses its cell, no plates, bowls, trays, props, text, labels, logo, face, decorative marks, borders or gridlines, no cooked meat, no background matte or simulated checkerboard. Save true RGBA PNG transparency.
+```
+
