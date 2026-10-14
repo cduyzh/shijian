@@ -1,0 +1,1444 @@
+{
+  "version": 4,
+  "createdAt": "2026-10-14",
+  "generator": "Codex built-in image_gen; reused completed generation outputs",
+  "grid": {
+    "columns": 5,
+    "rows": 7
+  },
+  "ingredients": {
+    "rice": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 0,
+      "row": 0,
+      "column": 0,
+      "globalIndex": 0,
+      "name": "籼米",
+      "sourceRect": [
+        24,
+        35,
+        176,
+        150
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "oats": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 1,
+      "row": 0,
+      "column": 1,
+      "globalIndex": 1,
+      "name": "原味燕麦片",
+      "sourceRect": [
+        226,
+        36,
+        183,
+        151
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "blackRice": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 2,
+      "row": 0,
+      "column": 2,
+      "globalIndex": 2,
+      "name": "黑米（非糯性）",
+      "sourceRect": [
+        438,
+        36,
+        179,
+        150
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "corn": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 3,
+      "row": 0,
+      "column": 3,
+      "globalIndex": 3,
+      "name": "鲜甜玉米",
+      "sourceRect": [
+        652,
+        24,
+        185,
+        175
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "potato": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 4,
+      "row": 0,
+      "column": 4,
+      "globalIndex": 4,
+      "name": "黄心土豆",
+      "sourceRect": [
+        862,
+        34,
+        173,
+        148
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "pumpkin": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 5,
+      "row": 1,
+      "column": 0,
+      "globalIndex": 5,
+      "name": "老南瓜",
+      "sourceRect": [
+        28,
+        221,
+        185,
+        172
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "egg": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 6,
+      "row": 1,
+      "column": 1,
+      "globalIndex": 6,
+      "name": "鲜鸡蛋",
+      "sourceRect": [
+        238,
+        234,
+        175,
+        156
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "chickenBreast": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 7,
+      "row": 1,
+      "column": 2,
+      "globalIndex": 7,
+      "name": "去皮鸡胸肉",
+      "sourceRect": [
+        445,
+        229,
+        174,
+        167
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "chickenThigh": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 8,
+      "row": 1,
+      "column": 3,
+      "globalIndex": 8,
+      "name": "去皮去骨鸡腿肉",
+      "sourceRect": [
+        649,
+        232,
+        185,
+        158
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "pork": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 9,
+      "row": 1,
+      "column": 4,
+      "globalIndex": 9,
+      "name": "猪里脊肉",
+      "sourceRect": [
+        856,
+        221,
+        182,
+        168
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "firmTofu": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 10,
+      "row": 2,
+      "column": 0,
+      "globalIndex": 10,
+      "name": "卤水老豆腐",
+      "sourceRect": [
+        27,
+        432,
+        182,
+        170
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "silkenTofu": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 11,
+      "row": 2,
+      "column": 1,
+      "globalIndex": 11,
+      "name": "石膏嫩豆腐",
+      "sourceRect": [
+        235,
+        436,
+        183,
+        155
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "greenPepper": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 12,
+      "row": 2,
+      "column": 2,
+      "globalIndex": 12,
+      "name": "二荆条青椒",
+      "sourceRect": [
+        435,
+        412,
+        191,
+        187
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "broccoli": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 13,
+      "row": 2,
+      "column": 3,
+      "globalIndex": 13,
+      "name": "绿花西兰花",
+      "sourceRect": [
+        645,
+        414,
+        199,
+        194
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "tomato": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 14,
+      "row": 2,
+      "column": 4,
+      "globalIndex": 14,
+      "name": "红番茄（大果）",
+      "sourceRect": [
+        873,
+        419,
+        166,
+        168
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "cucumber": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 15,
+      "row": 3,
+      "column": 0,
+      "globalIndex": 15,
+      "name": "刺皮嫩黄瓜",
+      "sourceRect": [
+        25,
+        637,
+        183,
+        160
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "bokChoy": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 16,
+      "row": 3,
+      "column": 1,
+      "globalIndex": 16,
+      "name": "小白菜（青梗）",
+      "sourceRect": [
+        230,
+        614,
+        189,
+        192
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "spinach": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 17,
+      "row": 3,
+      "column": 2,
+      "globalIndex": 17,
+      "name": "尖叶菠菜",
+      "sourceRect": [
+        441,
+        611,
+        206,
+        204
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "lettuceStem": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 18,
+      "row": 3,
+      "column": 3,
+      "globalIndex": 18,
+      "name": "青皮莴笋（去皮茎）",
+      "sourceRect": [
+        646,
+        630,
+        192,
+        167
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "carrot": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 19,
+      "row": 3,
+      "column": 4,
+      "globalIndex": 19,
+      "name": "橙红胡萝卜",
+      "sourceRect": [
+        855,
+        612,
+        185,
+        190
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "winterMelon": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 20,
+      "row": 4,
+      "column": 0,
+      "globalIndex": 20,
+      "name": "白皮冬瓜",
+      "sourceRect": [
+        20,
+        829,
+        178,
+        182
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "eggplant": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 21,
+      "row": 4,
+      "column": 1,
+      "globalIndex": 21,
+      "name": "紫皮长茄",
+      "sourceRect": [
+        221,
+        818,
+        200,
+        195
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "onion": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 22,
+      "row": 4,
+      "column": 2,
+      "globalIndex": 22,
+      "name": "紫皮洋葱",
+      "sourceRect": [
+        436,
+        837,
+        193,
+        168
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "shiitake": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 23,
+      "row": 4,
+      "column": 3,
+      "globalIndex": 23,
+      "name": "鲜香菇",
+      "sourceRect": [
+        645,
+        839,
+        203,
+        162
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "woodEar": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 24,
+      "row": 4,
+      "column": 4,
+      "globalIndex": 24,
+      "name": "黑木耳（干）",
+      "sourceRect": [
+        863,
+        834,
+        185,
+        171
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "garlicSprout": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 25,
+      "row": 5,
+      "column": 0,
+      "globalIndex": 25,
+      "name": "青蒜苗",
+      "sourceRect": [
+        21,
+        1018,
+        201,
+        197
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "apple": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 26,
+      "row": 5,
+      "column": 1,
+      "globalIndex": 26,
+      "name": "红富士苹果",
+      "sourceRect": [
+        239,
+        1033,
+        173,
+        166
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "pear": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 27,
+      "row": 5,
+      "column": 2,
+      "globalIndex": 27,
+      "name": "丰水梨",
+      "sourceRect": [
+        440,
+        1032,
+        174,
+        170
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "orange": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 28,
+      "row": 5,
+      "column": 3,
+      "globalIndex": 28,
+      "name": "脐橙",
+      "sourceRect": [
+        648,
+        1030,
+        206,
+        174
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "mandarin": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 29,
+      "row": 5,
+      "column": 4,
+      "globalIndex": 29,
+      "name": "蜜橘",
+      "sourceRect": [
+        867,
+        1024,
+        176,
+        182
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "kiwi": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 30,
+      "row": 6,
+      "column": 0,
+      "globalIndex": 30,
+      "name": "绿心猕猴桃",
+      "sourceRect": [
+        23,
+        1258,
+        209,
+        155
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "banana": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 31,
+      "row": 6,
+      "column": 1,
+      "globalIndex": 31,
+      "name": "普通香芽蕉",
+      "sourceRect": [
+        240,
+        1218,
+        186,
+        201
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "grape": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 32,
+      "row": 6,
+      "column": 2,
+      "globalIndex": 32,
+      "name": "巨峰葡萄",
+      "sourceRect": [
+        443,
+        1227,
+        174,
+        190
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "oil": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 33,
+      "row": 6,
+      "column": 3,
+      "globalIndex": 33,
+      "name": "菜籽油",
+      "sourceRect": [
+        688,
+        1219,
+        110,
+        204
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "soySauce": {
+      "file": "ingredients-v4-a.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 34,
+      "row": 6,
+      "column": 4,
+      "globalIndex": 34,
+      "name": "普通生抽",
+      "sourceRect": [
+        890,
+        1218,
+        106,
+        203
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "vinegar": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 0,
+      "row": 0,
+      "column": 0,
+      "globalIndex": 35,
+      "name": "酿造香醋",
+      "sourceRect": [
+        56,
+        24,
+        120,
+        179
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "garlic": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 1,
+      "row": 0,
+      "column": 1,
+      "globalIndex": 36,
+      "name": "白皮大蒜",
+      "sourceRect": [
+        231,
+        26,
+        172,
+        175
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "ginger": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 2,
+      "row": 0,
+      "column": 2,
+      "globalIndex": 37,
+      "name": "老姜",
+      "sourceRect": [
+        433,
+        33,
+        190,
+        162
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "douban": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 3,
+      "row": 0,
+      "column": 3,
+      "globalIndex": 38,
+      "name": "郫县豆瓣酱",
+      "sourceRect": [
+        655,
+        43,
+        151,
+        156
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "scallion": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 4,
+      "row": 0,
+      "column": 4,
+      "globalIndex": 39,
+      "name": "小香葱",
+      "sourceRect": [
+        849,
+        14,
+        195,
+        195
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "salt": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 5,
+      "row": 1,
+      "column": 0,
+      "globalIndex": 40,
+      "name": "加碘食盐",
+      "sourceRect": [
+        25,
+        251,
+        186,
+        146
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "peppercorn": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 6,
+      "row": 1,
+      "column": 1,
+      "globalIndex": 41,
+      "name": "干红花椒",
+      "sourceRect": [
+        223,
+        238,
+        196,
+        162
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "peanut": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 7,
+      "row": 1,
+      "column": 2,
+      "globalIndex": 42,
+      "name": "熟原味花生仁",
+      "sourceRect": [
+        430,
+        242,
+        192,
+        151
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "strawberry": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 8,
+      "row": 1,
+      "column": 3,
+      "globalIndex": 43,
+      "name": "红颜草莓",
+      "sourceRect": [
+        643,
+        235,
+        189,
+        166
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "peach": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 9,
+      "row": 1,
+      "column": 4,
+      "globalIndex": 44,
+      "name": "水蜜桃",
+      "sourceRect": [
+        848,
+        233,
+        199,
+        172
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "nectarine": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 10,
+      "row": 2,
+      "column": 0,
+      "globalIndex": 45,
+      "name": "油桃",
+      "sourceRect": [
+        26,
+        428,
+        184,
+        163
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "plum": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 11,
+      "row": 2,
+      "column": 1,
+      "globalIndex": 46,
+      "name": "青脆李",
+      "sourceRect": [
+        236,
+        424,
+        184,
+        174
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "watermelon": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 12,
+      "row": 2,
+      "column": 2,
+      "globalIndex": 47,
+      "name": "普通红瓤西瓜",
+      "sourceRect": [
+        434,
+        422,
+        190,
+        169
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "pomelo": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 13,
+      "row": 2,
+      "column": 3,
+      "globalIndex": 48,
+      "name": "白肉蜜柚",
+      "sourceRect": [
+        639,
+        421,
+        203,
+        178
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "loquat": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 14,
+      "row": 2,
+      "column": 4,
+      "globalIndex": 49,
+      "name": "大五星枇杷",
+      "sourceRect": [
+        855,
+        422,
+        184,
+        173
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "apricot": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 15,
+      "row": 3,
+      "column": 0,
+      "globalIndex": 50,
+      "name": "黄杏",
+      "sourceRect": [
+        22,
+        610,
+        197,
+        184
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "cantaloupe": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 16,
+      "row": 3,
+      "column": 1,
+      "globalIndex": 51,
+      "name": "西州蜜瓜",
+      "sourceRect": [
+        229,
+        621,
+        193,
+        161
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "dragonFruit": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 17,
+      "row": 3,
+      "column": 2,
+      "globalIndex": 52,
+      "name": "白心火龙果",
+      "sourceRect": [
+        432,
+        610,
+        189,
+        197
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "persimmon": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 18,
+      "row": 3,
+      "column": 3,
+      "globalIndex": 53,
+      "name": "脆柿",
+      "sourceRect": [
+        643,
+        626,
+        192,
+        165
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "shanghaiBok": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 19,
+      "row": 3,
+      "column": 4,
+      "globalIndex": 54,
+      "name": "上海青",
+      "sourceRect": [
+        839,
+        603,
+        206,
+        196
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "napaCabbage": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 20,
+      "row": 4,
+      "column": 0,
+      "globalIndex": 55,
+      "name": "大白菜",
+      "sourceRect": [
+        15,
+        804,
+        199,
+        205
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "whiteRadish": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 21,
+      "row": 4,
+      "column": 1,
+      "globalIndex": 56,
+      "name": "白萝卜",
+      "sourceRect": [
+        225,
+        804,
+        192,
+        209
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "lotusRoot": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 22,
+      "row": 4,
+      "column": 2,
+      "globalIndex": 57,
+      "name": "白花藕",
+      "sourceRect": [
+        436,
+        830,
+        187,
+        171
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "greenBean": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 23,
+      "row": 4,
+      "column": 3,
+      "globalIndex": 58,
+      "name": "四季豆",
+      "sourceRect": [
+        637,
+        824,
+        199,
+        173
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "peaTender": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 24,
+      "row": 4,
+      "column": 4,
+      "globalIndex": 59,
+      "name": "豌豆尖",
+      "sourceRect": [
+        850,
+        832,
+        196,
+        174
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "snowPea": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 25,
+      "row": 5,
+      "column": 0,
+      "globalIndex": 60,
+      "name": "荷兰豆",
+      "sourceRect": [
+        17,
+        1023,
+        198,
+        183
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "zucchini": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 26,
+      "row": 5,
+      "column": 1,
+      "globalIndex": 61,
+      "name": "西葫芦",
+      "sourceRect": [
+        230,
+        1019,
+        189,
+        189
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "luffa": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 27,
+      "row": 5,
+      "column": 2,
+      "globalIndex": 62,
+      "name": "丝瓜",
+      "sourceRect": [
+        437,
+        1014,
+        189,
+        199
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "celeryChinese": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 28,
+      "row": 5,
+      "column": 3,
+      "globalIndex": 63,
+      "name": "芹菜",
+      "sourceRect": [
+        636,
+        1011,
+        203,
+        208
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "tenderGinger": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 29,
+      "row": 5,
+      "column": 4,
+      "globalIndex": 64,
+      "name": "仔姜",
+      "sourceRect": [
+        859,
+        1021,
+        178,
+        188
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "enoki": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 30,
+      "row": 6,
+      "column": 0,
+      "globalIndex": 65,
+      "name": "金针菇",
+      "sourceRect": [
+        19,
+        1231,
+        198,
+        205
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "kingOyster": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 31,
+      "row": 6,
+      "column": 1,
+      "globalIndex": 66,
+      "name": "杏鲍菇",
+      "sourceRect": [
+        225,
+        1223,
+        194,
+        215
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "duckBreast": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 32,
+      "row": 6,
+      "column": 2,
+      "globalIndex": 67,
+      "name": "去皮鸭胸肉",
+      "sourceRect": [
+        436,
+        1243,
+        189,
+        181
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "silverCarp": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 33,
+      "row": 6,
+      "column": 3,
+      "globalIndex": 68,
+      "name": "去刺鲢鱼净肉",
+      "sourceRect": [
+        642,
+        1238,
+        195,
+        187
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    },
+    "shrimp": {
+      "file": "ingredients-v4-b.png",
+      "columns": 5,
+      "rows": 7,
+      "index": 34,
+      "row": 6,
+      "column": 4,
+      "globalIndex": 69,
+      "name": "鲜河虾仁",
+      "sourceRect": [
+        848,
+        1246,
+        198,
+        170
+      ],
+      "sourceSize": [
+        1060,
+        1484
+      ]
+    }
+  },
+  "atlases": {
+    "a": {
+      "file": "assets/ingredients-v4-a.png",
+      "width": 1060,
+      "height": 1484,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "fullyTransparentPercent": 49.48,
+      "sha256": "3fe82ae98d6a9ef4a95960e84f50a5c215bf4bf106e18ecc932a7402ed024ca0",
+      "count": 35
+    },
+    "b": {
+      "file": "assets/ingredients-v4-b.png",
+      "width": 1060,
+      "height": 1484,
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "fullyTransparentPercent": 44.58,
+      "sha256": "a60b12413ec6bfbf6641eda0fa9969c2716cd8e9b588f8b5f5f46b4aefd2a45c",
+      "count": 35
+    }
+  },
+  "qualityNotes": [
+    "All70 ingredients use transparent photographic cutouts; original images were copied without bitmap edits.",
+    "Some subjects exceed requested65%cell coverage; consumer should normalize alpha subject bounds uniformly and keep image aspect ratio.",
+    "Tiny semi-transparent edge flecks from generation remain; no background discs or circular clipping are used."
+  ]
+}

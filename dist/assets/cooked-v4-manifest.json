@@ -1,0 +1,1174 @@
+{
+  "version": "4",
+  "generatedOn": "2026-10-13",
+  "tool": "Codex built-in image_gen",
+  "transparent_background": true,
+  "totalRecipes": 49,
+  "purpose": "recipe-library-and-recipe-preview",
+  "camera": "three-quarter overhead, requested about 60 degrees above horizontal",
+  "atlases": [
+    {
+      "id": "a",
+      "start": 0,
+      "count": 16,
+      "columns": 4,
+      "rows": 4,
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2418002,
+      "transparentPixelPercent": 40.7,
+      "file": "cooked-v4-a.png",
+      "mode": "RGBA",
+      "hasAlpha": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "idsInReadingOrder": [
+        "pepperPork",
+        "kungPaoChicken",
+        "lettucePork",
+        "potatoChicken",
+        "tomatoEgg",
+        "garlicPork",
+        "tofuEggSteam",
+        "mushroomTofuPot",
+        "homeStyleTofu",
+        "mushroomChicken",
+        "cucumberChicken",
+        "onionPork",
+        "tomatoTofuEgg",
+        "lettuceChicken",
+        "garlicTofu",
+        "garlicBroccoli"
+      ],
+      "emptyCellIndices": [],
+      "original": "originals/cooked-v4-a-original.png"
+    },
+    {
+      "id": "b",
+      "start": 16,
+      "count": 16,
+      "columns": 4,
+      "rows": 4,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2446997,
+      "transparentPixelPercent": 43.17,
+      "file": "cooked-v4-b.png",
+      "mode": "RGBA",
+      "hasAlpha": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "idsInReadingOrder": [
+        "stirBokChoy",
+        "garlicSpinach",
+        "cucumberSalad",
+        "steamedEggplant",
+        "pepperCarrot",
+        "mushroomGreens",
+        "stirLettuce",
+        "carrotWoodEar",
+        "tomatoGreens",
+        "winterMelonPorkSoup",
+        "tomatoTofuSoup",
+        "spinachEggSoup",
+        "mushroomWinterSoup",
+        "cornChickenSoup",
+        "whiteRice",
+        "oatRice"
+      ],
+      "emptyCellIndices": [],
+      "original": "originals/cooked-v4-b-padding-repair.png",
+      "repair": "Regenerated with separated subjects and dark square soup bowls; visually checked over application cream background."
+    },
+    {
+      "id": "c",
+      "start": 32,
+      "count": 17,
+      "columns": 5,
+      "rows": 4,
+      "width": 1402,
+      "height": 1122,
+      "bytes": 2094565,
+      "transparentPixelPercent": 47.9,
+      "file": "cooked-v4-c.png",
+      "mode": "RGBA",
+      "hasAlpha": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "idsInReadingOrder": [
+        "blackRiceMix",
+        "pumpkinOatCongee",
+        "cornOatCongee",
+        "potatoRice",
+        "cornRice",
+        "celeryPork",
+        "gingerDuck",
+        "radishChicken",
+        "lotusPork",
+        "luffaEgg",
+        "shrimpTofu",
+        "stirShanghaibok",
+        "garlicPeaTender",
+        "snowPeaMushroom",
+        "stirNapa",
+        "wellCookedGreenBean",
+        "zucchiniMushroom"
+      ],
+      "emptyCellIndices": [
+        17,
+        18,
+        19
+      ],
+      "original": "originals/cooked-v4-c-original.png"
+    }
+  ],
+  "recipes": {
+    "pepperPork": {
+      "file": "cooked-v4-a.png",
+      "index": 0,
+      "columns": 4,
+      "rows": 4,
+      "row": 0,
+      "column": 0,
+      "globalIndex": 0,
+      "name": "二荆条青椒肉丝",
+      "type": "main",
+      "sourceRect": [
+        1,
+        83,
+        313,
+        219
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ]
+    },
+    "kungPaoChicken": {
+      "file": "cooked-v4-a.png",
+      "index": 1,
+      "columns": 4,
+      "rows": 4,
+      "row": 0,
+      "column": 1,
+      "globalIndex": 1,
+      "name": "少油宫保鸡丁",
+      "type": "main",
+      "sourceRect": [
+        317,
+        75,
+        305,
+        233
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ]
+    },
+    "lettucePork": {
+      "file": "cooked-v4-a.png",
+      "index": 2,
+      "columns": 4,
+      "rows": 4,
+      "row": 0,
+      "column": 2,
+      "globalIndex": 2,
+      "name": "莴笋木耳炒肉",
+      "type": "main",
+      "sourceRect": [
+        630,
+        79,
+        311,
+        237
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ]
+    },
+    "potatoChicken": {
+      "file": "cooked-v4-a.png",
+      "index": 3,
+      "columns": 4,
+      "rows": 4,
+      "row": 0,
+      "column": 3,
+      "globalIndex": 3,
+      "name": "土豆炖鸡腿肉",
+      "type": "main",
+      "sourceRect": [
+        944,
+        71,
+        307,
+        240
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ]
+    },
+    "tomatoEgg": {
+      "file": "cooked-v4-a.png",
+      "index": 4,
+      "columns": 4,
+      "rows": 4,
+      "row": 1,
+      "column": 0,
+      "globalIndex": 4,
+      "name": "家常番茄炒蛋",
+      "type": "main",
+      "sourceRect": [
+        1,
+        377,
+        315,
+        243
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ]
+    },
+    "garlicPork": {
+      "file": "cooked-v4-a.png",
+      "index": 5,
+      "columns": 4,
+      "rows": 4,
+      "row": 1,
+      "column": 1,
+      "globalIndex": 5,
+      "name": "青蒜苗肉丝",
+      "type": "main",
+      "sourceRect": [
+        317,
+        379,
+        308,
+        238
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ]
+    },
+    "tofuEggSteam": {
+      "file": "cooked-v4-a.png",
+      "index": 6,
+      "columns": 4,
+      "rows": 4,
+      "row": 1,
+      "column": 2,
+      "globalIndex": 6,
+      "name": "嫩豆腐蒸蛋",
+      "type": "main",
+      "sourceRect": [
+        632,
+        391,
+        311,
+        231
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ]
+    },
+    "mushroomTofuPot": {
+      "file": "cooked-v4-a.png",
+      "index": 7,
+      "columns": 4,
+      "rows": 4,
+      "row": 1,
+      "column": 3,
+      "globalIndex": 7,
+      "name": "香菇青菜豆腐煲",
+      "type": "main",
+      "sourceRect": [
+        946,
+        372,
+        302,
+        254
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ]
+    },
+    "homeStyleTofu": {
+      "file": "cooked-v4-a.png",
+      "index": 8,
+      "columns": 4,
+      "rows": 4,
+      "row": 2,
+      "column": 0,
+      "globalIndex": 8,
+      "name": "家常豆瓣烧豆腐",
+      "type": "main",
+      "sourceRect": [
+        0,
+        693,
+        315,
+        250
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ]
+    },
+    "mushroomChicken": {
+      "file": "cooked-v4-a.png",
+      "index": 9,
+      "columns": 4,
+      "rows": 4,
+      "row": 2,
+      "column": 1,
+      "globalIndex": 9,
+      "name": "香菇蒸鸡腿肉",
+      "type": "main",
+      "sourceRect": [
+        320,
+        692,
+        305,
+        244
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ]
+    },
+    "cucumberChicken": {
+      "file": "cooked-v4-a.png",
+      "index": 10,
+      "columns": 4,
+      "rows": 4,
+      "row": 2,
+      "column": 2,
+      "globalIndex": 10,
+      "name": "黄瓜木耳鸡丁",
+      "type": "main",
+      "sourceRect": [
+        631,
+        685,
+        311,
+        256
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ]
+    },
+    "onionPork": {
+      "file": "cooked-v4-a.png",
+      "index": 11,
+      "columns": 4,
+      "rows": 4,
+      "row": 2,
+      "column": 3,
+      "globalIndex": 11,
+      "name": "洋葱青椒炒里脊",
+      "type": "main",
+      "sourceRect": [
+        945,
+        695,
+        305,
+        235
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ]
+    },
+    "tomatoTofuEgg": {
+      "file": "cooked-v4-a.png",
+      "index": 12,
+      "columns": 4,
+      "rows": 4,
+      "row": 3,
+      "column": 0,
+      "globalIndex": 12,
+      "name": "番茄豆腐烩蛋",
+      "type": "main",
+      "sourceRect": [
+        5,
+        989,
+        308,
+        243
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ]
+    },
+    "lettuceChicken": {
+      "file": "cooked-v4-a.png",
+      "index": 13,
+      "columns": 4,
+      "rows": 4,
+      "row": 3,
+      "column": 1,
+      "globalIndex": 13,
+      "name": "莴笋鸡片",
+      "type": "main",
+      "sourceRect": [
+        320,
+        997,
+        306,
+        232
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ]
+    },
+    "garlicTofu": {
+      "file": "cooked-v4-a.png",
+      "index": 14,
+      "columns": 4,
+      "rows": 4,
+      "row": 3,
+      "column": 2,
+      "globalIndex": 14,
+      "name": "青蒜苗烧老豆腐",
+      "type": "main",
+      "sourceRect": [
+        629,
+        993,
+        313,
+        239
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ]
+    },
+    "garlicBroccoli": {
+      "file": "cooked-v4-a.png",
+      "index": 15,
+      "columns": 4,
+      "rows": 4,
+      "row": 3,
+      "column": 3,
+      "globalIndex": 15,
+      "name": "蒜蓉西兰花",
+      "type": "veg",
+      "sourceRect": [
+        949,
+        990,
+        298,
+        244
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ]
+    },
+    "stirBokChoy": {
+      "file": "cooked-v4-b.png",
+      "index": 0,
+      "columns": 4,
+      "rows": 4,
+      "row": 0,
+      "column": 0,
+      "globalIndex": 16,
+      "name": "清炒小白菜",
+      "type": "veg",
+      "sourceRect": [
+        72,
+        70,
+        297,
+        171
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ]
+    },
+    "garlicSpinach": {
+      "file": "cooked-v4-b.png",
+      "index": 1,
+      "columns": 4,
+      "rows": 4,
+      "row": 0,
+      "column": 1,
+      "globalIndex": 17,
+      "name": "蒜蓉菠菜",
+      "type": "veg",
+      "sourceRect": [
+        450,
+        59,
+        270,
+        186
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ]
+    },
+    "cucumberSalad": {
+      "file": "cooked-v4-b.png",
+      "index": 2,
+      "columns": 4,
+      "rows": 4,
+      "row": 0,
+      "column": 2,
+      "globalIndex": 18,
+      "name": "香醋凉拌黄瓜",
+      "type": "veg",
+      "sourceRect": [
+        818,
+        64,
+        269,
+        184
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ]
+    },
+    "steamedEggplant": {
+      "file": "cooked-v4-b.png",
+      "index": 3,
+      "columns": 4,
+      "rows": 4,
+      "row": 0,
+      "column": 3,
+      "globalIndex": 19,
+      "name": "蒜香蒸紫皮长茄",
+      "type": "veg",
+      "sourceRect": [
+        1181,
+        64,
+        283,
+        176
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ]
+    },
+    "pepperCarrot": {
+      "file": "cooked-v4-b.png",
+      "index": 4,
+      "columns": 4,
+      "rows": 4,
+      "row": 1,
+      "column": 0,
+      "globalIndex": 20,
+      "name": "青椒胡萝卜丝",
+      "type": "veg",
+      "sourceRect": [
+        70,
+        304,
+        294,
+        180
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ]
+    },
+    "mushroomGreens": {
+      "file": "cooked-v4-b.png",
+      "index": 5,
+      "columns": 4,
+      "rows": 4,
+      "row": 1,
+      "column": 1,
+      "globalIndex": 21,
+      "name": "香菇炒小白菜",
+      "type": "veg",
+      "sourceRect": [
+        439,
+        296,
+        287,
+        191
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ]
+    },
+    "stirLettuce": {
+      "file": "cooked-v4-b.png",
+      "index": 6,
+      "columns": 4,
+      "rows": 4,
+      "row": 1,
+      "column": 2,
+      "globalIndex": 22,
+      "name": "清炒莴笋片",
+      "type": "veg",
+      "sourceRect": [
+        806,
+        315,
+        300,
+        167
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ]
+    },
+    "carrotWoodEar": {
+      "file": "cooked-v4-b.png",
+      "index": 7,
+      "columns": 4,
+      "rows": 4,
+      "row": 1,
+      "column": 3,
+      "globalIndex": 23,
+      "name": "胡萝卜木耳小炒",
+      "type": "veg",
+      "sourceRect": [
+        1176,
+        299,
+        299,
+        185
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ]
+    },
+    "tomatoGreens": {
+      "file": "cooked-v4-b.png",
+      "index": 8,
+      "columns": 4,
+      "rows": 4,
+      "row": 2,
+      "column": 0,
+      "globalIndex": 24,
+      "name": "番茄炒小白菜",
+      "type": "veg",
+      "sourceRect": [
+        72,
+        542,
+        281,
+        185
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ]
+    },
+    "winterMelonPorkSoup": {
+      "file": "cooked-v4-b.png",
+      "index": 9,
+      "columns": 4,
+      "rows": 4,
+      "row": 2,
+      "column": 1,
+      "globalIndex": 25,
+      "name": "冬瓜瘦肉汤",
+      "type": "soup",
+      "sourceRect": [
+        438,
+        524,
+        270,
+        212
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ]
+    },
+    "tomatoTofuSoup": {
+      "file": "cooked-v4-b.png",
+      "index": 10,
+      "columns": 4,
+      "rows": 4,
+      "row": 2,
+      "column": 2,
+      "globalIndex": 26,
+      "name": "番茄嫩豆腐汤",
+      "type": "soup",
+      "sourceRect": [
+        809,
+        523,
+        275,
+        220
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ]
+    },
+    "spinachEggSoup": {
+      "file": "cooked-v4-b.png",
+      "index": 11,
+      "columns": 4,
+      "rows": 4,
+      "row": 2,
+      "column": 3,
+      "globalIndex": 27,
+      "name": "菠菜蛋花汤",
+      "type": "soup",
+      "sourceRect": [
+        1185,
+        526,
+        271,
+        213
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ]
+    },
+    "mushroomWinterSoup": {
+      "file": "cooked-v4-b.png",
+      "index": 12,
+      "columns": 4,
+      "rows": 4,
+      "row": 3,
+      "column": 0,
+      "globalIndex": 28,
+      "name": "香菇冬瓜清汤",
+      "type": "soup",
+      "sourceRect": [
+        71,
+        762,
+        274,
+        216
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ]
+    },
+    "cornChickenSoup": {
+      "file": "cooked-v4-b.png",
+      "index": 13,
+      "columns": 4,
+      "rows": 4,
+      "row": 3,
+      "column": 1,
+      "globalIndex": 29,
+      "name": "玉米胡萝卜鸡汤",
+      "type": "soup",
+      "sourceRect": [
+        434,
+        760,
+        282,
+        223
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ]
+    },
+    "whiteRice": {
+      "file": "cooked-v4-b.png",
+      "index": 14,
+      "columns": 4,
+      "rows": 4,
+      "row": 3,
+      "column": 2,
+      "globalIndex": 30,
+      "name": "松软籼米饭",
+      "type": "staple",
+      "sourceRect": [
+        806,
+        790,
+        285,
+        172
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ]
+    },
+    "oatRice": {
+      "file": "cooked-v4-b.png",
+      "index": 15,
+      "columns": 4,
+      "rows": 4,
+      "row": 3,
+      "column": 3,
+      "globalIndex": 31,
+      "name": "燕麦米饭",
+      "type": "staple",
+      "sourceRect": [
+        1180,
+        787,
+        292,
+        175
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ]
+    },
+    "blackRiceMix": {
+      "file": "cooked-v4-c.png",
+      "index": 0,
+      "columns": 5,
+      "rows": 4,
+      "row": 0,
+      "column": 0,
+      "globalIndex": 32,
+      "name": "黑米杂粮饭",
+      "type": "staple",
+      "sourceRect": [
+        29,
+        90,
+        267,
+        195
+      ],
+      "sourceSize": [
+        1402,
+        1122
+      ]
+    },
+    "pumpkinOatCongee": {
+      "file": "cooked-v4-c.png",
+      "index": 1,
+      "columns": 5,
+      "rows": 4,
+      "row": 0,
+      "column": 1,
+      "globalIndex": 33,
+      "name": "南瓜燕麦粥",
+      "type": "staple",
+      "sourceRect": [
+        306,
+        76,
+        263,
+        210
+      ],
+      "sourceSize": [
+        1402,
+        1122
+      ]
+    },
+    "cornOatCongee": {
+      "file": "cooked-v4-c.png",
+      "index": 2,
+      "columns": 5,
+      "rows": 4,
+      "row": 0,
+      "column": 2,
+      "globalIndex": 34,
+      "name": "玉米燕麦粥",
+      "type": "staple",
+      "sourceRect": [
+        573,
+        76,
+        257,
+        204
+      ],
+      "sourceSize": [
+        1402,
+        1122
+      ]
+    },
+    "potatoRice": {
+      "file": "cooked-v4-c.png",
+      "index": 3,
+      "columns": 5,
+      "rows": 4,
+      "row": 0,
+      "column": 3,
+      "globalIndex": 35,
+      "name": "土豆焖饭",
+      "type": "staple",
+      "sourceRect": [
+        842,
+        77,
+        262,
+        209
+      ],
+      "sourceSize": [
+        1402,
+        1122
+      ]
+    },
+    "cornRice": {
+      "file": "cooked-v4-c.png",
+      "index": 4,
+      "columns": 5,
+      "rows": 4,
+      "row": 0,
+      "column": 4,
+      "globalIndex": 36,
+      "name": "玉米粒米饭",
+      "type": "staple",
+      "sourceRect": [
+        1116,
+        81,
+        259,
+        205
+      ],
+      "sourceSize": [
+        1402,
+        1122
+      ]
+    },
+    "celeryPork": {
+      "file": "cooked-v4-c.png",
+      "index": 5,
+      "columns": 5,
+      "rows": 4,
+      "row": 1,
+      "column": 0,
+      "globalIndex": 37,
+      "name": "芹菜肉丝",
+      "type": "main",
+      "sourceRect": [
+        18,
+        323,
+        283,
+        239
+      ],
+      "sourceSize": [
+        1402,
+        1122
+      ]
+    },
+    "gingerDuck": {
+      "file": "cooked-v4-c.png",
+      "index": 6,
+      "columns": 5,
+      "rows": 4,
+      "row": 1,
+      "column": 1,
+      "globalIndex": 38,
+      "name": "仔姜鸭胸",
+      "type": "main",
+      "sourceRect": [
+        304,
+        330,
+        263,
+        224
+      ],
+      "sourceSize": [
+        1402,
+        1122
+      ]
+    },
+    "radishChicken": {
+      "file": "cooked-v4-c.png",
+      "index": 7,
+      "columns": 5,
+      "rows": 4,
+      "row": 1,
+      "column": 2,
+      "globalIndex": 39,
+      "name": "白萝卜炖鸡",
+      "type": "main",
+      "sourceRect": [
+        576,
+        327,
+        265,
+        223
+      ],
+      "sourceSize": [
+        1402,
+        1122
+      ]
+    },
+    "lotusPork": {
+      "file": "cooked-v4-c.png",
+      "index": 8,
+      "columns": 5,
+      "rows": 4,
+      "row": 1,
+      "column": 3,
+      "globalIndex": 40,
+      "name": "藕片炒里脊",
+      "type": "main",
+      "sourceRect": [
+        849,
+        332,
+        263,
+        225
+      ],
+      "sourceSize": [
+        1402,
+        1122
+      ]
+    },
+    "luffaEgg": {
+      "file": "cooked-v4-c.png",
+      "index": 9,
+      "columns": 5,
+      "rows": 4,
+      "row": 1,
+      "column": 4,
+      "globalIndex": 41,
+      "name": "丝瓜炒蛋",
+      "type": "main",
+      "sourceRect": [
+        1120,
+        338,
+        266,
+        210
+      ],
+      "sourceSize": [
+        1402,
+        1122
+      ]
+    },
+    "shrimpTofu": {
+      "file": "cooked-v4-c.png",
+      "index": 10,
+      "columns": 5,
+      "rows": 4,
+      "row": 2,
+      "column": 0,
+      "globalIndex": 42,
+      "name": "河虾仁豆腐煲",
+      "type": "main",
+      "sourceRect": [
+        21,
+        597,
+        284,
+        233
+      ],
+      "sourceSize": [
+        1402,
+        1122
+      ]
+    },
+    "stirShanghaibok": {
+      "file": "cooked-v4-c.png",
+      "index": 11,
+      "columns": 5,
+      "rows": 4,
+      "row": 2,
+      "column": 1,
+      "globalIndex": 43,
+      "name": "清炒上海青",
+      "type": "veg",
+      "sourceRect": [
+        313,
+        589,
+        257,
+        248
+      ],
+      "sourceSize": [
+        1402,
+        1122
+      ]
+    },
+    "garlicPeaTender": {
+      "file": "cooked-v4-c.png",
+      "index": 12,
+      "columns": 5,
+      "rows": 4,
+      "row": 2,
+      "column": 2,
+      "globalIndex": 44,
+      "name": "蒜蓉豌豆尖",
+      "type": "veg",
+      "sourceRect": [
+        582,
+        598,
+        263,
+        237
+      ],
+      "sourceSize": [
+        1402,
+        1122
+      ]
+    },
+    "snowPeaMushroom": {
+      "file": "cooked-v4-c.png",
+      "index": 13,
+      "columns": 5,
+      "rows": 4,
+      "row": 2,
+      "column": 3,
+      "globalIndex": 45,
+      "name": "荷兰豆杏鲍菇",
+      "type": "veg",
+      "sourceRect": [
+        854,
+        602,
+        273,
+        245
+      ],
+      "sourceSize": [
+        1402,
+        1122
+      ]
+    },
+    "stirNapa": {
+      "file": "cooked-v4-c.png",
+      "index": 14,
+      "columns": 5,
+      "rows": 4,
+      "row": 2,
+      "column": 4,
+      "globalIndex": 46,
+      "name": "清炒大白菜",
+      "type": "veg",
+      "sourceRect": [
+        1129,
+        606,
+        261,
+        222
+      ],
+      "sourceSize": [
+        1402,
+        1122
+      ]
+    },
+    "wellCookedGreenBean": {
+      "file": "cooked-v4-c.png",
+      "index": 15,
+      "columns": 5,
+      "rows": 4,
+      "row": 3,
+      "column": 0,
+      "globalIndex": 47,
+      "name": "蒜香四季豆",
+      "type": "veg",
+      "sourceRect": [
+        16,
+        868,
+        283,
+        231
+      ],
+      "sourceSize": [
+        1402,
+        1122
+      ]
+    },
+    "zucchiniMushroom": {
+      "file": "cooked-v4-c.png",
+      "index": 16,
+      "columns": 5,
+      "rows": 4,
+      "row": 3,
+      "column": 1,
+      "globalIndex": 48,
+      "name": "西葫芦炒金针菇",
+      "type": "veg",
+      "sourceRect": [
+        303,
+        870,
+        272,
+        230
+      ],
+      "sourceSize": [
+        1402,
+        1122
+      ]
+    }
+  },
+  "qualityNotes": [
+    "Subject source frames preserve complete naturally shaped dishes; SVG viewports uniformly fit them without stretching.",
+    "Atlas B regenerated and visually checked on the application background. Mushroom/winter-melon soup no longer includes meat-like pieces.",
+    "Generated PNG alpha retained unchanged; image content remains illustrative and should be identified together with recipe text."
+  ],
+  "repairedOn": "2026-10-14",
+  "repairNote": "B repainted by image_gen, removes white cutout scraps and meat-like pieces from mushroomWinterSoup. All atlases use actual source frames to preserve full shapes.",
+  "historicalQualityNotes": [
+    "Subjects are larger than the requested maximum 65 percent cell footprint in several cells; consuming layouts should add breathing room by scaling without stretching.",
+    "Atlas B mushroomWinterSoup includes a pale piece with meat-like appearance; recipe remains mushroom and winter melon only. Review this generated representation before treating it as exact ingredient identification.",
+    "PNG alpha is preserved from built-in generation. Small semi-transparent edge specks and halos may remain. No local image pixel edits were performed."
+  ]
+}

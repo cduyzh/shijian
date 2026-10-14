@@ -1,9 +1,11 @@
-# 食间公开仓库仅发布产品说明，默认忽略所有文件。
-# 增加公开文件前必须明确审查，禁止使用 git add -f 上传应用或私人数据。
+# 私人仓库：仅允许项目源码、运行资产及说明文件。
 /*
 !/.gitignore
 !/README.md
 !/docs/
+!/dist/
+!/scripts/
+!/tests/
 
 /docs/*
 !/docs/PRODUCT.md
@@ -13,17 +15,39 @@
 !/docs/COOKED-REFERENCES.md
 !/docs/visual-assets.md
 
-# 核心应用、生成图片、配置、缓存和私人菜单均不在公开范围。
-# 上面的 allowlist 已覆盖这些目录，此处保留可读的说明性规则。
-/dist/
-/src/
-/assets/
-/node_modules/
-/.openai/
-/.env*
-/.DS_Store
-/*.log
-/*.json
-/*.sqlite*
-/*.db
+/dist/*
+!/dist/index.html
+!/dist/app.js
+!/dist/styles.css
+!/dist/data.js
+!/dist/nutrition.js
+!/dist/visuals.js
+!/dist/asset-layout.js
+!/dist/meal-scene.js
+!/dist/vendor/
+!/dist/assets/
 
+/dist/assets/*
+!/dist/assets/favicon.svg
+!/dist/assets/cooked-hero.jpg
+!/dist/assets/ingredients-v4-*.png
+!/dist/assets/cooked-v4-*.png
+!/dist/assets/ingredients-v4-manifest.json
+!/dist/assets/cooked-v4-manifest.json
+!/dist/assets/*-v5.png
+!/dist/assets/*-v5.jpg
+!/dist/assets/*-v5-manifest.json
+
+# 部署身份、凭据、本机菜单、验收导出及生成历史不提交。
+/.site-source/
+/.openai/
+/.qa/
+/.env*
+/dist/assets/originals/
+**/node_modules/
+**/.DS_Store
+**/*.log
+**/*.sqlite*
+**/*.db
+**/*-menu-backup*.json
+**/*credentials*

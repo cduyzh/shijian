@@ -404,3 +404,83 @@ Style: premium real studio ingredient product photography, authentic vegetable v
 Constraints: exactly sixteen cells in the exact sequence, strict 4x4 equally spaced square grid, every arrangement centered and at most 65% cell dimensions, no food crosses its cell, no plates, bowls, trays, props, text, labels, logo, face, decorative marks, borders or gridlines, no cooked meat, no background matte or simulated checkerboard. Save true RGBA PNG transparency.
 ```
 
+
+
+## 2026-10-13 全部 49 道熟菜图集 v4
+
+本次按当前 `data.js` 的原始菜谱数组顺序，将 49 道菜分为前三组：16、16、17 道。三张图分别通过 Codex 内置 `image_gen` 一次独立生成，均设置 `transparent_background: true`；中断后复用已完成的 A，没有重新生成。素材只用于菜库与食谱预览，整餐的三维餐盘由另外的渲染实现提供。
+
+新的提示词采用约 60° 斜俯摄影角度，强调自然松散、低矮、不规则或长条形构图，肉片与蔬菜交错，米饭保留松散熟米粒。固体菜不加盘、托盘或背景；汤和粥使用低矮极简方碗，以合理盛放液体。目标最长边为单格的 65%，但生成结果中部分主体仍偏大，消费端需留白缩放，不应拉伸图片。
+
+| 文件 | 尺寸 | 格数与覆盖 | 透明通道 |
+| --- | --- | --- | --- |
+| `dist/assets/cooked-v4-a.png` | 1254×1254 | 4×4，16 道 | RGBA，`hasAlpha: yes` |
+| `dist/assets/cooked-v4-b.png` | 1254×1254 | 4×4，16 道 | RGBA，`hasAlpha: yes` |
+| `dist/assets/cooked-v4-c.png` | 1402×1122 | 5×4，17 道 | RGBA，`hasAlpha: yes` |
+
+A、B 为正方形，C 为 1402×1122，接近 5:4。三张 PNG 均直接保留内置输出，未裁切、重绘、去背景或有损转换；只读检查确认 alpha 范围均为 0–255。完全透明像素占比 A 40.70%、B 43.17%、C 47.90%。
+
+映射文件：`dist/assets/cooked-v4-manifest.json`。其中 `recipes` 按菜谱 ID 提供 `file / index / columns / rows / row / column / globalIndex`，`index / row / column` 使用从 0 开始的编号，覆盖 49 个唯一 ID，与当前数据数组顺序一致。C 的最后三个空格索引为 17、18、19。
+
+### 图集 A 顺序
+
+| 行 | 第 1 列 | 第 2 列 | 第 3 列 | 第 4 列 |
+| --- | --- | --- | --- | --- |
+| 1 | `pepperPork` 二荆条青椒肉丝 | `kungPaoChicken` 少油宫保鸡丁 | `lettucePork` 莴笋木耳炒肉 | `potatoChicken` 土豆炖鸡腿肉 |
+| 2 | `tomatoEgg` 家常番茄炒蛋 | `garlicPork` 青蒜苗肉丝 | `tofuEggSteam` 嫩豆腐蒸蛋 | `mushroomTofuPot` 香菇青菜豆腐煲 |
+| 3 | `homeStyleTofu` 家常豆瓣烧豆腐 | `mushroomChicken` 香菇蒸鸡腿肉 | `cucumberChicken` 黄瓜木耳鸡丁 | `onionPork` 洋葱青椒炒里脊 |
+| 4 | `tomatoTofuEgg` 番茄豆腐烩蛋 | `lettuceChicken` 莴笋鸡片 | `garlicTofu` 青蒜苗烧老豆腐 | `garlicBroccoli` 蒜蓉西兰花 |
+
+### 图集 B 顺序
+
+| 行 | 第 1 列 | 第 2 列 | 第 3 列 | 第 4 列 |
+| --- | --- | --- | --- | --- |
+| 1 | `stirBokChoy` 清炒小白菜 | `garlicSpinach` 蒜蓉菠菜 | `cucumberSalad` 香醋凉拌黄瓜 | `steamedEggplant` 蒜香蒸紫皮长茄 |
+| 2 | `pepperCarrot` 青椒胡萝卜丝 | `mushroomGreens` 香菇炒小白菜 | `stirLettuce` 清炒莴笋片 | `carrotWoodEar` 胡萝卜木耳小炒 |
+| 3 | `tomatoGreens` 番茄炒小白菜 | `winterMelonPorkSoup` 冬瓜瘦肉汤 | `tomatoTofuSoup` 番茄嫩豆腐汤 | `spinachEggSoup` 菠菜蛋花汤 |
+| 4 | `mushroomWinterSoup` 香菇冬瓜清汤 | `cornChickenSoup` 玉米胡萝卜鸡汤 | `whiteRice` 松软籼米饭 | `oatRice` 燕麦米饭 |
+
+### 图集 C 顺序
+
+| 行 | 第 1 列 | 第 2 列 | 第 3 列 | 第 4 列 | 第 5 列 |
+| --- | --- | --- | --- | --- | --- |
+| 1 | `blackRiceMix` 黑米杂粮饭 | `pumpkinOatCongee` 南瓜燕麦粥 | `cornOatCongee` 玉米燕麦粥 | `potatoRice` 土豆焖饭 | `cornRice` 玉米粒米饭 |
+| 2 | `celeryPork` 芹菜肉丝 | `gingerDuck` 仔姜鸭胸 | `radishChicken` 白萝卜炖鸡 | `lotusPork` 藕片炒里脊 | `luffaEgg` 丝瓜炒蛋 |
+| 3 | `shrimpTofu` 河虾仁豆腐煲 | `stirShanghaibok` 清炒上海青 | `garlicPeaTender` 蒜蓉豌豆尖 | `snowPeaMushroom` 荷兰豆杏鲍菇 | `stirNapa` 清炒大白菜 |
+| 4 | `wellCookedGreenBean` 蒜香四季豆 | `zucchiniMushroom` 西葫芦炒金针菇 | 空透明 | 空透明 | 空透明 |
+
+### 使用与配方边界
+
+A、B 的 CSS 图集大小为 `400% 400%`，两轴定位 `0% / 33.333333% / 66.666667% / 100%`；C 为 `500% 400%`，横向 `0% / 25% / 50% / 75% / 100%`，纵向与 A、B 相同。素材保留自然不规则轮廓与一些高度变化，不作为三维模型使用。
+
+提示词逐格限定原配方的食材、切法、熟制颜色；肉、虾、蛋与四季豆均要求熟制，不加入网络参考中的显著额外配料。菜谱总数、原料克重、营养数据均未因这轮生图调整。
+
+需要留意的生成偏差已经在 manifest 的 `qualityNotes` 中保留：部分主体占格偏大；B 的 `mushroomWinterSoup` 中有一块形态疑似肉片的浅色部分，不能据此改变仅香菇与冬瓜的配方；透明边缘可能有少量半透明杂点或光晕。应结合当前菜谱文字识别食材，不能把 AI 图当作精确配料鉴定、实拍或食品安全验收。
+
+原图保存在 `dist/assets/originals/cooked-v4-a-original.png`、`cooked-v4-b-original.png`、`cooked-v4-c-original.png`。完整实际提示词保存在 `dist/assets/originals/cooked-v4-prompts.json`。这些本地归档与全部应用素材不进入公开 GitHub 仓库，也不随发行包公开原图记录。
+
+本节只记录生成、落盘与静态映射检查，不表示本轮网页视觉验收或线上更新已经完成。
+
+
+## 2026-10-14 全部 70 种食材透明图集 v4
+
+本轮将原来的多套圆形或带背景图片统一替换为两张 5 列 × 7 行透明摄影图集。A、B 均为 1060×1484 RGBA PNG，每格 212×212，分别对应 `data.js` 食材原始顺序 0–34 与 35–69。全部 70 个 ID 的映射位于 `dist/assets/ingredients-v4-manifest.json`。形状和品种按川渝常用食材限定，包括二荆条青椒、紫皮长茄、青蒜苗、小香葱、上海青、小白菜、四季豆和荷兰豆的分别呈现。
+
+| 文件 | 覆盖 | 全透明像素占比 | Alpha 范围 |
+| --- | --- | --- | --- |
+| `dist/assets/ingredients-v4-a.png` | 35 种，籼米至生抽 | 49.48% | 0–255 |
+| `dist/assets/ingredients-v4-b.png` | 35 种，香醋至河虾仁 | 44.58% | 0–255 |
+
+两张图片均由 Codex 内置 `image_gen` 设置 `transparent_background:true` 生成。B 在中断后从已完成生成输出中找到并复用，没有重复生图。原图按字节复制归档为 `dist/assets/originals/ingredients-v4-a-original.png` 与 `ingredients-v4-b-original.png`，没有进行位图裁切、抠图或背景重绘。实际完整提示词分别保存在同目录 `ingredients-v4-a-prompt.txt` 与 `ingredients-v4-b-prompt.txt`。
+
+提示词统一要求 45° 斜俯真实摄影、左上柔光、原料的完整自然轮廓、每格最长边约 65%、透明留白、无圆形遮罩或底板、无文字或标签。液体与豆瓣酱使用小方玻璃瓶罐，干粮调料为松散原物。生成结果部分主体仍偏满格，页面应按 alpha 主体边界等比缩放和居中，不能拉伸或重新套圆形裁切。极少量半透明边缘杂点是生成输出本身的偏差，已保留如实记录。
+
+静态检查已核对 A/B 共 70 种顺序、具体品类、真实透明通道和映射唯一性；图片资源检查不代表页面交互和发布验收已经完成。
+
+### v4 最终显示校正（2026-10-14）
+
+70 种食材和 49 道成品均接入 v4 透明图集。根据完整原图 alpha 连通主体记录独立 `sourceRect`，保留自然轮廓并避开等分格线切边；用保持原始比例的 SVG 窗口显示原始 PNG，未编辑图片像素。食材的可见最长边约占方形窗口 80%，成品约 85%，均居中显示。此比例只用于界面一致性，不代表食材真实大小或份量。
+
+B 组熟菜使用新的生成版本：汤改为深鼠尾草色方碗，已在页面奶油白底上核对透明边界；香菇冬瓜汤不再含肉样块。原版本与修复版本均保留在本地素材档案。
+
+119 个显示框均通过透明边界检查，没有触边警告；桌面食材库、手机水果库和熟菜汤品卡片已检查实际渲染。归一化数学检查与视觉检查分别留证，不把生成提示词当作验收通过。
