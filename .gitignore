@@ -23,8 +23,6 @@
 !/dist/nutrition.js
 !/dist/visuals.js
 !/dist/asset-layout.js
-!/dist/meal-scene.js
-!/dist/vendor/
 !/dist/assets/
 
 /dist/assets/*
@@ -34,6 +32,7 @@
 !/dist/assets/cooked-v4-*.png
 !/dist/assets/ingredients-v4-manifest.json
 !/dist/assets/cooked-v4-manifest.json
+!/dist/assets/cooked-detail-v5-*.png
 !/dist/assets/*-v5.png
 !/dist/assets/*-v5.jpg
 !/dist/assets/*-v5-manifest.json

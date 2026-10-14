@@ -14,6 +14,7 @@
   });
   const similarRef = (sourceId, description, foodCode = null) => ({ updated: '2026-10-13', nutritionReference: { sourceId, description, foodCode, kind: 'similar-food-estimate' } });
   const pendingRef = description => ({ updated: '2026-10-13', nutritionReference: { sourceId: null, description, foodCode: null, kind: 'uncalibrated-estimate' } });
+  const expansionRef = description => ({ updated: '2026-10-14', nutritionReference: { sourceId: null, description, foodCode: null, kind: 'uncalibrated-estimate' } });
   const ingredients = [
     I('rice', '籼米', ['大米', '长粒米', '白米'], 'grain', '基础主食', '提供碳水化合物和熟悉的米饭口感；可以与全谷物搭配。', '认准普通籼米；糯米、粳米另属不同类型。', '密封干燥保存，避开灶台和潮湿处。', '全年', '#eee6cd', [346, 7.4, 0.8, 77.2, 0.7], 1, 7),
     I('oats', '原味燕麦片', ['燕麦', '压片燕麦'], 'grain', '全谷搭档', '增加全谷物与膳食纤维，让米饭或粥的口感更丰富。', '选无添加糖的纯燕麦片，不以甜味即食麦片替代。', '开封后密封避潮，按包装建议使用。', '全年', '#dac8a3', [377, 13.5, 6.7, 67.7, 10], 1, 16),
@@ -84,7 +85,19 @@
     I('kingOyster', '杏鲍菇', ['杏鲍', '刺芹侧耳'], 'vegetable', '厚肉菌菇', '厚实菌柄切片后有弹嫩口感，适合与荷兰豆清炒。', '选新鲜杏鲍菇；平菇、鲜香菇等菌菇分开。', '未洗先冷藏，切片后尽快煮熟，避免包装内积水。', '全年', '#d0c1a2', [35,3.1,0.2,6.5,2.3], 0.95, 10, pendingRef('杏鲍菇的演示参考；不将一般 oyster mushroom 品种冒充同种实测。')),
     I('duckBreast', '去皮鸭胸肉', ['鸭胸', '去皮鸭胸'], 'protein', '禽肉轮换', '为鸡肉与里脊之外增加禽肉选择；去皮后仍要彻底煮熟。', '选去皮无骨鸭胸，保留少量肉本身脂肪；带皮鸭胸或整鸭另算。', '密封放冷藏下层并尽快烹调，暂不用的分装冷冻。', '全年', '#c49b94', [135,18.3,6,0.9,0], 1, 32, {...similarRef('fdc172410','USDA 一般去皮生鸭肉，不是鸭胸部位实测。',172410),safetySourceIds:['cfsCooking']}),
     I('silverCarp', '去刺鲢鱼净肉', ['鲢鱼净肉', '鲢鱼肉'], 'protein', '淡水鱼选择', '鱼肉增加蛋白质食物轮换；购买净肉仍需检查残留鱼刺。', '选鲢鱼的去皮去骨净肉；草鱼、鲤鱼、鳙鱼不混作同种。', '购入后及时密封冷藏，尽快煮熟；暂不用的分装冷冻。', '全年', '#d9d5c5', [110,18,3.8,0,0], 1, 28, {...pendingRef('鲢鱼净肉的演示量级，未用不同物种鲤鱼的数值作为已核对记录。'),allergies:['鱼'],safetySourceIds:['cfsCooking']}),
-    I('shrimp', '鲜河虾仁', ['河虾仁', '去壳河虾仁'], 'protein', '虾类蛋白', '虾仁与豆腐搭配丰富蛋白质来源，选择原味生鲜产品。', '本条目是已去壳净虾仁；带壳整河虾、海虾和含调味的成品另算。', '及时密封冷藏并尽快煮熟，暂不用的分装冷冻，不常温久放。', '全年', '#d8c3b7', [85,20,0.5,0,0], 1, 70, {...pendingRef('鲜河虾仁的演示量级；混合海虾记录不等同河虾，官方接口本轮未读取成功。'),allergies:['甲壳类'],safetySourceIds:['cfsCooking']})
+    I('shrimp', '鲜河虾仁', ['河虾仁', '去壳河虾仁'], 'protein', '虾类蛋白', '虾仁与豆腐搭配丰富蛋白质来源，选择原味生鲜产品。', '本条目是已去壳净虾仁；带壳整河虾、海虾和含调味的成品另算。', '及时密封冷藏并尽快煮熟，暂不用的分装冷冻，不常温久放。', '全年', '#d8c3b7', [85,20,0.5,0,0], 1, 70, {...pendingRef('鲜河虾仁的演示量级；混合海虾记录不等同河虾，官方接口本轮未读取成功。'),allergies:['甲壳类'],safetySourceIds:['cfsCooking']}),
+    I('cabbage', '绿球甘蓝', ['莲花白','包菜','圆白菜','卷心菜'], 'vegetable', '脆甜叶菜', '叶片炒软后仍有脆甜口感，可与深绿色叶菜轮换。', '选普通结球绿甘蓝；莲花白、包菜在本库归为同一条目，紫甘蓝、大白菜和牛心甘蓝另算。', '未洗先冷藏，去坏叶；切开后包好冷藏并尽快使用。', '秋冬春', '#b6c995', [25,1.3,0.2,5.8,2.5], 0.9, 4, expansionRef('绿球甘蓝的手工参考估算；未逐项核对授权成分表或具体批次。')),
+    I('chive', '青叶韭菜', ['韭菜','绿韭菜'], 'vegetable', '韭香叶菜', '扁平绿叶与鸡蛋搭配增加清香和柔软口感；与青蒜苗分开安排。', '选新鲜青叶韭菜；韭黄、韭菜花、青蒜苗不是同一条目。', '未洗先冷藏防挤压，去坏叶，食用前洗净并尽快烹调。', '冬春较嫩', '#6c9576', [26,2.4,0.4,4.6,1.4], 0.88, 7, expansionRef('青叶韭菜可食部的手工估算，不以韭黄数据作为已核对记录。')),
+    I('garlicScape', '蒜薹', ['蒜苔','蒜薹茎'], 'vegetable', '清脆蒜香', '圆柱状嫩花茎有蒜香与脆感，适合与里脊切丝同炒。', '选柔嫩绿色蒜薹，去老端与花苞；青蒜苗、韭菜和大蒜另列。', '冷藏保存，洗切后及时烹调；不以腌制蒜薹等重替换鲜品。', '春夏', '#91ae72', [61,2,0.2,12.7,2.5], 0.9, 9, expansionRef('鲜蒜薹原料的手工参考估算，尚待具体记录核对。')),
+    I('waterSpinach', '绿梗空心菜', ['空心菜','藤藤菜','蕹菜','通菜'], 'vegetable', '夏日绿叶菜', '中空绿梗与软嫩叶片提供不同绿叶菜口感，蒜香清炒即可丰富餐桌。', '选嫩绿梗空心菜；白梗类型与其他藤叶不混作同一条目，去粗老茎。', '未洗先冷藏，尽早烹调；食用前逐片洗净，茎叶均煮熟。', '夏秋', '#749b68', [23,2.6,0.3,3.1,2.1], 0.82, 5, expansionRef('嫩绿梗空心菜的手工参考估算，不代表川渝批次检测。')),
+    I('oysterMushroom', '鲜平菇', ['平菇','蚝菇'], 'vegetable', '扇形鲜菇', '扇形菌盖、短菌柄和弹嫩质地适合炒蛋或煮汤，增加菌菇轮换。', '选正规来源新鲜灰白平菇；杏鲍菇、香菇、干平菇与野生蘑菇不混用。', '未洗先冷藏，避免积水，去老硬根，清洗后彻底烹熟。', '全年', '#b2ab9b', [33,3.3,0.4,6.1,2.3], 0.9, 8, expansionRef('鲜平菇可食部的手工参考估算；尚未逐项读取对应营养记录。')),
+    I('cauliflower', '紧实型白花菜', ['白花菜','花菜','菜花'], 'vegetable', '白色花球菜', '米白小花球丰富蔬菜颜色，与胡萝卜、绿叶菜交替搭配。', '选紧实米白花球；松花菜、绿西兰花和紫花菜不归为相同品种。', '完整花球冷藏避压，去老叶和硬根，掰小朵洗净后煮熟。', '秋冬春', '#dedbc5', [25,1.9,0.3,5,2], 0.8, 6, expansionRef('一般白花菜的手工估算，不是紧实品种实测记录。')),
+    I('mungBeanSprout', '鲜绿豆芽', ['绿豆芽','银芽'], 'vegetable', '爽脆芽菜', '乳白细茎带来清爽脆感；它是熟蔬菜搭档，不等同干绿豆或黄豆芽。', '选来源可靠、无黏液异味的新鲜绿豆芽；黄豆芽、豌豆尖不混用。', '购入后及时冷藏并尽快使用；流水清洗，彻底煮熟，清洗不能替代加热。', '全年', '#ded9ba', [30,3,0.2,5.9,1.8], 0.95, 4, {...expansionRef('鲜绿豆芽原料手工估算；不按干豆数据换算。'), safetySourceIds:['hcSprouts'], safetyNote:'本库芽菜菜谱全部充分熟制，不以凉拌生芽菜替代。'}),
+    I('driedTofu', '原味压制豆腐干', ['白豆干','原味豆腐干','豆干'], 'protein', '扎实植物蛋白', '压制后质地较紧实，切条炒青椒可作为植物蛋白主菜。', '选不油炸、无烟熏、无卤汁的原味压制豆腐干；香干、五香豆干、油豆腐按产品另算。', '按标签冷藏和保质期保存，开封后尽快烹调；营养与含盐量优先参考具体包装。', '全年', '#d8caaa', [140,16,7,5,1.5], 1, 12, {...expansionRef('原味压制豆腐干的演示估算，品牌含水量、凝固剂和配料会改变数据；未用卤制香干值冒充。'), weightBasis:'cooked-ready-to-eat', allergies:['大豆']}),
+    I('sweetPotato', '红心红薯', ['红心苕','红心番薯','红薯','苕'], 'grain', '薯类主食', '橙红薯肉煮熟后柔软自然清甜，与米饭共同计入主食。', '选普通红心红薯；紫薯、白心红薯、蜜薯制品另算，不食用霉变腐烂薯。', '完整薯阴凉通风，切开后冷藏并尽快煮熟；熟薯及时分装冷藏。', '秋冬', '#cb8b62', [86,1.6,0.1,20.1,3], 0.88, 4, expansionRef('红心红薯可食部手工估算，不代表具体蜜薯或批次糖分。')),
+    I('millet', '黄小米', ['小米','脱壳粟米'], 'grain', '谷物轮换', '细小黄色谷粒煮粥可丰富主食口感；粥仍需搭配蛋白质和蔬菜。', '选无添加的脱壳黄小米；大黄米是另一种谷物，不按同一条目替换。', '干燥密封避潮，开封后按包装建议保存，生虫或霉变不用。', '全年', '#d7b46f', [358,9.7,3.5,73.3,1.6], 1, 10, {...expansionRef('干黄小米原料手工估算；未声称是特定产区或授权数据库提取值。'), weightBasis:'dry'}),
+    I('yam', '白肉长山药（脆口型）', ['白肉山药','山药'], 'grain', '淀粉根茎', '乳白根茎熟后软脆或柔软，含淀粉，和米饭一起考虑主食份额。', '选正规食用白肉长山药（脆口型）；铁棍山药、淮山干片与山药粉不作同一品种，削皮可戴手套。', '完整根茎阴凉通风或冷藏，去皮切片后冷藏并尽快煮熟。', '秋冬', '#d1c5a3', [65,1.8,0.2,14.4,0.9], 0.85, 9, expansionRef('鲜白肉山药手工估算，不据此声称健脾、降糖或个体治疗效果。')),
+    I('taro', '小芋头', ['芋儿','小毛芋','芋仔'], 'grain', '柔软薯类', '小型球茎熟透后绵软，炖鸡时与米饭一起算入谷薯搭配。', '选可靠商家出售的可食用小毛芋；香芋、野芋和海芋不能同条目替换，不自行采食不明植物。', '完整芋头阴凉通风，去皮切块后冷藏尽快用；削皮可戴手套，食用前彻底煮熟。', '秋冬', '#bda282', [79,2.2,0.2,17.1,1.7], 0.82, 5, {...expansionRef('小芋头可食部手工参考估算；不是香芋或野生类似球茎的数据。'), safetySourceIds:['cfsWildTaro'], safetyNote:'只购买正规可食芋头；煮熟不能使误采的野芋变安全。'})
   ];
 
   const ingredientById = Object.fromEntries(ingredients.map(ingredient => [ingredient.id, ingredient]));
@@ -93,7 +106,7 @@
     id, name, type, minutes, servings: 2, ingredients: entries.map(([id, g]) => ({ id, g })),
     tags, benefit, pairing, steps, storage: safeStorage, color, visual: 'food',
     allergies: [...new Set(entries.flatMap(([ingredientId]) => ingredientById[ingredientId]?.allergies || []))],
-    nutritionNote: '按双人份可食部原料重量相加估算；谷物和干木耳按干重，熟花生按成品重。烹调损失、留锅调味和分餐差异未校正。',
+    nutritionNote: '按双人份可食部原料重量相加估算；谷物（含黄小米）和干木耳按干重，熟花生与原味压制豆干按产品状态重量。烹调损失、留锅调味和分餐差异未校正。',
     ...extra
   });
   const recipes = [
@@ -148,7 +161,23 @@
     R('snowPeaMushroom', '荷兰豆杏鲍菇', 'veg', 16, [['snowPea',200],['kingOyster',160],['oil',6],['garlic',8],['soySauce',6]], ['豆荚菌菇','清脆弹嫩','不辣'], '熟荷兰豆荚与杏鲍菇薄片形成不同口感，让蔬菜种类更丰富。', '配白萝卜炖鸡或蒸蛋与米饭；豆荚和菌菇均炒熟。', ['荷兰豆去筋清洗，杏鲍菇切薄片，蒜切末。','荷兰豆先用沸水煮熟沥水；少量油炒香蒜与杏鲍菇片。','菌菇炒熟后加入荷兰豆、生抽翻匀，整体热透。'], '#b7bc9d'),
     R('stirNapa', '清炒大白菜', 'veg', 12, [['napaCabbage',360],['garlic',8],['oil',6],['salt',1]], ['清甜白菜','软嫩配菜','不辣'], '大白菜厚白梗与浅绿叶片熟软清甜，适合和脆藕或肉类主菜搭配。', '配藕片炒里脊与米饭，也可与深绿叶菜在不同餐轮换。', ['大白菜逐片清洗，白梗和叶片切短段并分开。','少量油炒香蒜末，白梗先入锅炒软。','加入叶片炒熟，少量盐调味，不添加配方外的蚝油或肉。'], '#c8cbad'),
     R('wellCookedGreenBean', '蒜香四季豆', 'veg', 22, [['greenBean',300],['garlic',8],['oil',6],['salt',1]], ['必须彻底煮熟','少油熟制','不辣'], '彻底煮熟的四季豆为餐中增加熟制豆荚与纤维；安全熟度优先于鲜绿颜色。', '搭配丝瓜炒蛋、米饭；不能生食、低温慢煮或仅焯数秒后快炒。', ['四季豆去两头与老筋，洗净切短斜段，蒜切末。','在足量沸水中持续煮至所有豆段完全熟透，避免锅内拥挤；不是短焯数秒。时间随豆段粗细变化，不能只凭颜色判断。','沥水后少量油炒香蒜末，四季豆回锅充分热透，少量盐调味；有硬生口感或未熟部分时继续煮，不尝生豆判断。'], '#a8ad7d', {safetySourceIds:['cfsBeans'],safetyNote:'四季豆务必彻底煮熟。干豆的浸泡与煮制方案不能机械套到鲜豆荚，也不能将固定炒制时长视为安全保证。'}),
-    R('zucchiniMushroom', '西葫芦炒金针菇', 'veg', 15, [['zucchini',220],['enoki',150],['oil',6],['garlic',8],['soySauce',6]], ['柔嫩瓜菜','菌菇轮换','不辣'], '浅绿西葫芦片与细束金针菇搭配，增加熟蔬菜口感与菌菇种类。', '配河虾仁豆腐煲或鸡肉主菜与米饭；金针菇彻底煮熟。', ['嫩西葫芦洗净切半月薄片，金针菇去根洗净拆小束。','少量油炒香蒜末，先下西葫芦，再加金针菇与少量水。','煮炒至瓜片熟软、金针菇彻底熟透，加生抽翻匀，避免额外重咸调味。'], '#c2c6a7')
+    R('zucchiniMushroom', '西葫芦炒金针菇', 'veg', 15, [['zucchini',220],['enoki',150],['oil',6],['garlic',8],['soySauce',6]], ['柔嫩瓜菜','菌菇轮换','不辣'], '浅绿西葫芦片与细束金针菇搭配，增加熟蔬菜口感与菌菇种类。', '配河虾仁豆腐煲或鸡肉主菜与米饭；金针菇彻底煮熟。', ['嫩西葫芦洗净切半月薄片，金针菇去根洗净拆小束。','少量油炒香蒜末，先下西葫芦，再加金针菇与少量水。','煮炒至瓜片熟软、金针菇彻底熟透，加生抽翻匀，避免额外重咸调味。'], '#c2c6a7'),
+    R('chiveEgg', '韭菜炒蛋', 'main', 15, [['egg',200],['chive',220],['oil',8],['salt',1]], ['韭香家常','蛋类主菜','不辣'], '鸡蛋提供蛋白质，熟韭菜带清香；金黄蛋块与深绿叶段丰富口感。', '配黑米饭和白花菜胡萝卜小炒；韭菜、鸡蛋均熟制，下一餐可轮换肉或豆腐。', ['青叶韭菜去坏叶洗净沥干，切短段；鸡蛋在干净碗中打散。','部分油把鸡蛋炒至完全凝固后盛起，余油炒熟韭菜。','蛋块回锅充分热透，少量盐拌匀；不加入配方外虾皮或肉。'], '#c6be83', { updated:'2026-10-14', recipeStatus:'home-adaptation', cookedSourceIds:['cookChiveEgg'], safetySourceIds:['cfsCooking'] }),
+    R('garlicScapePork', '蒜薹肉丝', 'main', 20, [['pork',230],['garlicScape',240],['carrot',60],['oil',8],['soySauce',8],['ginger',5]], ['清脆蒜香','瘦肉搭档','不辣'], '里脊肉丝提供蛋白质，蒜薹的圆茎与少量胡萝卜丝形成嫩脆对比。', '配燕麦饭和清炒大白菜；蒜薹与青蒜苗不是同一种食材。', ['蒜薹去老端与花苞，洗净切短段；胡萝卜切细丝，里脊切丝，生熟刀板分开。','少量油炒香姜丝，肉丝炒至彻底熟透后盛起。','用余油炒胡萝卜和蒜薹，加少量水焖炒至熟，再加肉丝与生抽热透。'], '#b6b38b', { updated:'2026-10-14', recipeStatus:'home-adaptation', cookedSourceIds:['cookGarlicScapePork'], safetySourceIds:['cfsCooking'] }),
+    R('pepperDriedTofu', '青椒豆干', 'main', 18, [['driedTofu',300],['greenPepper',180],['onion',80],['oil',6],['soySauce',6],['garlic',6]], ['植物蛋白','豆干轮换','川味微辣'], '原味压制豆干提供扎实植物蛋白，二荆条与洋葱增加鲜香和清脆感。', '配米饭和蒜蓉空心菜；豆干与生抽的实际含盐量以产品标签为准，避免重复重咸。', ['原味压制豆干切短条，二荆条去蒂切细段，紫皮洋葱切丝，蒜切末。','少量油炒香蒜和洋葱，加入豆干与少量水翻炒热透。','下青椒炒熟，加少量生抽拌匀；不以油炸、烟熏或卤制香干替代原味条目。'], '#c2b690', { updated:'2026-10-14', recipeStatus:'home-adaptation', cookedSourceIds:['cookTofuPepper'], nutritionNote:'按双人可食部原料相加估算；原味豆干按产品状态重量。品牌含水量、配料与含盐量不同，需核对实际包装，不能等重替换卤制香干。' }),
+    R('tomatoFish', '番茄鲢鱼片', 'main', 25, [['silverCarp',280],['tomato',320],['oil',6],['ginger',8],['garlic',6],['salt',1],['scallion',5]], ['淡水鱼轮换','酸甜家常','不辣'], '鲢鱼净肉提供鱼类蛋白，番茄煮软形成自然酸甜薄汁，适合与清爽绿叶菜搭配。', '配米饭与清炒上海青；逐片检查残留鱼刺，鱼肉彻底煮熟，不能按生鱼片食用。', ['买去皮去骨鲢鱼净肉，仍逐片检查残留细刺，切较厚鱼片；番茄切块，生熟器具分开。','少量油炒香姜蒜，加入番茄炒软，加适量水煮开。','鱼片逐片下锅，保持沸煮至最厚鱼片充分熟透，少量盐调味撒葱；用温度计检查比仅看颜色可靠。'], '#d4ad96', { updated:'2026-10-14', recipeStatus:'home-adaptation', cookedSourceIds:['cookTomatoFish'], safetySourceIds:['cfsCooking'], storage:safeStorage+' 鱼刺检查在分餐时再确认。' }),
+    R('taroChicken', '小芋头炖鸡', 'main', 38, [['chickenThigh',250],['taro',260],['shiitake',100],['oil',6],['soySauce',8],['ginger',8],['scallion',5]], ['芋儿家常','温暖炖菜','含薯类'], '去皮无骨鸡腿与煮软小芋头组成温暖炖菜，香菇带来鲜味；芋头属于主食搭配的一部分。', '配蒜蓉菠菜和小一份米饭；这是清淡家常改良，不是红油江湖芋儿鸡复刻。', ['正规食用小芋头戴手套去皮，大的对半切；鸡腿去皮去骨切块，香菇切片。','少量油炒香姜与鸡块，加水、生抽、芋头和香菇煮开后小火炖。','炖至鸡肉中心充分熟透、芋头完全绵软，撒葱；不能用固定时长代替熟度，也不采食野芋。'], '#c4b59e', { updated:'2026-10-14', recipeStatus:'home-adaptation', cookedSourceIds:['cookTaroChicken'], safetySourceIds:['cfsCooking','cfsWildTaro'] }),
+    R('oysterEgg', '平菇炒蛋', 'main', 17, [['egg',200],['oysterMushroom',300],['oil',8],['salt',1],['scallion',5]], ['鲜菇蛋香','蛋类主菜','不辣'], '鸡蛋与平菇的扇形菌盖形成柔软、弹嫩的对比，清淡炒制也有鲜味。', '配红薯米饭与蒜香手撕莲花白；菌菇不能代替主蛋白，鸡蛋仍是本菜主体蛋白来源。', ['鲜平菇去老根洗净，沿纹理撕成小片；鸡蛋打散，小葱洗净切末。','部分油炒蛋至完全凝固后盛起，余油下平菇，加少量水煮炒至熟。','蛋块回锅充分热透，少量盐调味撒葱；不添加火腿、虾皮或小米椒。'], '#d0c1a1', { updated:'2026-10-14', recipeStatus:'home-adaptation', cookedSourceIds:['cookOysterEgg'], safetySourceIds:['cfsCooking'] }),
+    R('handTornCabbage', '蒜香手撕莲花白', 'veg', 12, [['cabbage',400],['garlic',8],['oil',6],['vinegar',8],['soySauce',6]], ['莲花白家常','脆甜叶菜','不辣'], '绿球甘蓝撕成不规则叶片，熟后脆甜；少量蒜和香醋增加风味层次。', '配平菇炒蛋或番茄鱼片与米饭；深绿叶菜在其他餐轮换。', ['绿球甘蓝去坏叶、硬芯，逐片洗净，撕成小块沥水；蒜切片。','少量油炒香蒜片，先炒厚梗再下叶片，必要时加少量水。','炒至梗叶均熟，加生抽与香醋翻匀；不添加猪油、五花肉或干辣椒。'], '#bbc795', { updated:'2026-10-14', recipeStatus:'home-adaptation', cookedSourceIds:['cookTornCabbage'] }),
+    R('garlicWaterSpinach', '蒜蓉空心菜', 'veg', 12, [['waterSpinach',360],['garlic',10],['oil',6],['salt',1]], ['绿梗叶菜','蒜香清炒','不辣'], '空心菜的绿梗与软叶增加夏日绿叶菜变化，少量蒜香就能搭配豆干或肉类主菜。', '配青椒豆干和米饭；本菜只是蔬菜配菜，仍需主菜和主食。', ['嫩绿梗空心菜去粗老茎，逐片洗净，切短段并将梗叶分开。','少量油炒香蒜末，先下茎段炒熟，再放叶片。','炒至茎叶均熟软，少量盐调味，及时出锅；不加腐乳或额外辣椒。'], '#94b18a', { updated:'2026-10-14', recipeStatus:'home-adaptation', cookedSourceIds:['cookWaterSpinach'] }),
+    R('vinegarMungSprout', '醋香绿豆芽', 'veg', 15, [['mungBeanSprout',360],['chive',60],['garlic',6],['oil',6],['vinegar',10],['salt',1]], ['熟制芽菜','酸香清爽','不辣'], '充分熟制的绿豆芽保持爽脆，少量韭菜和香醋增加香气。', '配肉、蛋或豆腐主菜与米饭；豆芽需煮熟，不作生芽凉拌替换。', ['来源可靠的新鲜绿豆芽流水洗净，去坏芽；韭菜洗净切段。','绿豆芽先放沸水中煮至充分熟透后沥水；清洗与短焯几秒不能替代熟制。','少量油炒香蒜末，加入韭菜炒熟，再下熟豆芽、香醋和盐，整体热透。'], '#cbd1ae', { updated:'2026-10-14', recipeStatus:'home-adaptation', cookedSourceIds:['cookMungSprout'], safetySourceIds:['hcSprouts'] }),
+    R('cauliflowerCarrot', '白花菜胡萝卜小炒', 'veg', 16, [['cauliflower',280],['carrot',120],['garlic',8],['oil',6],['salt',1]], ['白橙花球','清爽配菜','不辣'], '紧实白花菜小朵与橙色胡萝卜薄片增加颜色和花球口感，与蛋类主菜相配。', '配韭菜炒蛋与杂粮饭；与绿西兰花轮换，白花菜不代表全天蔬菜都已足够。', ['白花菜去硬根、老叶，掰小朵洗净；胡萝卜切薄片，蒜切末。','花菜用沸水煮至接近熟后沥水，少量油炒香蒜与胡萝卜。','加花菜与少量水继续炒至熟，少量盐调味；不画或加入五花肉、干辣椒。'], '#d1c5a0', { updated:'2026-10-14', recipeStatus:'home-adaptation', cookedSourceIds:['cookCauliflower'] }),
+    R('yamWoodEar', '山药木耳小炒', 'veg', 18, [['yam',240],['woodEar',6],['carrot',80],['oil',6],['garlic',6],['salt',1]], ['山药熟片','菌菇脆感','含淀粉根茎'], '熟山药片、木耳与胡萝卜形成白、黑、橙的脆软对比；山药含淀粉，不能完全按绿叶菜安排。', '配有足量绿叶菜的香菇青菜豆腐煲，米饭可留小一份；另一餐再轮换深绿叶菜。', ['干黑木耳冷藏泡发洗净去老根，山药戴手套去皮切薄片，胡萝卜切薄片。','山药片用沸水煮熟，少量油炒香蒜与胡萝卜，加入木耳和少量水继续煮炒。','木耳彻底熟透后加入熟山药片，少量盐翻匀热透；不长时间常温泡木耳。'], '#c9c5b0', { updated:'2026-10-14', recipeStatus:'home-adaptation', cookedSourceIds:['cookYamWoodEar'] }),
+    R('oysterTofuSoup', '平菇嫩豆腐汤', 'soup', 18, [['oysterMushroom',200],['silkenTofu',250],['ginger',5],['oil',3],['salt',1],['scallion',5]], ['鲜菇清汤','温柔豆腐','不辣'], '熟平菇与嫩豆腐让清汤有弹嫩和细滑两种口感，汤中的豆腐也要吃下。', '作为完整正餐的汤菜搭档，仍配主菜、蔬菜和主食；不以喝汤代替进餐。', ['平菇去老根洗净撕小片，嫩豆腐切块，姜切丝。','少量油炒香姜和平菇，加水煮开，加入豆腐。','煮至平菇与豆腐充分熟透，少量盐调味撒葱，保持清汤口感。'], '#cac5b2', { updated:'2026-10-14', recipeStatus:'local-home', cookedSourceIds:['cookOysterTofuSoup'] }),
+    R('radishEggSoup', '白萝卜蛋花汤', 'soup', 20, [['whiteRadish',280],['egg',100],['ginger',4],['salt',1],['scallion',5]], ['清甜根菜汤','凝固蛋花','不辣'], '白萝卜细丝煮软清甜，凝固蛋花丰富汤的口感；汤只是餐旁搭档。', '配主菜、绿叶菜和米饭；蛋花汤不替代主菜槽，也不宣称滋补治疗作用。', ['长白萝卜去老皮洗净切细丝，鸡蛋打散，姜切细丝。','清水加姜与萝卜丝煮开，煮至萝卜充分软熟。','缓慢淋入蛋液，煮至蛋花完全凝固，少量盐调味撒葱。'], '#d5ceb0', { updated:'2026-10-14', recipeStatus:'local-home', cookedSourceIds:['cookRadishEggSoup'], safetySourceIds:['cfsCooking'] }),
+    R('luffaShrimpSoup', '丝瓜河虾仁汤', 'soup', 20, [['luffa',280],['shrimp',140],['ginger',5],['oil',3],['salt',1],['scallion',5]], ['柔嫩清汤','熟制河虾仁','不辣'], '丝瓜软块与熟河虾仁组成清鲜汤菜，增加瓜菜与水产轮换。', '搭配一份主菜、绿叶菜与米饭；对甲壳类过敏时不选，虾仁不能只看变色判断熟透。', ['嫩丝瓜去皮切滚刀块，河虾仁去残壳与虾线，生熟工具分开。','少量油炒香姜和丝瓜，加水煮开至丝瓜软。','加入河虾仁充分煮熟，最厚虾肉也要热透，再少量盐调味撒葱。'], '#c7ceb1', { updated:'2026-10-14', recipeStatus:'local-home', cookedSourceIds:['cookLuffaShrimpSoup'], safetySourceIds:['cfsCooking'] }),
+    R('sweetPotatoRice', '红薯米饭', 'staple', 35, [['rice',100],['sweetPotato',200]], ['谷薯组合','自然清甜','不加糖'], '红心红薯小块与熟籼米饭搭配，让主食有自然甜香；两者一起计入主食份额。', '配不含土豆、芋头或山药的主菜与绿叶菜；不能在完整米饭之外无限加薯。', ['红心红薯洗净去皮切小块，籼米快速淘洗。','放入电饭煲，按米种和锅具建议加水，将薯块铺在米上。','煮至米饭与红薯完全熟软，稍焖后轻轻翻松；不加糖，留餐及时分装冷藏。'], '#d6b28a', { updated:'2026-10-14', recipeStatus:'local-home', cookedSourceIds:['cookSweetPotatoRice'], safetySourceIds:['cfsRice'] }),
+    R('milletRiceCongee', '小米大米粥', 'staple', 30, [['millet',80],['rice',50]], ['谷物轮换','温暖稠粥','不加糖'], '黄小米与籼米煮成柔软稠粥，增加主食的谷物变化；配蛋白质菜和蔬菜更完整。', '配嫩豆腐蒸蛋和蒜蓉空心菜；粥是主食，不能单独作为完整晚餐。', ['黄小米和籼米快速淘洗，不反复揉搓。','锅中加适量水煮开，放入两种谷物，小火煮至米粒熟软，防止溢锅。','根据锅具调整水量，搅匀成柔软稠粥，不加糖或奶精；留餐浅盒分装及时冷藏。'], '#d5c594', { updated:'2026-10-14', recipeStatus:'local-home', cookedSourceIds:['cookMilletCongee'], safetySourceIds:['cfsRice'] })
   ];
 
   // 三个固定槽位：main 是蛋/肉/豆腐主菜，纯汤不替代主菜。
@@ -179,19 +208,49 @@
     { main: 'radishChicken', veg: 'snowPeaMushroom', staple: 'whiteRice' },
     { main: 'lotusPork', veg: 'stirNapa', staple: 'oatRice', note: '藕也含淀粉，避免再配土豆焖饭。' },
     { main: 'luffaEgg', veg: 'wellCookedGreenBean', staple: 'blackRiceMix' },
-    { main: 'shrimpTofu', veg: 'zucchiniMushroom', staple: 'cornRice' }
+    { main: 'shrimpTofu', veg: 'zucchiniMushroom', staple: 'cornRice' },
+    { main: 'chiveEgg', veg: 'cauliflowerCarrot', staple: 'blackRiceMix' },
+    { main: 'garlicScapePork', veg: 'stirNapa', staple: 'oatRice' },
+    { main: 'pepperDriedTofu', veg: 'garlicWaterSpinach', staple: 'whiteRice' },
+    { main: 'tomatoFish', veg: 'stirShanghaibok', staple: 'oatRice' },
+    { main: 'taroChicken', veg: 'garlicSpinach', staple: 'whiteRice', note: '主菜已有芋头，米饭可留小一份，不再叠加红薯饭或土豆饭。' },
+    { main: 'oysterEgg', veg: 'handTornCabbage', staple: 'sweetPotatoRice' },
+    { main: 'mushroomChicken', veg: 'vinegarMungSprout', staple: 'blackRiceMix' },
+    { main: 'mushroomTofuPot', veg: 'yamWoodEar', staple: 'whiteRice', note: '主菜已有绿叶菜，配菜中的山药含淀粉，米饭可留小一份。' },
+    { main: 'tofuEggSteam', veg: 'garlicWaterSpinach', staple: 'milletRiceCongee' }
   ];
   const sources = [
     { id: 'cns2022', title: '中国营养学会 · 中国居民膳食指南（2022）', url: 'https://dg.cnsoc.org/article/2021b.html', updated: '2022', checked: updated, note: '成人一般膳食原则的公开科普依据，不是本应用逐项食物成分数据来源。' },
     { id: 'cnsEnergy', title: '膳食指南 2022 · 吃动平衡，健康体重', url: 'https://dg.cnsoc.org/article/04/k9W2iu8FT6K5oWaQKArU9g.html', updated: '2022-05-02', checked: updated, note: '用于能量平衡的一般解释；本应用未据此生成个人热量缺口。' },
     { id: 'cnsPlants', title: '膳食指南 2022 · 多吃蔬果、奶类、全谷、大豆', url: 'https://dg.cnsoc.org/article/04/70JvPbFmTlyZbjoO67LeRg.html', updated: '2022-05-03', checked: updated, note: '用于蔬菜、整果和全谷物搭配；本应用不宣称只规划午晚餐即可全天达标。' },
-    { id: 'cnsProtein', title: '膳食指南 2022 · 适量吃鱼、禽、蛋、瘦肉', url: 'https://dg.cnsoc.org/article/04/3tyM8WoTTUmc_oFHMymk3Q.html', updated: '2022-05-04', checked: updated, note: '用于蛋白质食物轮换与烹调解释；本期菜单范围没有覆盖鱼奶等全天食物。' },
-    { id: 'whoHealthy', title: 'WHO · Healthy diet', url: 'https://www.who.int/news-room/fact-sheets/detail/healthy-diet', updated: '2026-01-26', checked: updated, note: '健康膳食、食物多样性及少盐少糖原则；数值标准不直接用作此局部餐单的达标评分。' },
+    { id: 'cnsProtein', title: '膳食指南 2022 · 适量吃鱼、禽、蛋、瘦肉', url: 'https://dg.cnsoc.org/article/04/3tyM8WoTTUmc_oFHMymk3Q.html', updated: '2022-05-04', checked: updated, note: '用于蛋白质食物轮换与烹调解释；菜单只覆盖所选正餐与水果，没有计算完整全天摄入。' },
+    { id: 'whoHealthy', title: 'WHO · Healthy diet', url: 'https://www.who.int/news-room/fact-sheets/detail/healthy-diet', updated: '2026-01-26', checked: '2026-10-14', note: '健康膳食、食物多样性及少盐少糖原则；数值标准不直接用作此局部餐单的达标评分。' },
     { id: 'whoSafety', title: 'WHO · Five keys to safer food', url: 'https://www.who.int/docs/librariesprovider2/default-document-library/5keys_en.pdf', updated: '2001', checked: updated, note: '用于生熟分开、彻底煮熟、及时冷藏等食品安全提示。' },
-    { id: 'fdaStorage', title: 'FDA · Are You Storing Food Safely?', url: 'https://www.fda.gov/consumers/consumer-updates/are-you-storing-food-safely', updated: '页面未标注统一修订日', checked: updated, note: '用于冷藏不高于 4°C、易腐食品及时入冰箱及炎热环境缩短常温放置时间。' },
+    { id: 'fdaStorage', title: 'FDA · Are You Storing Food Safely?', url: 'https://www.fda.gov/consumers/consumer-updates/are-you-storing-food-safely', updated: '页面未标注统一修订日', checked: '2026-10-14', note: '用于冷藏不高于 4°C、易腐食品及时入冰箱及炎热环境缩短常温放置时间。' },
     { id: 'cfsProduce', title: '香港食物安全中心 · 水果和蔬菜的营养素含量', url: 'https://www.cfs.gov.hk/sc_chi/programme/programme_rafs/programme_rafs_n_01_04_01_fruit_veg_report.html', updated: '历史公开研究报告；详见原页面', checked: '2026-10-13', note: '本轮参考一般草莓、鲜桃、西瓜、柚子、火龙果与丝瓜条目的原料营养量级；不是食间具体品种或批次实测，可食部与价格不来自此报告。' },
     { id: 'cfsBeans', title: '香港食物安全中心 · 豆类与植物血球凝集素', url: 'https://www.cfs.gov.hk/tc_chi/multimedia/multimedia_pub/multimedia_pub_fsb_202402.html', updated: '2024-06', checked: '2026-10-13', note: '四季豆等豆类食用前必须正确烹煮、彻底煮熟。本文的干豆示例不能机械当作鲜四季豆统一的烹调时长。' },
-    { id: 'cfsCooking', title: '香港食物安全中心 · 烹煮及翻热', url: 'https://www.cfs.gov.hk/sc_chi/trade_zone/safe_kitchen/Cooking_and_reheating.html', updated: '页面未标注统一修订日', checked: '2026-10-13', note: '生肉、禽、虾与蛋充分熟制；建议以温度计检查中心温度至少 75°C 并维持 30 秒，具体食材仍须充分加热。' },
+    { id: 'cfsCooking', title: '香港食物安全中心 · 烹煮及翻热', url: 'https://www.cfs.gov.hk/sc_chi/trade_zone/safe_kitchen/Cooking_and_reheating.html', updated: '页面未标注统一修订日', checked: '2026-10-14', note: '生肉、禽、虾与蛋充分熟制；建议以温度计检查中心温度至少 75°C 并维持 30 秒，具体食材仍须充分加热。' },
+    { id: 'hcSprouts', title:'加拿大卫生部 · Food safety tips for sprouts', url:'https://www.canada.ca/en/health-canada/services/food-safety-fruits-vegetables/sprouts.html', updated:'页面未读取到统一修订日', checked:'2026-10-14', kind:'food-safety', note:'芽菜须清洗并彻底煮熟；清洗不能保证去除全部污染。本库绿豆芽仅用于熟制菜。' },
+    { id: 'cfsWildTaro', title:'香港食物安全中心 · 进食野芋引致的食物中毒', url:'https://www.cfs.gov.hk/tc_chi/multimedia/multimedia_pub/multimedia_pub_fsf_211_03.html', updated:'2024-02', checked:'2026-10-14', kind:'food-safety', note:'只购买可靠供应商的可食芋头，不采食不明野生球茎；烹煮不能让误采的野芋变安全。' },
+    { id: 'cfsRice', title:'香港食物安全中心 · Foods that need extra care', url:'https://www.cfs.gov.hk/english/trade_zone/safe_kitchen/Foods_that_need_extra_care.html', updated:'页面未标注统一修订日', checked:'2026-10-14', kind:'food-safety', note:'熟饭及时保温或冷却冷藏；复热不能保证消除不当常温存放产生的耐热毒素。' },
+    ...[
+      ['cookChiveEgg','下厨房 · 韭菜炒鸡蛋','https://m.xiachufang.com/recipe/92086/','2011-08-07','仅参考韭菜叶段与凝固炒蛋的组合和形态；份量、用油与步骤为食间整理。'],
+      ['cookGarlicScapePork','美食天下 · 肉丝炒蒜薹','https://home.meishichina.com/recipe-534586.html','详见原页','已读取公开搜索摘要确认里脊肉丝与蒜薹组合；原页面直接读取失败，未宣称完整核验。食间不采用甜面酱或料酒。'],
+      ['cookTofuPepper','下厨房 · 青椒炒豆干','https://www.xiachufang.com/recipe/104733465/','2020-06-17','仅参考豆干短条、青椒丝的炒菜类别；食间限定原味豆干与二荆条，增添洋葱、减少用油，不加糖或老抽。'],
+      ['cookTomatoFish','央视《天天饮食》· 酸汤番茄鱼','https://tv.cctv.com/v/v2/VIDE1370767331633131.html','2011-12-25','仅参考熟鱼片与软番茄薄汤汁的类别；原方为鲈鱼，食间使用鲢鱼净肉，不含泡椒、酸豇豆、鱼骨汤或番茄酱。'],
+      ['cookTaroChicken','央视《家乡至味2022》· 芋儿鸡','https://tv.cctv.com/2022/02/06/VIDE4TtRSNNf59Q0BuaVpiJQ220206.shtml','2022-02-06','节目页面只用于芋儿鸡菜类与川渝背景，不是食间完整做法的出处；本方是去皮无骨鸡腿、香菇和小芋头的清淡家常改良。'],
+      ['cookOysterEgg','美食天下 · 平菇炒鸡蛋','https://home.meishichina.com/recipe-243233.html','详见原页','已读取公开搜索内容确认撕片平菇与凝固炒蛋类别；直接页面读取失败。食间不采用火腿、虾皮、小米椒，也不采用原文治疗宣称。'],
+      ['cookTornCabbage','Cookidoo · 手撕包菜','https://cookidoo.it/recipes/recipe/it/r588496','详见原页','参考手撕不规则甘蓝叶片的类别；食间用油与调味单独设定，不加干辣椒或白糖，不复制专用机器步骤。'],
+      ['cookWaterSpinach','下厨房 · 蒜爆空心菜','https://m.xiachufang.com/recipe/107157481/','2023-07-12','参考空心菜梗叶处理及蒜香熟制形态；本方用菜籽油，不含猪肥膘、猪油、鸡精与味精。'],
+      ['cookMungSprout','下厨房 · 醋溜绿豆芽','https://m.xiachufang.com/recipe/128617/','2011-11-26','参考乳白熟豆芽与醋香类别；食间另加熟韭菜，不加白糖、花椒和鸡精，安全熟制要求以卫生机构为准。'],
+      ['cookCauliflower','下厨房 · 清炒胡萝卜花椰菜','https://m.xiachufang.com/recipe/107257546/','2023-12-27','参考白花球与胡萝卜的熟菜组合；食间不含西兰花、蒜苗、白胡椒，也不复制专用机器步骤。'],
+      ['cookYamWoodEar','下厨房 · 山药炒木耳','https://m.xiachufang.com/recipe/191033/','2011-12-30','参考乳白山药片、卷耳木耳片的炒菜形态；食间另有胡萝卜，木耳冷藏泡发充分熟制，不采用蘑菇精。'],
+      ['cookOysterTofuSoup','下厨房 · 豆腐菌菇汤','https://m.xiachufang.com/recipe/102051444/','2016-09-22','参考撕片鲜平菇与嫩豆腐块的清汤类别；本方只用平菇，不含香菇、香菜、蒜、生抽或鸡精。'],
+      ['cookRadishEggSoup','下厨房 · 荷包蛋萝卜汤','https://www.xiachufang.com/recipe/106121383/','2021-02-15','仅参考白萝卜细丝与熟鸡蛋组合；食间改成完全凝固蛋花清汤，不煎荷包蛋、不加鸡精，不沿用原图奶白汤外观。'],
+      ['cookLuffaShrimpSoup','下厨房 · 丝瓜虾仁汤','https://m.xiachufang.com/recipe/1007681/','2011-11-03','参考软丝瓜块与熟虾仁的汤菜类别；食间限定鲜河虾仁，不含秀珍菇、胡椒、芫荽或水淀粉，熟度按卫生机构建议确认。'],
+      ['cookSweetPotatoRice','下厨房 · 红薯米饭','https://m.xiachufang.com/recipe/104133375/','2019-10-28','参考薯块与大米同煮类别；食间明确红心红薯、籼米和自己的双人配方，水量按锅具而非固定水位。'],
+      ['cookMilletCongee','下厨房 · 山西二米粥','https://m.xiachufang.com/recipe/83439/','2011，详见原页','仅参考小米与大米煮成湿软粥的类别；比例为食间配方，不采用原文医疗、营养精华等宣称，也不鼓励忽视溢锅。']
+    ].map(([id,title,url,sourceUpdated,note])=>({id,title,url,updated:sourceUpdated,checked:'2026-10-14',kind:'cooked-form-reference',note})),
     ...[
       [169914,'Nectarines, raw','一般鲜油桃'],
       [169949,'Plums, raw','一般鲜李，不是青脆李品种实测'],
@@ -220,7 +279,7 @@
     {
       id: 'protein', title: '蛋、豆腐、瘦肉轮流当主角', summary: '搭配有变化，比只吃一种蛋白质更好坚持。',
       explanation: '蛋、禽肉、瘦肉和大豆制品都可以成为餐中的蛋白质来源。豆腐与鸡蛋组合也适合家常主菜；清汤本身不能等同一份主菜。',
-      advice: '轮换蒸蛋、豆腐、禽肉和里脊，优先蒸煮与少油炒。喝肉汤时也吃汤里的肉；全天仍要另考虑奶类、鱼类等本期未覆盖的食物。', sourceIds: ['cnsProtein', 'cnsPlants'], color: '#ddbaaa'
+      advice: '轮换蒸蛋、豆腐、禽肉、鱼片和里脊，优先蒸煮与少油炒。喝肉汤时也吃汤里的肉；全天仍要另考虑早餐、奶类等菜单未完整覆盖的食物。', sourceIds: ['cnsProtein', 'cnsPlants'], color: '#ddbaaa'
     },
     {
       id: 'vegetables', title: '让蔬菜成为餐盘里显眼的一半', summary: '深绿、橙红、菌菇与茎菜轮换着搭配。',
@@ -241,10 +300,10 @@
 
   window.SHIJIAN_DATA = {
     meta: {
-      version: '1.1.0', updated: '2026-10-13', servings: 2, region: '川渝家庭常见食材',
-      dataNote: '营养与可食部仍是参考估算：部分新增原料已读取 USDA 官方条目或香港食安中心公开报告，但具体川渝品种、成熟度、部位与产品不同，不能宣称逐项实测。未校对条目明确留为演示估算。仅涵盖午晚餐与水果，不代表全天摄入。',
+      version: '1.2.0', updated: '2026-10-14', servings: 2, region: '川渝家庭常见食材',
+      dataNote: '营养与可食部仍是参考估算：2026-10-13 的部分新增原料已读取 USDA 官方条目或香港食安中心公开报告，但具体川渝品种、成熟度、部位与产品不同，不能宣称逐项实测。2026-10-14 新增 12 项均明确留为待校准的手工估算。仅涵盖所选正餐与水果，不代表全天摄入。',
       priceNote: '价格是为演示采购预算设置的静态估算，单位为元/千克；不是四川市场实时行情，也不等于实际购物账单。',
-      weightNote: '配方用量为双人份可食部原料重量；谷物和干木耳用干重，熟原味花生用成品重，其余为原料生重。去皮鸭胸、去刺鲢鱼净肉与去壳河虾仁的采购基准已是净料，edible=1，不能再次扣骨皮壳。理论购买重量=可食部需要量÷可食部比例。',
+      weightNote: '配方用量为双人份可食部原料重量；谷物（含黄小米）和干木耳用干重，熟原味花生与原味压制豆干用产品状态重量，其余为原料生重。去皮鸭胸、去刺鲢鱼净肉、去壳河虾仁和原味豆干的采购基准已是净料，edible=1，不能再次扣骨皮壳。理论购买重量=可食部需要量÷可食部比例。',
       formulaNote: '双人菜谱营养=sum(每100g原料营养×配方可食部原料克重÷100)，单人参考=双人总值÷2；按各营养字段分别汇总，不以4/9公式替换来源能量值。不校正烹调失水、吸油、留锅或营养损失。',
       cookingNote: '菜谱为食间整理的少油家常版本。实际用油、烹调损失与分餐不均会改变营养估算。',
       pairingNote: '蔬菜约半盘，主食和蛋白质各约四分之一，仅为餐盘视觉引导，并非精确热量或重量比例。',

@@ -10,7 +10,7 @@
  function amountsForDay(day,mode='both',servings=2){const amounts={};for(const k of kinds(mode))add(amounts,amountsForMeal(day[k],servings));if(I[day.fruit])amounts[day.fruit]=(amounts[day.fruit]||0)+(D.meta.fruitEdibleGramsPerPerson||200)*servings;return amounts;}
  function planAmounts(plan){const amounts={};plan.days.forEach(d=>add(amounts,amountsForDay(d,plan.mealMode||'both',2)));return amounts;}
  function estimateCost(plan,pantry={}){return Object.entries(planAmounts(plan)).reduce((sum,[id,g])=>sum+(pantry[id]?0:g/1000/(I[id].edible||1)*(I[id].pricePerKg||0)),0);}
- function rows(amounts,servings=2){return Object.entries(amounts).map(([id,g])=>({id,name:I[id]?.name||id,g,perPersonG:g/servings,basis:I[id]?.weightBasis==='dry'?'干品重量':I[id]?.weightBasis==='cooked-ready-to-eat'?'直接食用重量':I[id]?.category==='seasoning'?'调味品加入量':'可食部生重',nutrition:I[id]?.nutrition}));}
+ function rows(amounts,servings=2){return Object.entries(amounts).map(([id,g])=>({id,name:I[id]?.name||id,g,perPersonG:g/servings,basis:I[id]?.weightBasis==='dry'?'干品重量':I[id]?.weightBasis==='cooked-ready-to-eat'?(id==='driedTofu'?'产品状态重量':'直接食用重量'):I[id]?.category==='seasoning'?'调味品加入量':'可食部生重',nutrition:I[id]?.nutrition}));}
  const result=(amounts,servings)=>({servings,amounts,rows:rows(amounts,servings),total:totals(amounts),perPerson:totals(Object.fromEntries(Object.entries(amounts).map(([id,g])=>[id,g/servings])))});
  window.SHIJIAN_NUTRITION={keys,kinds,totals,amountsForRecipe,amountsForMeal,amountsForDay,planAmounts,estimateCost,rows,recipe:(id,servings=2)=>result(amountsForRecipe(id,servings),servings),day:(day,mode='both',servings=2)=>result(amountsForDay(day,mode,servings),servings)};
 })();
