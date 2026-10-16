@@ -1,6 +1,8 @@
 # 本地开发与预览
 
-食间是无需构建的静态网页。私人仓库包含 `dist/` 应用源码、当前运行图片、维护脚本和文档；克隆后不需要后端或安装前端依赖。
+食间是无需构建的静态网页。完整本地工作区包含 `dist/` 应用源码、当前运行图片、维护脚本和文档，不需要后端或安装前端依赖。
+
+当前 `.gitignore` 排除整个 `dist/`，仅克隆仓库不能启动应用；需要另行取得完整 `dist/`。以下预览与检查命令均以本机已具备该目录为前提。
 
 ## 文件结构
 
@@ -71,6 +73,6 @@ python3 scripts/rebuild-visuals.py --report .qa/visual-rebuild.json
 
 ## 提交与部署
 
-提交前检查 `git status --short` 与 `git diff --cached --name-only`。允许记录应用代码、运行图片和维护文档；`.gitignore` 排除菜单备份、浏览器数据、凭据、`.openai/`、`.site-source/` 与 `.qa/`，不要用 `git add -f` 绕过。
+提交前检查 `git status --short` 与 `git diff --cached --name-only`。当前 `.gitignore` 排除 `dist/`、菜单备份、浏览器数据、凭据、`.openai/`、`.site-source/` 与 `.qa/`，不要用 `git add -f` 绕过。本地保留的运行文件与 Git 跟踪状态分别核对；图片清理无需移除仍在使用的应用文件。
 
 清理文件只影响当前工作树，不自动缩减 Git 历史。源码提交、推送与网站部署分别处理；本仓库没有配置 GitHub Pages，推送不会自动更新线上应用。

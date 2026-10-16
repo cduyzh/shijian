@@ -63,7 +63,7 @@
 - `science`：6 条 `id, title, summary, explanation, advice, sourceIds[], color`。
 - `sources`：`id, title, url, updated, checked, note`；`sourceIds` 可以直接关联到真实公开权威页面。
 
-图片映射由主界面补充。本轮界面可显示配方的双人原料克重与按两人均分的单人营养估算；克重不是成品重量，单人值不是全天目标。食材单价与静态参考价格仍不代表购物报价。
+图片映射由当前素材清单提供，维护方式见[图片维护说明](visual-assets.md)。界面可显示配方的双人原料克重与按两人均分的单人营养估算；克重不是成品重量，单人值不是全天目标。食材单价与静态参考价格仍不代表购物报价。
 
 ## 2026-10-13 扩展：70 个食材、18 种水果、49 道菜
 
@@ -71,7 +71,7 @@
 
 ### 新增原料的核对状态
 
-官方 API 通过系统 `curl` 按正常证书校验读取，核对了食品名称、FDC ID、原料状态与每 100g 核心营养；未使用第三方转录网站充当官方数据。后续接口返回 HTTP 429，本轮停止继续请求，未把失败查询称为核对成功。公开 API 的 `DEMO_KEY` 是官方示例入口，不是用户凭据。
+官方 API 通过系统 `curl` 按正常证书校验读取，核对了食品名称、FDC ID、原料状态与每 100g 核心营养；未使用第三方转录网站充当官方数据。后续接口返回 HTTP 429，当时停止继续请求，未把失败查询称为核对成功。公开 API 的 `DEMO_KEY` 是官方示例入口，不是用户凭据。
 
 “同类已读取”表示存在可追溯的通用原料记录，**并非**当前川渝具体品种、指定肉部位或批次的精确化验。应用使用一位小数等显示取整，`nutritionStatus` 仍为 `estimate`。
 
@@ -112,7 +112,7 @@
 
 ### 新原料类型、计算基准与核对状态
 
-这 12 项的营养值**不是本轮读取的官方成分数据**，`nutritionReference.kind=uncalibrated-estimate`，`sourceId / foodCode` 保留空值，`updated=2026-10-14`。每 100g 可食部的能量单位是 kcal，其余营养字段单位是 g；可食部比例和元/千克价格也都是静态设计估算。核对日期表示整理、类型与数据合同核对日，不代表实验室检测、市场采价或成分表核对成功。
+这 12 项的营养值**不是已核对的官方成分数据**，`nutritionReference.kind=uncalibrated-estimate`，`sourceId / foodCode` 保留空值，`updated=2026-10-14`。每 100g 可食部的能量单位是 kcal，其余营养字段单位是 g；可食部比例和元/千克价格也都是静态设计估算。核对日期表示整理、类型与数据合同核对日，不代表实验室检测、市场采价或成分表核对成功。
 
 | ID / 原料 | 名称范围与计算基准 | 演示采购价（元/千克） |
 | --- | --- | --- |
@@ -133,9 +133,9 @@
 
 ### 熟制与留餐依据
 
-- [加拿大卫生部：Food safety tips for sprouts](https://www.canada.ca/en/health-canada/services/food-safety-fruits-vegetables/sprouts.html)，本轮已读取：芽菜清洗后仍要彻底煮熟；本库醋香绿豆芽先充分煮熟再回锅，避免将清洗、几秒焯水或醋汁当作安全保证。
-- [香港食安中心：进食野芋引致的食物中毒](https://www.cfs.gov.hk/tc_chi/multimedia/multimedia_pub/multimedia_pub_fsf_211_03.html)，本轮已读取：只选可靠供应商的食用芋头，不采不明野生植物；烹煮不能使误采的野芋安全。
-- [香港食安中心：Foods that need extra care](https://www.cfs.gov.hk/english/trade_zone/safe_kitchen/Foods_that_need_extra_care.html)，本轮已读取：熟饭及时保温或冷藏，复热不能保证去除不当常温放置产生的耐热毒素。红薯饭和双米粥仍按及时浅盒分装冷藏的规则留餐。
-- [香港食安中心：烹煮及翻热](https://www.cfs.gov.hk/sc_chi/trade_zone/safe_kitchen/Cooking_and_reheating.html)，本轮已重新读取：禽肉、肉丝、鱼片、虾仁和蛋充分熟制；最厚处用温度计核对更可靠。买去刺鲢鱼净肉仍需检查残留细刺，不凭“去刺”商品名称保证无刺。
+- [加拿大卫生部：Food safety tips for sprouts](https://www.canada.ca/en/health-canada/services/food-safety-fruits-vegetables/sprouts.html)，2026-10-14 整理时已读取：芽菜清洗后仍要彻底煮熟；本库醋香绿豆芽先充分煮熟再回锅，避免将清洗、几秒焯水或醋汁当作安全保证。
+- [香港食安中心：进食野芋引致的食物中毒](https://www.cfs.gov.hk/tc_chi/multimedia/multimedia_pub/multimedia_pub_fsf_211_03.html)，2026-10-14 整理时已读取：只选可靠供应商的食用芋头，不采不明野生植物；烹煮不能使误采的野芋安全。
+- [香港食安中心：Foods that need extra care](https://www.cfs.gov.hk/english/trade_zone/safe_kitchen/Foods_that_need_extra_care.html)，2026-10-14 整理时已读取：熟饭及时保温或冷藏，复热不能保证去除不当常温放置产生的耐热毒素。红薯饭和双米粥仍按及时浅盒分装冷藏的规则留餐。
+- [香港食安中心：烹煮及翻热](https://www.cfs.gov.hk/sc_chi/trade_zone/safe_kitchen/Cooking_and_reheating.html)，2026-10-14 整理时已重新读取：禽肉、肉丝、鱼片、虾仁和蛋充分熟制；最厚处用温度计核对更可靠。买去刺鲢鱼净肉仍需检查残留细刺，不凭“去刺”商品名称保证无刺。
 
 新增原料安全提示关联 `safetySourceIds`，新增菜谱包含 `updated / recipeStatus / cookedSourceIds`，公开做法参考与本地配方差异见 [成品图参考说明](COOKED-REFERENCES.md)。这些来源只支持熟制形态或一般安全原则，不承担新原料营养数值和采购价格的出处。
