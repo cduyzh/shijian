@@ -1,0 +1,126 @@
+name: Deploy published release through webhook
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-deploy-${{ github.event.release.id }}
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.event.release.draft == false && github.event.release.prerelease == false
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify release package and notify deployment endpoint
+        env:
+          DEPLOY_WEBHOOK_URL: ${{ secrets.DEPLOY_WEBHOOK_URL }}
+          DEPLOY_WEBHOOK_TOKEN: ${{ secrets.DEPLOY_WEBHOOK_TOKEN }}
+          EVENT_PATH: ${{ github.event_path }}
+          EXPECTED_COMMIT: ${{ github.sha }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          node --input-type=module <<'NODE'
+          import { readFile } from 'node:fs/promises';
+
+          const event = JSON.parse(await readFile(process.env.EVENT_PATH, 'utf8'));
+          const release = event.release;
+          if (!release || release.draft || release.prerelease) {
+            throw new Error('Only a published stable release can deploy.');
+          }
+          if (!process.env.DEPLOY_WEBHOOK_URL || !process.env.DEPLOY_WEBHOOK_TOKEN) {
+            console.warn('Deployment webhook is not configured; set repository secrets DEPLOY_WEBHOOK_URL and DEPLOY_WEBHOOK_TOKEN, then publish the draft release.');
+            process.exit(0);
+          }
+
+          const tag = release.tag_name;
+          if (!/^v\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$/.test(tag)) {
+            throw new Error(`Invalid release tag: ${tag}`);
+          }
+          if (!/^[0-9a-f]{40}$/i.test(process.env.EXPECTED_COMMIT)) {
+            throw new Error('Could not resolve the release commit SHA.');
+          }
+
+          const zipName = `shijian-dist-${tag}.zip`;
+          const manifestName = `${zipName}.manifest.json`;
+          const checksumName = `${zipName}.sha256`;
+          const assets = release.assets ?? [];
+          const findAsset = (name) => {
+            const matches = assets.filter((asset) => asset.name === name);
+            if (matches.length !== 1) throw new Error(`Release must contain exactly one ${name} asset.`);
+            return matches[0];
+          };
+          const zip = findAsset(zipName);
+          const manifestAsset = findAsset(manifestName);
+          const checksum = findAsset(checksumName);
+
+          const manifestResponse = await fetch(manifestAsset.browser_download_url);
+          if (!manifestResponse.ok) throw new Error(`Cannot fetch release manifest: HTTP ${manifestResponse.status}`);
+          const manifest = await manifestResponse.json();
+          if (manifest.schema_version !== 1 || manifest.tag !== tag) throw new Error('Release manifest version or tag does not match.');
+          if (manifest.source_commit?.toLowerCase() !== process.env.EXPECTED_COMMIT.toLowerCase()) {
+            throw new Error('Release package was not built from the commit referenced by this release tag.');
+          }
+          if (manifest.archive?.name !== zipName || manifest.archive.size !== zip.size) {
+            throw new Error('Release archive metadata does not match the uploaded ZIP asset.');
+          }
+          if (!/^[0-9a-f]{64}$/i.test(manifest.archive.sha256)) throw new Error('Release manifest has an invalid SHA-256.');
+          if (!Array.isArray(manifest.files) || manifest.file_count !== manifest.files.length || !manifest.files.some((file) => file.path === 'dist/index.html')) {
+            throw new Error('Release manifest is incomplete or does not contain the site entry point.');
+          }
+          if (zip.digest && zip.digest.toLowerCase() !== `sha256:${manifest.archive.sha256.toLowerCase()}`) {
+            throw new Error('GitHub asset digest does not match the release manifest.');
+          }
+          const checksumResponse = await fetch(checksum.browser_download_url);
+          if (!checksumResponse.ok) throw new Error(`Cannot fetch release checksum: HTTP ${checksumResponse.status}`);
+          const checksumText = (await checksumResponse.text()).trim();
+          if (checksumText !== `${manifest.archive.sha256.toLowerCase()}  ${zipName}`) {
+            throw new Error('Release SHA-256 sidecar does not match the manifest.');
+          }
+
+          const endpoint = new URL(process.env.DEPLOY_WEBHOOK_URL);
+          if (endpoint.protocol !== 'https:' || !(endpoint.hostname === 'cduyzh.top' || endpoint.hostname.endsWith('.cduyzh.top'))) {
+            throw new Error('DEPLOY_WEBHOOK_URL must use HTTPS on cduyzh.top or one of its subdomains.');
+          }
+
+          const payload = {
+            schema_version: 1,
+            event: 'release.published',
+            idempotency_key: `${process.env.REPOSITORY}:${release.id}`,
+            repository: process.env.REPOSITORY,
+            source_commit: manifest.source_commit,
+            release: {
+              id: release.id,
+              tag: tag,
+              url: release.html_url,
+              published_at: release.published_at,
+            },
+            artifact: {
+              name: zip.name,
+              size: zip.size,
+              sha256: manifest.archive.sha256.toLowerCase(),
+              download_url: zip.browser_download_url,
+              checksum_name: checksum.name,
+              checksum_download_url: checksum.browser_download_url,
+              manifest,
+            },
+          };
+          const response = await fetch(endpoint, {
+            method: 'POST',
+            headers: {
+              'Authorization': `Bearer ${process.env.DEPLOY_WEBHOOK_TOKEN}`,
+              'Content-Type': 'application/json',
+              'X-GitHub-Event': 'release',
+              'X-Idempotency-Key': payload.idempotency_key,
+            },
+            body: JSON.stringify(payload),
+            signal: AbortSignal.timeout(30_000),
+          });
+          const responseText = (await response.text()).slice(0, 2000);
+          if (!response.ok) throw new Error(`Deployment webhook returned HTTP ${response.status}: ${responseText}`);
+          console.log(`Deployment request accepted for ${tag}: HTTP ${response.status}`);
+          NODE

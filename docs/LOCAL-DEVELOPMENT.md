@@ -4,6 +4,8 @@
 
 当前 `.gitignore` 排除整个 `dist/`，仅克隆仓库不能启动应用；需要另行取得完整 `dist/`。以下预览与检查命令均以本机已具备该目录为前提。
 
+Release 打包、发布草稿与 webhook 部署说明见[GitHub Release 与 webhook 部署](RELEASE-DEPLOY.md)。
+
 ## 文件结构
 
 ```text

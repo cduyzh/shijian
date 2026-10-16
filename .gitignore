@@ -1,10 +1,11 @@
-# 私人仓库：仅允许项目源码、运行资产及说明文件。
+# 公开仓库：提交源码、发布配置与说明；本机运行产物和私有配置保持排除。
 /*
 !/.gitignore
 !/README.md
 !/docs/
 !/dist/
 !/scripts/
+!/.github/
 !/tests/
 
 /docs/*
@@ -14,6 +15,9 @@
 !/docs/NUTRITION-SOURCES.md
 !/docs/COOKED-REFERENCES.md
 !/docs/visual-assets.md
+!/docs/RELEASE-DEPLOY.md
+
+/.release-output/
 
 # 部署身份、凭据、本机菜单、验收导出及生成历史不提交；归档不得放入 dist。
 /.site-source/

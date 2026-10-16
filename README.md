@@ -46,6 +46,7 @@ Git 不保存用户菜单、浏览器存储或备份导出；部署凭据、托�
 - [产品设计与交互](docs/PRODUCT.md)
 - [本地保存与隐私](docs/PRIVACY.md)
 - [本地开发与预览](docs/LOCAL-DEVELOPMENT.md)
+- [GitHub Release 与 webhook 部署](docs/RELEASE-DEPLOY.md)
 - [营养与数据来源](docs/NUTRITION-SOURCES.md)
 - [熟菜效果图的公开参考与生成规范](docs/COOKED-REFERENCES.md)
 - [AI 图片素材记录](docs/visual-assets.md)
