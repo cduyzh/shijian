@@ -25,28 +25,33 @@
 !/dist/asset-layout.js
 !/dist/assets/
 
+# 仅登记当前在用资产；替换版本时同步收敛清单与校验脚本。
 /dist/assets/*
 !/dist/assets/favicon.svg
 !/dist/assets/cooked-hero.jpg
-!/dist/assets/ingredients-v4-*.png
-!/dist/assets/cooked-v4-*.png
-!/dist/assets/ingredients-v4-manifest.json
-!/dist/assets/cooked-v4-manifest.json
-!/dist/assets/cooked-detail-v5-*.png
-!/dist/assets/*-v5.png
-!/dist/assets/*-v5.jpg
-!/dist/assets/*-v5-manifest.json
+!/dist/assets/plate-photo-v5.png
+!/dist/assets/linen-table-v5.png
+!/dist/assets/meal-photo-v5-manifest.json
+!/dist/assets/ingredients-hires-v8-*.png
+!/dist/assets/ingredients-hires-v8-manifest.json
+!/dist/assets/cooked-spread-v9-*.png
+!/dist/assets/cooked-spread-v9-manifest.json
 
-# 部署身份、凭据、本机菜单、验收导出及生成历史不提交。
+# 部署身份、凭据、本机菜单、验收导出及生成历史不提交；归档不得放入 dist。
 /.site-source/
 /.openai/
 /.qa/
 /.env*
 /dist/assets/originals/
 **/node_modules/
+**/__pycache__/
+**/*.pyc
 **/.DS_Store
 **/*.log
 **/*.sqlite*
 **/*.db
 **/*-menu-backup*.json
 **/*credentials*
+
+# GitHub 仅保存源码与文档；本地构建/发布产物 dist 保留在工作区但不纳入版本库。
+/dist/

@@ -6,10 +6,10 @@
 
 用法：
     python3 scripts/rebuild-visuals.py
-    python3 scripts/rebuild-visuals.py --report .qa/v5/visual-rebuild.json
+    python3 scripts/rebuild-visuals.py --report .qa/visual-rebuild.json
 
-根目录从本脚本位置解析。合并顺序为旧版本先、新版本后，detail 清单
-在同版本最后覆盖。提供的 sourceRect/sourceSize 保留原坐标；只有缺失
+根目录从本脚本位置解析。只读取当前食材和菜品两份完整清单，不回退到
+历史版本或按文件名覆盖映射。提供的 sourceRect/sourceSize 保留原坐标；只有缺失
 sourceRect 时，才根据图集网格及全图 alpha 连通主体推导矩形。
 """
 
@@ -23,7 +23,6 @@ import json
 import math
 import os
 from pathlib import Path
-import re
 import shutil
 import subprocess
 import sys
@@ -40,6 +39,10 @@ ASSETS = ROOT / "dist" / "assets"
 ALPHA_THRESHOLD = 128
 TARGETS = {"ingredients": 0.80, "recipes": 0.85}
 EXPECTED_COUNTS = {"ingredients": 82, "recipes": 65}
+CURRENT_MANIFESTS = {
+    "ingredients": "ingredients-hires-v8-manifest.json",
+    "recipes": "cooked-spread-v9-manifest.json",
+}
 NODE_LOADER = r"""
 const fs = require('fs'), vm = require('vm');
 const context = { window: {} };
@@ -80,49 +83,25 @@ def load_data_ids() -> dict[str, list[dict]]:
     return data
 
 
-def manifest_order(path: Path) -> tuple[int, int, str]:
-    match = re.search(r"(?:^|-)v(\d+)(?:-|\.)", path.name)
-    version = int(match.group(1)) if match else 0
-    return version, int("detail" in path.stem.lower()), path.name
-
-
 def combine_manifests(data: dict, report: dict) -> dict[str, dict]:
     merged = {kind: {} for kind in TARGETS}
-    origins = {kind: {} for kind in TARGETS}
     allowed = {kind: {row["id"] for row in rows} for kind, rows in data.items()}
-    for path in sorted(ASSETS.glob("*-manifest.json"), key=manifest_order):
+    for kind, filename in CURRENT_MANIFESTS.items():
+        path = ASSETS / filename
         manifest = json.loads(path.read_text(encoding="utf-8"))
-        counts = {}
-        for kind in TARGETS:
-            entries = manifest.get(kind)
-            if entries is None:
-                continue  # 餐盘和背景清单不是食材或菜谱映射。
-            if not isinstance(entries, dict):
-                raise ValueError(f"{path.name} 的 {kind} 必须为按 ID 索引的对象。")
-            counts[kind] = 0
-            for item_id, entry in entries.items():
-                if item_id not in allowed[kind]:
-                    report["ignoredIds"].append({"manifest": path.name, "kind": kind, "id": item_id})
-                    continue
-                if not isinstance(entry, dict) or not isinstance(entry.get("file"), str):
-                    raise ValueError(f"{path.name}/{kind}/{item_id} 缺少有效 file。")
-                if item_id in merged[kind]:
-                    report["overrides"].append({
-                        "kind": kind, "id": item_id, "from": origins[kind][item_id], "to": path.name,
-                    })
-                # 整条映射替换，避免新图误继承旧图的 sourceRect 或网格。
-                merged[kind][item_id] = dict(entry)
-                origins[kind][item_id] = path.name
-                counts[kind] += 1
-        if counts:
-            report["manifests"].append({
-                "file": path.name, "sha256": digest(path), "versionOrder": list(manifest_order(path)[:2]),
-                "acceptedCounts": counts,
-            })
-    for kind, ids in allowed.items():
-        missing = sorted(ids - set(merged[kind]))
-        if missing:
-            raise ValueError(f"{kind} 缺少图片映射：{', '.join(missing)}")
+        entries = manifest.get(kind)
+        if not isinstance(entries, dict):
+            raise ValueError(f"{path.name} 的 {kind} 必须为按 ID 索引的对象。")
+        missing, extra = allowed[kind] - set(entries), set(entries) - allowed[kind]
+        if missing or extra:
+            raise ValueError(f"{kind} 映射与 data.js 不一致；缺少：{sorted(missing)}；多余：{sorted(extra)}")
+        for item_id, entry in entries.items():
+            if not isinstance(entry, dict) or not isinstance(entry.get("file"), str):
+                raise ValueError(f"{path.name}/{kind}/{item_id} 缺少有效 file。")
+            merged[kind][item_id] = dict(entry)
+        report["manifests"].append({
+            "file": path.name, "sha256": digest(path), "acceptedCounts": {kind: len(entries)},
+        })
     return merged
 
 
@@ -312,7 +291,7 @@ def main() -> int:
     report = {
         "checkedAt": datetime.now(timezone.utc).isoformat(), "passed": False,
         "alphaThreshold": ALPHA_THRESHOLD, "targets": TARGETS, "expectedCounts": EXPECTED_COUNTS,
-        "manifests": [], "overrides": [], "ignoredIds": [], "images": {},
+        "manifests": [], "images": {},
         "items": {kind: {} for kind in TARGETS},
         "note": "仅重建映射并分析透明主体；不编辑图片，不代替品种、熟制细节或 UI 视觉验收。",
     }
@@ -328,7 +307,7 @@ def main() -> int:
                 item_id = entry["id"]
                 visuals[kind][item_id], layouts[kind][item_id] = normalize_mapping(kind, item_id, merged[kind][item_id], cache, report)
         compact = lambda value: json.dumps(value, ensure_ascii=False, separators=(",", ":"))
-        visual_text = "/* 从透明素材清单重建；保留 sourceSize 和原图 sourceRect，详情素材优先。 */\nwindow.SHIJIAN_VISUALS = " + compact(visuals) + ";\n"
+        visual_text = "/* 从当前完整素材清单重建；保留 sourceSize 和原图 sourceRect。 */\nwindow.SHIJIAN_VISUALS = " + compact(visuals) + ";\n"
         layout_text = "/* 仅读取 alpha>=128 归一化：食材最大边80%，菜谱85%；未修改位图。 */\nwindow.SHIJIAN_ASSET_LAYOUT = " + compact(layouts) + ";\n"
         # 所有映射及边界校验成功后才替换输出文件。
         atomic_write(ROOT / "dist" / "visuals.js", visual_text)
@@ -346,7 +325,7 @@ def main() -> int:
             destination = args.report if args.report.is_absolute() else ROOT / args.report
             atomic_write(destination, json.dumps(report, ensure_ascii=False, indent=2) + "\n")
     if report["passed"]:
-        print(json.dumps({"passed": True, "counts": report["counts"], "overrides": len(report["overrides"]), "images": len(report["images"])}, ensure_ascii=False))
+        print(json.dumps({"passed": True, "counts": report["counts"], "images": len(report["images"])}, ensure_ascii=False))
         return 0
     return 1
 

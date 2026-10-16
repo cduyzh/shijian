@@ -1,0 +1,2949 @@
+{
+  "capturedFor": "v8 每个主体最长边至少达到当前v7的1.5倍；原图重生成，不用位图放大代替",
+  "items": {
+    "ingredients": {
+      "rice": {
+        "file": "ingredients-flat-v7-a.png",
+        "bounds": [
+          2,
+          2,
+          257,
+          244
+        ],
+        "longest": 255,
+        "minimumLongest": 383,
+        "sourceRect": [
+          37,
+          58,
+          259,
+          246
+        ],
+        "alphaArea": 40135,
+        "minimumAlphaArea": 60203,
+        "sha256": "57ff291c4bac50a2d9ab3f0c762e9f4df78f7b414df400ab2953d75821b98c5f"
+      },
+      "oats": {
+        "file": "ingredients-flat-v7-a.png",
+        "bounds": [
+          2,
+          2,
+          271,
+          257
+        ],
+        "longest": 269,
+        "minimumLongest": 404,
+        "sourceRect": [
+          338,
+          50,
+          273,
+          259
+        ],
+        "alphaArea": 48737,
+        "minimumAlphaArea": 73106,
+        "sha256": "57ff291c4bac50a2d9ab3f0c762e9f4df78f7b414df400ab2953d75821b98c5f"
+      },
+      "blackRice": {
+        "file": "ingredients-flat-v7-a.png",
+        "bounds": [
+          2,
+          2,
+          265,
+          249
+        ],
+        "longest": 263,
+        "minimumLongest": 395,
+        "sourceRect": [
+          648,
+          55,
+          267,
+          251
+        ],
+        "alphaArea": 45520,
+        "minimumAlphaArea": 68280,
+        "sha256": "57ff291c4bac50a2d9ab3f0c762e9f4df78f7b414df400ab2953d75821b98c5f"
+      },
+      "corn": {
+        "file": "ingredients-flat-v7-a.png",
+        "bounds": [
+          2,
+          2,
+          289,
+          254
+        ],
+        "longest": 287,
+        "minimumLongest": 431,
+        "sourceRect": [
+          946,
+          42,
+          291,
+          256
+        ],
+        "alphaArea": 36611,
+        "minimumAlphaArea": 54917,
+        "sha256": "57ff291c4bac50a2d9ab3f0c762e9f4df78f7b414df400ab2953d75821b98c5f"
+      },
+      "potato": {
+        "file": "ingredients-flat-v7-a.png",
+        "bounds": [
+          2,
+          2,
+          282,
+          241
+        ],
+        "longest": 280,
+        "minimumLongest": 420,
+        "sourceRect": [
+          27,
+          354,
+          284,
+          243
+        ],
+        "alphaArea": 51124,
+        "minimumAlphaArea": 76686,
+        "sha256": "57ff291c4bac50a2d9ab3f0c762e9f4df78f7b414df400ab2953d75821b98c5f"
+      },
+      "pumpkin": {
+        "file": "ingredients-flat-v7-a.png",
+        "bounds": [
+          2,
+          2,
+          269,
+          239
+        ],
+        "longest": 267,
+        "minimumLongest": 401,
+        "sourceRect": [
+          343,
+          353,
+          271,
+          241
+        ],
+        "alphaArea": 38007,
+        "minimumAlphaArea": 57011,
+        "sha256": "57ff291c4bac50a2d9ab3f0c762e9f4df78f7b414df400ab2953d75821b98c5f"
+      },
+      "egg": {
+        "file": "ingredients-flat-v7-a.png",
+        "bounds": [
+          2,
+          2,
+          267,
+          175
+        ],
+        "longest": 265,
+        "minimumLongest": 398,
+        "sourceRect": [
+          655,
+          396,
+          269,
+          177
+        ],
+        "alphaArea": 34969,
+        "minimumAlphaArea": 52454,
+        "sha256": "57ff291c4bac50a2d9ab3f0c762e9f4df78f7b414df400ab2953d75821b98c5f"
+      },
+      "chickenBreast": {
+        "file": "ingredients-flat-v7-a.png",
+        "bounds": [
+          2,
+          2,
+          271,
+          227
+        ],
+        "longest": 269,
+        "minimumLongest": 404,
+        "sourceRect": [
+          952,
+          360,
+          273,
+          229
+        ],
+        "alphaArea": 41563,
+        "minimumAlphaArea": 62345,
+        "sha256": "57ff291c4bac50a2d9ab3f0c762e9f4df78f7b414df400ab2953d75821b98c5f"
+      },
+      "chickenThigh": {
+        "file": "ingredients-flat-v7-a.png",
+        "bounds": [
+          2,
+          2,
+          276,
+          238
+        ],
+        "longest": 274,
+        "minimumLongest": 411,
+        "sourceRect": [
+          30,
+          654,
+          278,
+          240
+        ],
+        "alphaArea": 52299,
+        "minimumAlphaArea": 78449,
+        "sha256": "57ff291c4bac50a2d9ab3f0c762e9f4df78f7b414df400ab2953d75821b98c5f"
+      },
+      "pork": {
+        "file": "ingredients-flat-v7-a.png",
+        "bounds": [
+          2,
+          2,
+          285,
+          261
+        ],
+        "longest": 283,
+        "minimumLongest": 425,
+        "sourceRect": [
+          332,
+          644,
+          287,
+          263
+        ],
+        "alphaArea": 47547,
+        "minimumAlphaArea": 71321,
+        "sha256": "57ff291c4bac50a2d9ab3f0c762e9f4df78f7b414df400ab2953d75821b98c5f"
+      },
+      "firmTofu": {
+        "file": "ingredients-flat-v7-a.png",
+        "bounds": [
+          2,
+          2,
+          282,
+          207
+        ],
+        "longest": 280,
+        "minimumLongest": 420,
+        "sourceRect": [
+          649,
+          677,
+          284,
+          209
+        ],
+        "alphaArea": 46480,
+        "minimumAlphaArea": 69720,
+        "sha256": "57ff291c4bac50a2d9ab3f0c762e9f4df78f7b414df400ab2953d75821b98c5f"
+      },
+      "silkenTofu": {
+        "file": "ingredients-flat-v7-a.png",
+        "bounds": [
+          2,
+          2,
+          272,
+          190
+        ],
+        "longest": 270,
+        "minimumLongest": 405,
+        "sourceRect": [
+          960,
+          681,
+          274,
+          192
+        ],
+        "alphaArea": 39491,
+        "minimumAlphaArea": 59237,
+        "sha256": "57ff291c4bac50a2d9ab3f0c762e9f4df78f7b414df400ab2953d75821b98c5f"
+      },
+      "greenPepper": {
+        "file": "ingredients-flat-v7-a.png",
+        "bounds": [
+          2,
+          2,
+          268,
+          291
+        ],
+        "longest": 289,
+        "minimumLongest": 434,
+        "sourceRect": [
+          35,
+          920,
+          270,
+          293
+        ],
+        "alphaArea": 31710,
+        "minimumAlphaArea": 47565,
+        "sha256": "57ff291c4bac50a2d9ab3f0c762e9f4df78f7b414df400ab2953d75821b98c5f"
+      },
+      "broccoli": {
+        "file": "ingredients-flat-v7-a.png",
+        "bounds": [
+          2,
+          2,
+          300,
+          250
+        ],
+        "longest": 298,
+        "minimumLongest": 447,
+        "sourceRect": [
+          318,
+          947,
+          302,
+          252
+        ],
+        "alphaArea": 47839,
+        "minimumAlphaArea": 71759,
+        "sha256": "57ff291c4bac50a2d9ab3f0c762e9f4df78f7b414df400ab2953d75821b98c5f"
+      },
+      "tomato": {
+        "file": "ingredients-flat-v7-a.png",
+        "bounds": [
+          2,
+          2,
+          320,
+          186
+        ],
+        "longest": 318,
+        "minimumLongest": 477,
+        "sourceRect": [
+          629,
+          981,
+          322,
+          188
+        ],
+        "alphaArea": 45215,
+        "minimumAlphaArea": 67823,
+        "sha256": "57ff291c4bac50a2d9ab3f0c762e9f4df78f7b414df400ab2953d75821b98c5f"
+      },
+      "cucumber": {
+        "file": "ingredients-flat-v7-a.png",
+        "bounds": [
+          2,
+          2,
+          272,
+          260
+        ],
+        "longest": 270,
+        "minimumLongest": 405,
+        "sourceRect": [
+          951,
+          934,
+          274,
+          262
+        ],
+        "alphaArea": 36257,
+        "minimumAlphaArea": 54386,
+        "sha256": "57ff291c4bac50a2d9ab3f0c762e9f4df78f7b414df400ab2953d75821b98c5f"
+      },
+      "bokChoy": {
+        "file": "ingredients-flat-v7-b.png",
+        "bounds": [
+          2,
+          2,
+          320,
+          264
+        ],
+        "longest": 318,
+        "minimumLongest": 477,
+        "sourceRect": [
+          16,
+          4,
+          322,
+          266
+        ],
+        "alphaArea": 46588,
+        "minimumAlphaArea": 69882,
+        "sha256": "59fc6a5abec5d3a5f44575c196866918447292f9fdde956213795dcb4df6447a"
+      },
+      "spinach": {
+        "file": "ingredients-flat-v7-b.png",
+        "bounds": [
+          2,
+          2,
+          306,
+          261
+        ],
+        "longest": 304,
+        "minimumLongest": 456,
+        "sourceRect": [
+          399,
+          11,
+          308,
+          263
+        ],
+        "alphaArea": 34118,
+        "minimumAlphaArea": 51177,
+        "sha256": "59fc6a5abec5d3a5f44575c196866918447292f9fdde956213795dcb4df6447a"
+      },
+      "lettuceStem": {
+        "file": "ingredients-flat-v7-b.png",
+        "bounds": [
+          2,
+          2,
+          309,
+          231
+        ],
+        "longest": 307,
+        "minimumLongest": 461,
+        "sourceRect": [
+          747,
+          28,
+          311,
+          233
+        ],
+        "alphaArea": 37080,
+        "minimumAlphaArea": 55620,
+        "sha256": "59fc6a5abec5d3a5f44575c196866918447292f9fdde956213795dcb4df6447a"
+      },
+      "carrot": {
+        "file": "ingredients-flat-v7-b.png",
+        "bounds": [
+          2,
+          2,
+          321,
+          214
+        ],
+        "longest": 319,
+        "minimumLongest": 479,
+        "sourceRect": [
+          1105,
+          28,
+          323,
+          216
+        ],
+        "alphaArea": 38769,
+        "minimumAlphaArea": 58154,
+        "sha256": "59fc6a5abec5d3a5f44575c196866918447292f9fdde956213795dcb4df6447a"
+      },
+      "winterMelon": {
+        "file": "ingredients-flat-v7-b.png",
+        "bounds": [
+          2,
+          2,
+          291,
+          268
+        ],
+        "longest": 289,
+        "minimumLongest": 434,
+        "sourceRect": [
+          32,
+          276,
+          293,
+          270
+        ],
+        "alphaArea": 59772,
+        "minimumAlphaArea": 89658,
+        "sha256": "59fc6a5abec5d3a5f44575c196866918447292f9fdde956213795dcb4df6447a"
+      },
+      "eggplant": {
+        "file": "ingredients-flat-v7-b.png",
+        "bounds": [
+          2,
+          2,
+          372,
+          230
+        ],
+        "longest": 370,
+        "minimumLongest": 555,
+        "sourceRect": [
+          353,
+          290,
+          374,
+          232
+        ],
+        "alphaArea": 38770,
+        "minimumAlphaArea": 58155,
+        "sha256": "59fc6a5abec5d3a5f44575c196866918447292f9fdde956213795dcb4df6447a"
+      },
+      "onion": {
+        "file": "ingredients-flat-v7-b.png",
+        "bounds": [
+          2,
+          2,
+          319,
+          176
+        ],
+        "longest": 317,
+        "minimumLongest": 476,
+        "sourceRect": [
+          757,
+          322,
+          321,
+          178
+        ],
+        "alphaArea": 39780,
+        "minimumAlphaArea": 59670,
+        "sha256": "59fc6a5abec5d3a5f44575c196866918447292f9fdde956213795dcb4df6447a"
+      },
+      "shiitake": {
+        "file": "ingredients-flat-v7-b.png",
+        "bounds": [
+          2,
+          2,
+          302,
+          256
+        ],
+        "longest": 300,
+        "minimumLongest": 450,
+        "sourceRect": [
+          1122,
+          276,
+          304,
+          258
+        ],
+        "alphaArea": 55191,
+        "minimumAlphaArea": 82787,
+        "sha256": "59fc6a5abec5d3a5f44575c196866918447292f9fdde956213795dcb4df6447a"
+      },
+      "woodEar": {
+        "file": "ingredients-flat-v7-b.png",
+        "bounds": [
+          2,
+          2,
+          337,
+          237
+        ],
+        "longest": 335,
+        "minimumLongest": 503,
+        "sourceRect": [
+          19,
+          564,
+          339,
+          239
+        ],
+        "alphaArea": 40336,
+        "minimumAlphaArea": 60504,
+        "sha256": "59fc6a5abec5d3a5f44575c196866918447292f9fdde956213795dcb4df6447a"
+      },
+      "garlicSprout": {
+        "file": "ingredients-flat-v7-b.png",
+        "bounds": [
+          2,
+          2,
+          318,
+          251
+        ],
+        "longest": 316,
+        "minimumLongest": 474,
+        "sourceRect": [
+          372,
+          546,
+          320,
+          253
+        ],
+        "alphaArea": 30898,
+        "minimumAlphaArea": 46347,
+        "sha256": "59fc6a5abec5d3a5f44575c196866918447292f9fdde956213795dcb4df6447a"
+      },
+      "apple": {
+        "file": "ingredients-flat-v7-b.png",
+        "bounds": [
+          2,
+          2,
+          357,
+          191
+        ],
+        "longest": 355,
+        "minimumLongest": 533,
+        "sourceRect": [
+          718,
+          577,
+          359,
+          193
+        ],
+        "alphaArea": 50959,
+        "minimumAlphaArea": 76439,
+        "sha256": "59fc6a5abec5d3a5f44575c196866918447292f9fdde956213795dcb4df6447a"
+      },
+      "pear": {
+        "file": "ingredients-flat-v7-b.png",
+        "bounds": [
+          2,
+          2,
+          349,
+          184
+        ],
+        "longest": 347,
+        "minimumLongest": 521,
+        "sourceRect": [
+          1090,
+          586,
+          351,
+          186
+        ],
+        "alphaArea": 47278,
+        "minimumAlphaArea": 70917,
+        "sha256": "59fc6a5abec5d3a5f44575c196866918447292f9fdde956213795dcb4df6447a"
+      },
+      "orange": {
+        "file": "ingredients-flat-v7-b.png",
+        "bounds": [
+          2,
+          2,
+          356,
+          197
+        ],
+        "longest": 354,
+        "minimumLongest": 531,
+        "sourceRect": [
+          16,
+          824,
+          358,
+          199
+        ],
+        "alphaArea": 52958,
+        "minimumAlphaArea": 79437,
+        "sha256": "59fc6a5abec5d3a5f44575c196866918447292f9fdde956213795dcb4df6447a"
+      },
+      "mandarin": {
+        "file": "ingredients-flat-v7-b.png",
+        "bounds": [
+          2,
+          2,
+          301,
+          208
+        ],
+        "longest": 299,
+        "minimumLongest": 449,
+        "sourceRect": [
+          409,
+          826,
+          303,
+          210
+        ],
+        "alphaArea": 39792,
+        "minimumAlphaArea": 59688,
+        "sha256": "59fc6a5abec5d3a5f44575c196866918447292f9fdde956213795dcb4df6447a"
+      },
+      "kiwi": {
+        "file": "ingredients-flat-v7-b.png",
+        "bounds": [
+          2,
+          2,
+          313,
+          170
+        ],
+        "longest": 311,
+        "minimumLongest": 467,
+        "sourceRect": [
+          751,
+          846,
+          315,
+          172
+        ],
+        "alphaArea": 40990,
+        "minimumAlphaArea": 61485,
+        "sha256": "59fc6a5abec5d3a5f44575c196866918447292f9fdde956213795dcb4df6447a"
+      },
+      "banana": {
+        "file": "ingredients-flat-v7-b.png",
+        "bounds": [
+          2,
+          2,
+          333,
+          264
+        ],
+        "longest": 331,
+        "minimumLongest": 497,
+        "sourceRect": [
+          1099,
+          789,
+          335,
+          266
+        ],
+        "alphaArea": 46306,
+        "minimumAlphaArea": 69459,
+        "sha256": "59fc6a5abec5d3a5f44575c196866918447292f9fdde956213795dcb4df6447a"
+      },
+      "grape": {
+        "file": "ingredients-flat-v7-c.png",
+        "bounds": [
+          2,
+          2,
+          271,
+          253
+        ],
+        "longest": 269,
+        "minimumLongest": 404,
+        "sourceRect": [
+          52,
+          55,
+          273,
+          255
+        ],
+        "alphaArea": 45101,
+        "minimumAlphaArea": 67652,
+        "sha256": "38daeb43f528e7ace24de1e1e78129bdd9e51a1f309966bbed8479048e1df574"
+      },
+      "oil": {
+        "file": "ingredients-flat-v7-c.png",
+        "bounds": [
+          2,
+          2,
+          238,
+          236
+        ],
+        "longest": 236,
+        "minimumLongest": 354,
+        "sourceRect": [
+          358,
+          52,
+          240,
+          238
+        ],
+        "alphaArea": 43413,
+        "minimumAlphaArea": 65120,
+        "sha256": "38daeb43f528e7ace24de1e1e78129bdd9e51a1f309966bbed8479048e1df574"
+      },
+      "soySauce": {
+        "file": "ingredients-flat-v7-c.png",
+        "bounds": [
+          2,
+          2,
+          241,
+          235
+        ],
+        "longest": 239,
+        "minimumLongest": 359,
+        "sourceRect": [
+          656,
+          53,
+          243,
+          237
+        ],
+        "alphaArea": 43789,
+        "minimumAlphaArea": 65684,
+        "sha256": "38daeb43f528e7ace24de1e1e78129bdd9e51a1f309966bbed8479048e1df574"
+      },
+      "vinegar": {
+        "file": "ingredients-flat-v7-c.png",
+        "bounds": [
+          2,
+          2,
+          237,
+          233
+        ],
+        "longest": 235,
+        "minimumLongest": 353,
+        "sourceRect": [
+          965,
+          52,
+          239,
+          235
+        ],
+        "alphaArea": 42682,
+        "minimumAlphaArea": 64023,
+        "sha256": "38daeb43f528e7ace24de1e1e78129bdd9e51a1f309966bbed8479048e1df574"
+      },
+      "garlic": {
+        "file": "ingredients-flat-v7-c.png",
+        "bounds": [
+          2,
+          2,
+          280,
+          236
+        ],
+        "longest": 278,
+        "minimumLongest": 417,
+        "sourceRect": [
+          45,
+          359,
+          282,
+          238
+        ],
+        "alphaArea": 38534,
+        "minimumAlphaArea": 57801,
+        "sha256": "38daeb43f528e7ace24de1e1e78129bdd9e51a1f309966bbed8479048e1df574"
+      },
+      "ginger": {
+        "file": "ingredients-flat-v7-c.png",
+        "bounds": [
+          2,
+          2,
+          267,
+          263
+        ],
+        "longest": 265,
+        "minimumLongest": 398,
+        "sourceRect": [
+          352,
+          340,
+          269,
+          265
+        ],
+        "alphaArea": 40102,
+        "minimumAlphaArea": 60153,
+        "sha256": "38daeb43f528e7ace24de1e1e78129bdd9e51a1f309966bbed8479048e1df574"
+      },
+      "douban": {
+        "file": "ingredients-flat-v7-c.png",
+        "bounds": [
+          2,
+          2,
+          243,
+          241
+        ],
+        "longest": 241,
+        "minimumLongest": 362,
+        "sourceRect": [
+          654,
+          347,
+          245,
+          243
+        ],
+        "alphaArea": 45263,
+        "minimumAlphaArea": 67895,
+        "sha256": "38daeb43f528e7ace24de1e1e78129bdd9e51a1f309966bbed8479048e1df574"
+      },
+      "scallion": {
+        "file": "ingredients-flat-v7-c.png",
+        "bounds": [
+          2,
+          2,
+          294,
+          297
+        ],
+        "longest": 295,
+        "minimumLongest": 443,
+        "sourceRect": [
+          933,
+          313,
+          296,
+          299
+        ],
+        "alphaArea": 18202,
+        "minimumAlphaArea": 27303,
+        "sha256": "38daeb43f528e7ace24de1e1e78129bdd9e51a1f309966bbed8479048e1df574"
+      },
+      "salt": {
+        "file": "ingredients-flat-v7-c.png",
+        "bounds": [
+          2,
+          2,
+          223,
+          208
+        ],
+        "longest": 221,
+        "minimumLongest": 332,
+        "sourceRect": [
+          64,
+          673,
+          225,
+          210
+        ],
+        "alphaArea": 24032,
+        "minimumAlphaArea": 36048,
+        "sha256": "38daeb43f528e7ace24de1e1e78129bdd9e51a1f309966bbed8479048e1df574"
+      },
+      "peppercorn": {
+        "file": "ingredients-flat-v7-c.png",
+        "bounds": [
+          2,
+          2,
+          267,
+          259
+        ],
+        "longest": 265,
+        "minimumLongest": 398,
+        "sourceRect": [
+          347,
+          655,
+          269,
+          261
+        ],
+        "alphaArea": 38564,
+        "minimumAlphaArea": 57846,
+        "sha256": "38daeb43f528e7ace24de1e1e78129bdd9e51a1f309966bbed8479048e1df574"
+      },
+      "peanut": {
+        "file": "ingredients-flat-v7-c.png",
+        "bounds": [
+          2,
+          2,
+          218,
+          246
+        ],
+        "longest": 244,
+        "minimumLongest": 366,
+        "sourceRect": [
+          671,
+          655,
+          220,
+          248
+        ],
+        "alphaArea": 31259,
+        "minimumAlphaArea": 46889,
+        "sha256": "38daeb43f528e7ace24de1e1e78129bdd9e51a1f309966bbed8479048e1df574"
+      },
+      "strawberry": {
+        "file": "ingredients-flat-v7-c.png",
+        "bounds": [
+          2,
+          2,
+          301,
+          274
+        ],
+        "longest": 299,
+        "minimumLongest": 449,
+        "sourceRect": [
+          939,
+          638,
+          303,
+          276
+        ],
+        "alphaArea": 48900,
+        "minimumAlphaArea": 73350,
+        "sha256": "38daeb43f528e7ace24de1e1e78129bdd9e51a1f309966bbed8479048e1df574"
+      },
+      "peach": {
+        "file": "ingredients-flat-v7-c.png",
+        "bounds": [
+          2,
+          2,
+          309,
+          216
+        ],
+        "longest": 307,
+        "minimumLongest": 461,
+        "sourceRect": [
+          30,
+          971,
+          311,
+          218
+        ],
+        "alphaArea": 54567,
+        "minimumAlphaArea": 81851,
+        "sha256": "38daeb43f528e7ace24de1e1e78129bdd9e51a1f309966bbed8479048e1df574"
+      },
+      "nectarine": {
+        "file": "ingredients-flat-v7-c.png",
+        "bounds": [
+          2,
+          2,
+          311,
+          209
+        ],
+        "longest": 309,
+        "minimumLongest": 464,
+        "sourceRect": [
+          355,
+          976,
+          313,
+          211
+        ],
+        "alphaArea": 48175,
+        "minimumAlphaArea": 72263,
+        "sha256": "38daeb43f528e7ace24de1e1e78129bdd9e51a1f309966bbed8479048e1df574"
+      },
+      "plum": {
+        "file": "ingredients-flat-v7-c.png",
+        "bounds": [
+          2,
+          2,
+          249,
+          255
+        ],
+        "longest": 253,
+        "minimumLongest": 380,
+        "sourceRect": [
+          683,
+          960,
+          251,
+          257
+        ],
+        "alphaArea": 40351,
+        "minimumAlphaArea": 60527,
+        "sha256": "38daeb43f528e7ace24de1e1e78129bdd9e51a1f309966bbed8479048e1df574"
+      },
+      "watermelon": {
+        "file": "ingredients-flat-v7-c.png",
+        "bounds": [
+          2,
+          2,
+          282,
+          252
+        ],
+        "longest": 280,
+        "minimumLongest": 420,
+        "sourceRect": [
+          956,
+          958,
+          284,
+          254
+        ],
+        "alphaArea": 39357,
+        "minimumAlphaArea": 59036,
+        "sha256": "38daeb43f528e7ace24de1e1e78129bdd9e51a1f309966bbed8479048e1df574"
+      },
+      "pomelo": {
+        "file": "ingredients-flat-v7-d.png",
+        "bounds": [
+          2,
+          2,
+          283,
+          186
+        ],
+        "longest": 281,
+        "minimumLongest": 422,
+        "sourceRect": [
+          81,
+          56,
+          285,
+          188
+        ],
+        "alphaArea": 38079,
+        "minimumAlphaArea": 57119,
+        "sha256": "000553e0c96f805af2ca0d47a5296e9a30d9240a0494a8b06461e08661eb688b"
+      },
+      "loquat": {
+        "file": "ingredients-flat-v7-d.png",
+        "bounds": [
+          2,
+          2,
+          257,
+          163
+        ],
+        "longest": 255,
+        "minimumLongest": 383,
+        "sourceRect": [
+          455,
+          66,
+          259,
+          165
+        ],
+        "alphaArea": 22465,
+        "minimumAlphaArea": 33698,
+        "sha256": "000553e0c96f805af2ca0d47a5296e9a30d9240a0494a8b06461e08661eb688b"
+      },
+      "apricot": {
+        "file": "ingredients-flat-v7-d.png",
+        "bounds": [
+          2,
+          2,
+          243,
+          155
+        ],
+        "longest": 241,
+        "minimumLongest": 362,
+        "sourceRect": [
+          830,
+          66,
+          245,
+          157
+        ],
+        "alphaArea": 22069,
+        "minimumAlphaArea": 33104,
+        "sha256": "000553e0c96f805af2ca0d47a5296e9a30d9240a0494a8b06461e08661eb688b"
+      },
+      "cantaloupe": {
+        "file": "ingredients-flat-v7-d.png",
+        "bounds": [
+          2,
+          2,
+          289,
+          203
+        ],
+        "longest": 287,
+        "minimumLongest": 431,
+        "sourceRect": [
+          1184,
+          44,
+          291,
+          205
+        ],
+        "alphaArea": 45323,
+        "minimumAlphaArea": 67985,
+        "sha256": "000553e0c96f805af2ca0d47a5296e9a30d9240a0494a8b06461e08661eb688b"
+      },
+      "dragonFruit": {
+        "file": "ingredients-flat-v7-d.png",
+        "bounds": [
+          2,
+          2,
+          313,
+          206
+        ],
+        "longest": 311,
+        "minimumLongest": 467,
+        "sourceRect": [
+          53,
+          279,
+          315,
+          208
+        ],
+        "alphaArea": 41221,
+        "minimumAlphaArea": 61832,
+        "sha256": "000553e0c96f805af2ca0d47a5296e9a30d9240a0494a8b06461e08661eb688b"
+      },
+      "persimmon": {
+        "file": "ingredients-flat-v7-d.png",
+        "bounds": [
+          2,
+          2,
+          265,
+          135
+        ],
+        "longest": 263,
+        "minimumLongest": 395,
+        "sourceRect": [
+          454,
+          314,
+          267,
+          137
+        ],
+        "alphaArea": 26405,
+        "minimumAlphaArea": 39608,
+        "sha256": "000553e0c96f805af2ca0d47a5296e9a30d9240a0494a8b06461e08661eb688b"
+      },
+      "shanghaiBok": {
+        "file": "ingredients-flat-v7-d.png",
+        "bounds": [
+          2,
+          2,
+          312,
+          205
+        ],
+        "longest": 310,
+        "minimumLongest": 465,
+        "sourceRect": [
+          796,
+          283,
+          314,
+          207
+        ],
+        "alphaArea": 37009,
+        "minimumAlphaArea": 55514,
+        "sha256": "000553e0c96f805af2ca0d47a5296e9a30d9240a0494a8b06461e08661eb688b"
+      },
+      "napaCabbage": {
+        "file": "ingredients-flat-v7-d.png",
+        "bounds": [
+          2,
+          2,
+          300,
+          190
+        ],
+        "longest": 298,
+        "minimumLongest": 447,
+        "sourceRect": [
+          1177,
+          286,
+          302,
+          192
+        ],
+        "alphaArea": 45074,
+        "minimumAlphaArea": 67611,
+        "sha256": "000553e0c96f805af2ca0d47a5296e9a30d9240a0494a8b06461e08661eb688b"
+      },
+      "whiteRadish": {
+        "file": "ingredients-flat-v7-d.png",
+        "bounds": [
+          2,
+          2,
+          312,
+          200
+        ],
+        "longest": 310,
+        "minimumLongest": 465,
+        "sourceRect": [
+          52,
+          521,
+          314,
+          202
+        ],
+        "alphaArea": 30098,
+        "minimumAlphaArea": 45147,
+        "sha256": "000553e0c96f805af2ca0d47a5296e9a30d9240a0494a8b06461e08661eb688b"
+      },
+      "lotusRoot": {
+        "file": "ingredients-flat-v7-d.png",
+        "bounds": [
+          2,
+          2,
+          280,
+          180
+        ],
+        "longest": 278,
+        "minimumLongest": 417,
+        "sourceRect": [
+          446,
+          527,
+          282,
+          182
+        ],
+        "alphaArea": 30498,
+        "minimumAlphaArea": 45747,
+        "sha256": "000553e0c96f805af2ca0d47a5296e9a30d9240a0494a8b06461e08661eb688b"
+      },
+      "greenBean": {
+        "file": "ingredients-flat-v7-d.png",
+        "bounds": [
+          2,
+          2,
+          319,
+          212
+        ],
+        "longest": 317,
+        "minimumLongest": 476,
+        "sourceRect": [
+          782,
+          515,
+          321,
+          214
+        ],
+        "alphaArea": 28542,
+        "minimumAlphaArea": 42813,
+        "sha256": "000553e0c96f805af2ca0d47a5296e9a30d9240a0494a8b06461e08661eb688b"
+      },
+      "peaTender": {
+        "file": "ingredients-flat-v7-d.png",
+        "bounds": [
+          2,
+          2,
+          275,
+          199
+        ],
+        "longest": 273,
+        "minimumLongest": 410,
+        "sourceRect": [
+          1182,
+          527,
+          277,
+          201
+        ],
+        "alphaArea": 18387,
+        "minimumAlphaArea": 27581,
+        "sha256": "000553e0c96f805af2ca0d47a5296e9a30d9240a0494a8b06461e08661eb688b"
+      },
+      "snowPea": {
+        "file": "ingredients-flat-v7-d.png",
+        "bounds": [
+          2,
+          2,
+          296,
+          198
+        ],
+        "longest": 294,
+        "minimumLongest": 441,
+        "sourceRect": [
+          69,
+          767,
+          298,
+          200
+        ],
+        "alphaArea": 36019,
+        "minimumAlphaArea": 54029,
+        "sha256": "000553e0c96f805af2ca0d47a5296e9a30d9240a0494a8b06461e08661eb688b"
+      },
+      "zucchini": {
+        "file": "ingredients-flat-v7-d.png",
+        "bounds": [
+          2,
+          2,
+          337,
+          188
+        ],
+        "longest": 335,
+        "minimumLongest": 503,
+        "sourceRect": [
+          415,
+          776,
+          339,
+          190
+        ],
+        "alphaArea": 39634,
+        "minimumAlphaArea": 59451,
+        "sha256": "000553e0c96f805af2ca0d47a5296e9a30d9240a0494a8b06461e08661eb688b"
+      },
+      "luffa": {
+        "file": "ingredients-flat-v7-d.png",
+        "bounds": [
+          2,
+          2,
+          320,
+          179
+        ],
+        "longest": 318,
+        "minimumLongest": 477,
+        "sourceRect": [
+          783,
+          779,
+          322,
+          181
+        ],
+        "alphaArea": 29581,
+        "minimumAlphaArea": 44372,
+        "sha256": "000553e0c96f805af2ca0d47a5296e9a30d9240a0494a8b06461e08661eb688b"
+      },
+      "celeryChinese": {
+        "file": "ingredients-flat-v7-d.png",
+        "bounds": [
+          2,
+          2,
+          302,
+          214
+        ],
+        "longest": 300,
+        "minimumLongest": 450,
+        "sourceRect": [
+          1170,
+          755,
+          304,
+          216
+        ],
+        "alphaArea": 26130,
+        "minimumAlphaArea": 39195,
+        "sha256": "000553e0c96f805af2ca0d47a5296e9a30d9240a0494a8b06461e08661eb688b"
+      },
+      "tenderGinger": {
+        "file": "ingredients-flat-v7-e.png",
+        "bounds": [
+          2,
+          2,
+          310,
+          289
+        ],
+        "longest": 308,
+        "minimumLongest": 462,
+        "sourceRect": [
+          46,
+          54,
+          312,
+          291
+        ],
+        "alphaArea": 48415,
+        "minimumAlphaArea": 72623,
+        "sha256": "360d89b7ab5a84e1e71f43aa86030bec3cadd9c590e772d2e1316513290642bb"
+      },
+      "enoki": {
+        "file": "ingredients-flat-v7-e.png",
+        "bounds": [
+          2,
+          2,
+          340,
+          274
+        ],
+        "longest": 338,
+        "minimumLongest": 507,
+        "sourceRect": [
+          379,
+          56,
+          342,
+          276
+        ],
+        "alphaArea": 55110,
+        "minimumAlphaArea": 82665,
+        "sha256": "360d89b7ab5a84e1e71f43aa86030bec3cadd9c590e772d2e1316513290642bb"
+      },
+      "kingOyster": {
+        "file": "ingredients-flat-v7-e.png",
+        "bounds": [
+          2,
+          2,
+          362,
+          300
+        ],
+        "longest": 360,
+        "minimumLongest": 540,
+        "sourceRect": [
+          734,
+          48,
+          364,
+          302
+        ],
+        "alphaArea": 56222,
+        "minimumAlphaArea": 84333,
+        "sha256": "360d89b7ab5a84e1e71f43aa86030bec3cadd9c590e772d2e1316513290642bb"
+      },
+      "duckBreast": {
+        "file": "ingredients-flat-v7-e.png",
+        "bounds": [
+          2,
+          2,
+          298,
+          221
+        ],
+        "longest": 296,
+        "minimumLongest": 444,
+        "sourceRect": [
+          1120,
+          98,
+          300,
+          223
+        ],
+        "alphaArea": 40750,
+        "minimumAlphaArea": 61125,
+        "sha256": "360d89b7ab5a84e1e71f43aa86030bec3cadd9c590e772d2e1316513290642bb"
+      },
+      "silverCarp": {
+        "file": "ingredients-flat-v7-e.png",
+        "bounds": [
+          2,
+          2,
+          328,
+          285
+        ],
+        "longest": 326,
+        "minimumLongest": 489,
+        "sourceRect": [
+          37,
+          389,
+          330,
+          287
+        ],
+        "alphaArea": 52966,
+        "minimumAlphaArea": 79449,
+        "sha256": "360d89b7ab5a84e1e71f43aa86030bec3cadd9c590e772d2e1316513290642bb"
+      },
+      "shrimp": {
+        "file": "ingredients-flat-v7-e.png",
+        "bounds": [
+          2,
+          2,
+          319,
+          280
+        ],
+        "longest": 317,
+        "minimumLongest": 476,
+        "sourceRect": [
+          393,
+          394,
+          321,
+          282
+        ],
+        "alphaArea": 44355,
+        "minimumAlphaArea": 66533,
+        "sha256": "360d89b7ab5a84e1e71f43aa86030bec3cadd9c590e772d2e1316513290642bb"
+      },
+      "cabbage": {
+        "file": "ingredients-flat-v7-e.png",
+        "bounds": [
+          2,
+          2,
+          308,
+          283
+        ],
+        "longest": 306,
+        "minimumLongest": 459,
+        "sourceRect": [
+          729,
+          389,
+          310,
+          285
+        ],
+        "alphaArea": 67658,
+        "minimumAlphaArea": 101487,
+        "sha256": "360d89b7ab5a84e1e71f43aa86030bec3cadd9c590e772d2e1316513290642bb"
+      },
+      "chive": {
+        "file": "ingredients-flat-v7-e.png",
+        "bounds": [
+          2,
+          2,
+          347,
+          316
+        ],
+        "longest": 345,
+        "minimumLongest": 518,
+        "sourceRect": [
+          1067,
+          365,
+          349,
+          318
+        ],
+        "alphaArea": 47472,
+        "minimumAlphaArea": 71208,
+        "sha256": "360d89b7ab5a84e1e71f43aa86030bec3cadd9c590e772d2e1316513290642bb"
+      },
+      "garlicScape": {
+        "file": "ingredients-flat-v7-e.png",
+        "bounds": [
+          2,
+          2,
+          243,
+          332
+        ],
+        "longest": 330,
+        "minimumLongest": 495,
+        "sourceRect": [
+          64,
+          702,
+          245,
+          334
+        ],
+        "alphaArea": 29166,
+        "minimumAlphaArea": 43749,
+        "sha256": "360d89b7ab5a84e1e71f43aa86030bec3cadd9c590e772d2e1316513290642bb"
+      },
+      "waterSpinach": {
+        "file": "ingredients-flat-v7-e.png",
+        "bounds": [
+          2,
+          2,
+          337,
+          358
+        ],
+        "longest": 356,
+        "minimumLongest": 534,
+        "sourceRect": [
+          371,
+          683,
+          339,
+          360
+        ],
+        "alphaArea": 40682,
+        "minimumAlphaArea": 61023,
+        "sha256": "360d89b7ab5a84e1e71f43aa86030bec3cadd9c590e772d2e1316513290642bb"
+      },
+      "oysterMushroom": {
+        "file": "ingredients-flat-v7-e.png",
+        "bounds": [
+          2,
+          2,
+          329,
+          298
+        ],
+        "longest": 327,
+        "minimumLongest": 491,
+        "sourceRect": [
+          730,
+          731,
+          331,
+          300
+        ],
+        "alphaArea": 65221,
+        "minimumAlphaArea": 97832,
+        "sha256": "360d89b7ab5a84e1e71f43aa86030bec3cadd9c590e772d2e1316513290642bb"
+      },
+      "cauliflower": {
+        "file": "ingredients-flat-v7-e.png",
+        "bounds": [
+          2,
+          2,
+          335,
+          242
+        ],
+        "longest": 333,
+        "minimumLongest": 500,
+        "sourceRect": [
+          1091,
+          755,
+          337,
+          244
+        ],
+        "alphaArea": 51715,
+        "minimumAlphaArea": 77573,
+        "sha256": "360d89b7ab5a84e1e71f43aa86030bec3cadd9c590e772d2e1316513290642bb"
+      },
+      "mungBeanSprout": {
+        "file": "ingredients-flat-v7-f.png",
+        "bounds": [
+          2,
+          2,
+          484,
+          391
+        ],
+        "longest": 482,
+        "minimumLongest": 723,
+        "sourceRect": [
+          24,
+          79,
+          486,
+          393
+        ],
+        "alphaArea": 121392,
+        "minimumAlphaArea": 182088,
+        "sha256": "6b31cdb00ed578bc3b879e13b714a0c433efffeb6da132d2d2d12d90b80a1676"
+      },
+      "driedTofu": {
+        "file": "ingredients-flat-v7-f.png",
+        "bounds": [
+          2,
+          2,
+          423,
+          337
+        ],
+        "longest": 421,
+        "minimumLongest": 632,
+        "sourceRect": [
+          558,
+          109,
+          425,
+          339
+        ],
+        "alphaArea": 101270,
+        "minimumAlphaArea": 151905,
+        "sha256": "6b31cdb00ed578bc3b879e13b714a0c433efffeb6da132d2d2d12d90b80a1676"
+      },
+      "sweetPotato": {
+        "file": "ingredients-flat-v7-f.png",
+        "bounds": [
+          2,
+          2,
+          480,
+          317
+        ],
+        "longest": 478,
+        "minimumLongest": 717,
+        "sourceRect": [
+          1031,
+          122,
+          482,
+          319
+        ],
+        "alphaArea": 102196,
+        "minimumAlphaArea": 153294,
+        "sha256": "6b31cdb00ed578bc3b879e13b714a0c433efffeb6da132d2d2d12d90b80a1676"
+      },
+      "millet": {
+        "file": "ingredients-flat-v7-f.png",
+        "bounds": [
+          2,
+          2,
+          473,
+          391
+        ],
+        "longest": 471,
+        "minimumLongest": 707,
+        "sourceRect": [
+          23,
+          567,
+          475,
+          393
+        ],
+        "alphaArea": 124429,
+        "minimumAlphaArea": 186644,
+        "sha256": "6b31cdb00ed578bc3b879e13b714a0c433efffeb6da132d2d2d12d90b80a1676"
+      },
+      "yam": {
+        "file": "ingredients-flat-v7-f.png",
+        "bounds": [
+          2,
+          2,
+          450,
+          316
+        ],
+        "longest": 448,
+        "minimumLongest": 672,
+        "sourceRect": [
+          546,
+          600,
+          452,
+          318
+        ],
+        "alphaArea": 109965,
+        "minimumAlphaArea": 164948,
+        "sha256": "6b31cdb00ed578bc3b879e13b714a0c433efffeb6da132d2d2d12d90b80a1676"
+      },
+      "taro": {
+        "file": "ingredients-flat-v7-f.png",
+        "bounds": [
+          2,
+          2,
+          458,
+          327
+        ],
+        "longest": 456,
+        "minimumLongest": 684,
+        "sourceRect": [
+          1047,
+          601,
+          460,
+          329
+        ],
+        "alphaArea": 102810,
+        "minimumAlphaArea": 154215,
+        "sha256": "6b31cdb00ed578bc3b879e13b714a0c433efffeb6da132d2d2d12d90b80a1676"
+      }
+    },
+    "recipes": {
+      "pepperPork": {
+        "file": "cooked-flat-v7-a.png",
+        "bounds": [
+          2,
+          2,
+          282,
+          247
+        ],
+        "longest": 280,
+        "minimumLongest": 420,
+        "sourceRect": [
+          26,
+          84,
+          284,
+          249
+        ],
+        "alphaArea": 46869,
+        "minimumAlphaArea": 70304,
+        "sha256": "c8c91a6a36059eea02a056f49a99c16ac3752b23be631fe50ab5bd4d90d7920f"
+      },
+      "kungPaoChicken": {
+        "file": "cooked-flat-v7-a.png",
+        "bounds": [
+          2,
+          2,
+          282,
+          253
+        ],
+        "longest": 280,
+        "minimumLongest": 420,
+        "sourceRect": [
+          333,
+          81,
+          284,
+          255
+        ],
+        "alphaArea": 49941,
+        "minimumAlphaArea": 74912,
+        "sha256": "c8c91a6a36059eea02a056f49a99c16ac3752b23be631fe50ab5bd4d90d7920f"
+      },
+      "lettucePork": {
+        "file": "cooked-flat-v7-a.png",
+        "bounds": [
+          2,
+          2,
+          277,
+          235
+        ],
+        "longest": 275,
+        "minimumLongest": 413,
+        "sourceRect": [
+          641,
+          86,
+          279,
+          237
+        ],
+        "alphaArea": 46594,
+        "minimumAlphaArea": 69891,
+        "sha256": "c8c91a6a36059eea02a056f49a99c16ac3752b23be631fe50ab5bd4d90d7920f"
+      },
+      "potatoChicken": {
+        "file": "cooked-flat-v7-a.png",
+        "bounds": [
+          2,
+          2,
+          290,
+          249
+        ],
+        "longest": 288,
+        "minimumLongest": 432,
+        "sourceRect": [
+          942,
+          82,
+          292,
+          251
+        ],
+        "alphaArea": 52577,
+        "minimumAlphaArea": 78866,
+        "sha256": "c8c91a6a36059eea02a056f49a99c16ac3752b23be631fe50ab5bd4d90d7920f"
+      },
+      "tomatoEgg": {
+        "file": "cooked-flat-v7-a.png",
+        "bounds": [
+          2,
+          2,
+          288,
+          244
+        ],
+        "longest": 286,
+        "minimumLongest": 429,
+        "sourceRect": [
+          22,
+          393,
+          290,
+          246
+        ],
+        "alphaArea": 50765,
+        "minimumAlphaArea": 76148,
+        "sha256": "c8c91a6a36059eea02a056f49a99c16ac3752b23be631fe50ab5bd4d90d7920f"
+      },
+      "garlicPork": {
+        "file": "cooked-flat-v7-a.png",
+        "bounds": [
+          2,
+          2,
+          286,
+          238
+        ],
+        "longest": 284,
+        "minimumLongest": 426,
+        "sourceRect": [
+          331,
+          397,
+          288,
+          240
+        ],
+        "alphaArea": 49563,
+        "minimumAlphaArea": 74345,
+        "sha256": "c8c91a6a36059eea02a056f49a99c16ac3752b23be631fe50ab5bd4d90d7920f"
+      },
+      "tofuEggSteam": {
+        "file": "cooked-flat-v7-a.png",
+        "bounds": [
+          2,
+          2,
+          221,
+          220
+        ],
+        "longest": 219,
+        "minimumLongest": 329,
+        "sourceRect": [
+          665,
+          407,
+          223,
+          222
+        ],
+        "alphaArea": 37515,
+        "minimumAlphaArea": 56273,
+        "sha256": "c8c91a6a36059eea02a056f49a99c16ac3752b23be631fe50ab5bd4d90d7920f"
+      },
+      "mushroomTofuPot": {
+        "file": "cooked-flat-v7-a.png",
+        "bounds": [
+          2,
+          2,
+          292,
+          241
+        ],
+        "longest": 290,
+        "minimumLongest": 435,
+        "sourceRect": [
+          940,
+          404,
+          294,
+          243
+        ],
+        "alphaArea": 52890,
+        "minimumAlphaArea": 79335,
+        "sha256": "c8c91a6a36059eea02a056f49a99c16ac3752b23be631fe50ab5bd4d90d7920f"
+      },
+      "homeStyleTofu": {
+        "file": "cooked-flat-v7-a.png",
+        "bounds": [
+          2,
+          2,
+          287,
+          236
+        ],
+        "longest": 285,
+        "minimumLongest": 428,
+        "sourceRect": [
+          24,
+          698,
+          289,
+          238
+        ],
+        "alphaArea": 52388,
+        "minimumAlphaArea": 78582,
+        "sha256": "c8c91a6a36059eea02a056f49a99c16ac3752b23be631fe50ab5bd4d90d7920f"
+      },
+      "mushroomChicken": {
+        "file": "cooked-flat-v7-a.png",
+        "bounds": [
+          2,
+          2,
+          290,
+          240
+        ],
+        "longest": 288,
+        "minimumLongest": 432,
+        "sourceRect": [
+          331,
+          697,
+          292,
+          242
+        ],
+        "alphaArea": 52238,
+        "minimumAlphaArea": 78357,
+        "sha256": "c8c91a6a36059eea02a056f49a99c16ac3752b23be631fe50ab5bd4d90d7920f"
+      },
+      "cucumberChicken": {
+        "file": "cooked-flat-v7-a.png",
+        "bounds": [
+          2,
+          2,
+          288,
+          242
+        ],
+        "longest": 286,
+        "minimumLongest": 429,
+        "sourceRect": [
+          636,
+          697,
+          290,
+          244
+        ],
+        "alphaArea": 51481,
+        "minimumAlphaArea": 77222,
+        "sha256": "c8c91a6a36059eea02a056f49a99c16ac3752b23be631fe50ab5bd4d90d7920f"
+      },
+      "onionPork": {
+        "file": "cooked-flat-v7-a.png",
+        "bounds": [
+          2,
+          2,
+          286,
+          239
+        ],
+        "longest": 284,
+        "minimumLongest": 426,
+        "sourceRect": [
+          943,
+          696,
+          288,
+          241
+        ],
+        "alphaArea": 52971,
+        "minimumAlphaArea": 79457,
+        "sha256": "c8c91a6a36059eea02a056f49a99c16ac3752b23be631fe50ab5bd4d90d7920f"
+      },
+      "tomatoTofuEgg": {
+        "file": "cooked-flat-v7-a.png",
+        "bounds": [
+          2,
+          2,
+          283,
+          233
+        ],
+        "longest": 281,
+        "minimumLongest": 422,
+        "sourceRect": [
+          26,
+          973,
+          285,
+          235
+        ],
+        "alphaArea": 50187,
+        "minimumAlphaArea": 75281,
+        "sha256": "c8c91a6a36059eea02a056f49a99c16ac3752b23be631fe50ab5bd4d90d7920f"
+      },
+      "lettuceChicken": {
+        "file": "cooked-flat-v7-a.png",
+        "bounds": [
+          2,
+          2,
+          276,
+          238
+        ],
+        "longest": 274,
+        "minimumLongest": 411,
+        "sourceRect": [
+          336,
+          973,
+          278,
+          240
+        ],
+        "alphaArea": 48523,
+        "minimumAlphaArea": 72785,
+        "sha256": "c8c91a6a36059eea02a056f49a99c16ac3752b23be631fe50ab5bd4d90d7920f"
+      },
+      "garlicTofu": {
+        "file": "cooked-flat-v7-a.png",
+        "bounds": [
+          2,
+          2,
+          294,
+          238
+        ],
+        "longest": 292,
+        "minimumLongest": 438,
+        "sourceRect": [
+          634,
+          977,
+          296,
+          240
+        ],
+        "alphaArea": 54145,
+        "minimumAlphaArea": 81218,
+        "sha256": "c8c91a6a36059eea02a056f49a99c16ac3752b23be631fe50ab5bd4d90d7920f"
+      },
+      "garlicBroccoli": {
+        "file": "cooked-flat-v7-a.png",
+        "bounds": [
+          2,
+          2,
+          291,
+          233
+        ],
+        "longest": 289,
+        "minimumLongest": 434,
+        "sourceRect": [
+          947,
+          977,
+          293,
+          235
+        ],
+        "alphaArea": 49427,
+        "minimumAlphaArea": 74141,
+        "sha256": "c8c91a6a36059eea02a056f49a99c16ac3752b23be631fe50ab5bd4d90d7920f"
+      },
+      "stirBokChoy": {
+        "file": "cooked-flat-v7-b.png",
+        "bounds": [
+          2,
+          2,
+          287,
+          214
+        ],
+        "longest": 285,
+        "minimumLongest": 428,
+        "sourceRect": [
+          21,
+          68,
+          289,
+          216
+        ],
+        "alphaArea": 44697,
+        "minimumAlphaArea": 67046,
+        "sha256": "137f8df8bff1eb490edd0bfbe06570267e958d06dd1279df64dfa354eb83dfea"
+      },
+      "garlicSpinach": {
+        "file": "cooked-flat-v7-b.png",
+        "bounds": [
+          2,
+          2,
+          292,
+          224
+        ],
+        "longest": 290,
+        "minimumLongest": 435,
+        "sourceRect": [
+          326,
+          62,
+          294,
+          226
+        ],
+        "alphaArea": 45751,
+        "minimumAlphaArea": 68627,
+        "sha256": "137f8df8bff1eb490edd0bfbe06570267e958d06dd1279df64dfa354eb83dfea"
+      },
+      "cucumberSalad": {
+        "file": "cooked-flat-v7-b.png",
+        "bounds": [
+          2,
+          2,
+          281,
+          217
+        ],
+        "longest": 279,
+        "minimumLongest": 419,
+        "sourceRect": [
+          642,
+          65,
+          283,
+          219
+        ],
+        "alphaArea": 45393,
+        "minimumAlphaArea": 68090,
+        "sha256": "137f8df8bff1eb490edd0bfbe06570267e958d06dd1279df64dfa354eb83dfea"
+      },
+      "steamedEggplant": {
+        "file": "cooked-flat-v7-b.png",
+        "bounds": [
+          2,
+          2,
+          287,
+          213
+        ],
+        "longest": 285,
+        "minimumLongest": 428,
+        "sourceRect": [
+          947,
+          71,
+          289,
+          215
+        ],
+        "alphaArea": 47687,
+        "minimumAlphaArea": 71531,
+        "sha256": "137f8df8bff1eb490edd0bfbe06570267e958d06dd1279df64dfa354eb83dfea"
+      },
+      "pepperCarrot": {
+        "file": "cooked-flat-v7-b.png",
+        "bounds": [
+          2,
+          2,
+          286,
+          212
+        ],
+        "longest": 284,
+        "minimumLongest": 426,
+        "sourceRect": [
+          22,
+          354,
+          288,
+          214
+        ],
+        "alphaArea": 46512,
+        "minimumAlphaArea": 69768,
+        "sha256": "137f8df8bff1eb490edd0bfbe06570267e958d06dd1279df64dfa354eb83dfea"
+      },
+      "mushroomGreens": {
+        "file": "cooked-flat-v7-b.png",
+        "bounds": [
+          2,
+          2,
+          290,
+          222
+        ],
+        "longest": 288,
+        "minimumLongest": 432,
+        "sourceRect": [
+          327,
+          353,
+          292,
+          224
+        ],
+        "alphaArea": 45932,
+        "minimumAlphaArea": 68898,
+        "sha256": "137f8df8bff1eb490edd0bfbe06570267e958d06dd1279df64dfa354eb83dfea"
+      },
+      "stirLettuce": {
+        "file": "cooked-flat-v7-b.png",
+        "bounds": [
+          2,
+          2,
+          286,
+          223
+        ],
+        "longest": 284,
+        "minimumLongest": 426,
+        "sourceRect": [
+          642,
+          354,
+          288,
+          225
+        ],
+        "alphaArea": 46274,
+        "minimumAlphaArea": 69411,
+        "sha256": "137f8df8bff1eb490edd0bfbe06570267e958d06dd1279df64dfa354eb83dfea"
+      },
+      "carrotWoodEar": {
+        "file": "cooked-flat-v7-b.png",
+        "bounds": [
+          2,
+          2,
+          289,
+          218
+        ],
+        "longest": 287,
+        "minimumLongest": 431,
+        "sourceRect": [
+          950,
+          352,
+          291,
+          220
+        ],
+        "alphaArea": 47924,
+        "minimumAlphaArea": 71886,
+        "sha256": "137f8df8bff1eb490edd0bfbe06570267e958d06dd1279df64dfa354eb83dfea"
+      },
+      "tomatoGreens": {
+        "file": "cooked-flat-v7-b.png",
+        "bounds": [
+          2,
+          2,
+          287,
+          219
+        ],
+        "longest": 285,
+        "minimumLongest": 428,
+        "sourceRect": [
+          23,
+          666,
+          289,
+          221
+        ],
+        "alphaArea": 47758,
+        "minimumAlphaArea": 71637,
+        "sha256": "137f8df8bff1eb490edd0bfbe06570267e958d06dd1279df64dfa354eb83dfea"
+      },
+      "winterMelonPorkSoup": {
+        "file": "cooked-flat-v7-b.png",
+        "bounds": [
+          2,
+          2,
+          262,
+          259
+        ],
+        "longest": 260,
+        "minimumLongest": 390,
+        "sourceRect": [
+          341,
+          634,
+          264,
+          261
+        ],
+        "alphaArea": 52896,
+        "minimumAlphaArea": 79344,
+        "sha256": "137f8df8bff1eb490edd0bfbe06570267e958d06dd1279df64dfa354eb83dfea"
+      },
+      "tomatoTofuSoup": {
+        "file": "cooked-flat-v7-b.png",
+        "bounds": [
+          2,
+          2,
+          261,
+          259
+        ],
+        "longest": 259,
+        "minimumLongest": 389,
+        "sourceRect": [
+          652,
+          634,
+          263,
+          261
+        ],
+        "alphaArea": 52419,
+        "minimumAlphaArea": 78629,
+        "sha256": "137f8df8bff1eb490edd0bfbe06570267e958d06dd1279df64dfa354eb83dfea"
+      },
+      "spinachEggSoup": {
+        "file": "cooked-flat-v7-b.png",
+        "bounds": [
+          2,
+          2,
+          259,
+          256
+        ],
+        "longest": 257,
+        "minimumLongest": 386,
+        "sourceRect": [
+          961,
+          634,
+          261,
+          258
+        ],
+        "alphaArea": 51497,
+        "minimumAlphaArea": 77246,
+        "sha256": "137f8df8bff1eb490edd0bfbe06570267e958d06dd1279df64dfa354eb83dfea"
+      },
+      "mushroomWinterSoup": {
+        "file": "cooked-flat-v7-b.png",
+        "bounds": [
+          2,
+          2,
+          263,
+          259
+        ],
+        "longest": 261,
+        "minimumLongest": 392,
+        "sourceRect": [
+          31,
+          932,
+          265,
+          261
+        ],
+        "alphaArea": 52603,
+        "minimumAlphaArea": 78905,
+        "sha256": "137f8df8bff1eb490edd0bfbe06570267e958d06dd1279df64dfa354eb83dfea"
+      },
+      "cornChickenSoup": {
+        "file": "cooked-flat-v7-b.png",
+        "bounds": [
+          2,
+          2,
+          262,
+          259
+        ],
+        "longest": 260,
+        "minimumLongest": 390,
+        "sourceRect": [
+          341,
+          932,
+          264,
+          261
+        ],
+        "alphaArea": 52490,
+        "minimumAlphaArea": 78735,
+        "sha256": "137f8df8bff1eb490edd0bfbe06570267e958d06dd1279df64dfa354eb83dfea"
+      },
+      "whiteRice": {
+        "file": "cooked-flat-v7-b.png",
+        "bounds": [
+          2,
+          2,
+          282,
+          207
+        ],
+        "longest": 280,
+        "minimumLongest": 420,
+        "sourceRect": [
+          645,
+          969,
+          284,
+          209
+        ],
+        "alphaArea": 42309,
+        "minimumAlphaArea": 63464,
+        "sha256": "137f8df8bff1eb490edd0bfbe06570267e958d06dd1279df64dfa354eb83dfea"
+      },
+      "oatRice": {
+        "file": "cooked-flat-v7-b.png",
+        "bounds": [
+          2,
+          2,
+          280,
+          210
+        ],
+        "longest": 278,
+        "minimumLongest": 417,
+        "sourceRect": [
+          956,
+          968,
+          282,
+          212
+        ],
+        "alphaArea": 41802,
+        "minimumAlphaArea": 62703,
+        "sha256": "137f8df8bff1eb490edd0bfbe06570267e958d06dd1279df64dfa354eb83dfea"
+      },
+      "blackRiceMix": {
+        "file": "cooked-flat-v7-c.png",
+        "bounds": [
+          2,
+          2,
+          282,
+          217
+        ],
+        "longest": 280,
+        "minimumLongest": 420,
+        "sourceRect": [
+          32,
+          71,
+          284,
+          219
+        ],
+        "alphaArea": 44700,
+        "minimumAlphaArea": 67050,
+        "sha256": "1dfcf5fb3739b48e55ee23fae2579b14e4be98528de7b42c0e0a3ebae32af4f4"
+      },
+      "pumpkinOatCongee": {
+        "file": "cooked-flat-v7-c.png",
+        "bounds": [
+          2,
+          2,
+          259,
+          255
+        ],
+        "longest": 257,
+        "minimumLongest": 386,
+        "sourceRect": [
+          343,
+          40,
+          261,
+          257
+        ],
+        "alphaArea": 50986,
+        "minimumAlphaArea": 76479,
+        "sha256": "1dfcf5fb3739b48e55ee23fae2579b14e4be98528de7b42c0e0a3ebae32af4f4"
+      },
+      "cornOatCongee": {
+        "file": "cooked-flat-v7-c.png",
+        "bounds": [
+          2,
+          2,
+          262,
+          257
+        ],
+        "longest": 260,
+        "minimumLongest": 390,
+        "sourceRect": [
+          644,
+          39,
+          264,
+          259
+        ],
+        "alphaArea": 52040,
+        "minimumAlphaArea": 78060,
+        "sha256": "1dfcf5fb3739b48e55ee23fae2579b14e4be98528de7b42c0e0a3ebae32af4f4"
+      },
+      "potatoRice": {
+        "file": "cooked-flat-v7-c.png",
+        "bounds": [
+          2,
+          2,
+          293,
+          220
+        ],
+        "longest": 291,
+        "minimumLongest": 437,
+        "sourceRect": [
+          933,
+          66,
+          295,
+          222
+        ],
+        "alphaArea": 47804,
+        "minimumAlphaArea": 71706,
+        "sha256": "1dfcf5fb3739b48e55ee23fae2579b14e4be98528de7b42c0e0a3ebae32af4f4"
+      },
+      "cornRice": {
+        "file": "cooked-flat-v7-c.png",
+        "bounds": [
+          2,
+          2,
+          293,
+          233
+        ],
+        "longest": 291,
+        "minimumLongest": 437,
+        "sourceRect": [
+          24,
+          360,
+          295,
+          235
+        ],
+        "alphaArea": 51609,
+        "minimumAlphaArea": 77414,
+        "sha256": "1dfcf5fb3739b48e55ee23fae2579b14e4be98528de7b42c0e0a3ebae32af4f4"
+      },
+      "celeryPork": {
+        "file": "cooked-flat-v7-c.png",
+        "bounds": [
+          2,
+          2,
+          287,
+          248
+        ],
+        "longest": 285,
+        "minimumLongest": 428,
+        "sourceRect": [
+          328,
+          351,
+          289,
+          250
+        ],
+        "alphaArea": 52497,
+        "minimumAlphaArea": 78746,
+        "sha256": "1dfcf5fb3739b48e55ee23fae2579b14e4be98528de7b42c0e0a3ebae32af4f4"
+      },
+      "gingerDuck": {
+        "file": "cooked-flat-v7-c.png",
+        "bounds": [
+          2,
+          2,
+          301,
+          245
+        ],
+        "longest": 299,
+        "minimumLongest": 449,
+        "sourceRect": [
+          626,
+          358,
+          303,
+          247
+        ],
+        "alphaArea": 56443,
+        "minimumAlphaArea": 84665,
+        "sha256": "1dfcf5fb3739b48e55ee23fae2579b14e4be98528de7b42c0e0a3ebae32af4f4"
+      },
+      "radishChicken": {
+        "file": "cooked-flat-v7-c.png",
+        "bounds": [
+          2,
+          2,
+          303,
+          255
+        ],
+        "longest": 301,
+        "minimumLongest": 452,
+        "sourceRect": [
+          935,
+          345,
+          305,
+          257
+        ],
+        "alphaArea": 58876,
+        "minimumAlphaArea": 88314,
+        "sha256": "1dfcf5fb3739b48e55ee23fae2579b14e4be98528de7b42c0e0a3ebae32af4f4"
+      },
+      "lotusPork": {
+        "file": "cooked-flat-v7-c.png",
+        "bounds": [
+          2,
+          2,
+          296,
+          248
+        ],
+        "longest": 294,
+        "minimumLongest": 441,
+        "sourceRect": [
+          21,
+          650,
+          298,
+          250
+        ],
+        "alphaArea": 55275,
+        "minimumAlphaArea": 82913,
+        "sha256": "1dfcf5fb3739b48e55ee23fae2579b14e4be98528de7b42c0e0a3ebae32af4f4"
+      },
+      "luffaEgg": {
+        "file": "cooked-flat-v7-c.png",
+        "bounds": [
+          2,
+          2,
+          292,
+          246
+        ],
+        "longest": 290,
+        "minimumLongest": 435,
+        "sourceRect": [
+          327,
+          652,
+          294,
+          248
+        ],
+        "alphaArea": 54550,
+        "minimumAlphaArea": 81825,
+        "sha256": "1dfcf5fb3739b48e55ee23fae2579b14e4be98528de7b42c0e0a3ebae32af4f4"
+      },
+      "shrimpTofu": {
+        "file": "cooked-flat-v7-c.png",
+        "bounds": [
+          2,
+          2,
+          300,
+          258
+        ],
+        "longest": 298,
+        "minimumLongest": 447,
+        "sourceRect": [
+          629,
+          649,
+          302,
+          260
+        ],
+        "alphaArea": 58173,
+        "minimumAlphaArea": 87260,
+        "sha256": "1dfcf5fb3739b48e55ee23fae2579b14e4be98528de7b42c0e0a3ebae32af4f4"
+      },
+      "stirShanghaibok": {
+        "file": "cooked-flat-v7-c.png",
+        "bounds": [
+          2,
+          2,
+          301,
+          248
+        ],
+        "longest": 299,
+        "minimumLongest": 449,
+        "sourceRect": [
+          940,
+          652,
+          303,
+          250
+        ],
+        "alphaArea": 55158,
+        "minimumAlphaArea": 82737,
+        "sha256": "1dfcf5fb3739b48e55ee23fae2579b14e4be98528de7b42c0e0a3ebae32af4f4"
+      },
+      "garlicPeaTender": {
+        "file": "cooked-flat-v7-c.png",
+        "bounds": [
+          2,
+          2,
+          298,
+          240
+        ],
+        "longest": 296,
+        "minimumLongest": 444,
+        "sourceRect": [
+          16,
+          949,
+          300,
+          242
+        ],
+        "alphaArea": 52080,
+        "minimumAlphaArea": 78120,
+        "sha256": "1dfcf5fb3739b48e55ee23fae2579b14e4be98528de7b42c0e0a3ebae32af4f4"
+      },
+      "snowPeaMushroom": {
+        "file": "cooked-flat-v7-c.png",
+        "bounds": [
+          2,
+          2,
+          311,
+          244
+        ],
+        "longest": 309,
+        "minimumLongest": 464,
+        "sourceRect": [
+          318,
+          954,
+          313,
+          246
+        ],
+        "alphaArea": 57389,
+        "minimumAlphaArea": 86084,
+        "sha256": "1dfcf5fb3739b48e55ee23fae2579b14e4be98528de7b42c0e0a3ebae32af4f4"
+      },
+      "stirNapa": {
+        "file": "cooked-flat-v7-c.png",
+        "bounds": [
+          2,
+          2,
+          298,
+          235
+        ],
+        "longest": 296,
+        "minimumLongest": 444,
+        "sourceRect": [
+          635,
+          956,
+          300,
+          237
+        ],
+        "alphaArea": 52682,
+        "minimumAlphaArea": 79023,
+        "sha256": "1dfcf5fb3739b48e55ee23fae2579b14e4be98528de7b42c0e0a3ebae32af4f4"
+      },
+      "wellCookedGreenBean": {
+        "file": "cooked-flat-v7-c.png",
+        "bounds": [
+          2,
+          2,
+          296,
+          245
+        ],
+        "longest": 294,
+        "minimumLongest": 441,
+        "sourceRect": [
+          940,
+          950,
+          298,
+          247
+        ],
+        "alphaArea": 50462,
+        "minimumAlphaArea": 75693,
+        "sha256": "1dfcf5fb3739b48e55ee23fae2579b14e4be98528de7b42c0e0a3ebae32af4f4"
+      },
+      "zucchiniMushroom": {
+        "file": "cooked-flat-v7-d.png",
+        "bounds": [
+          2,
+          2,
+          245,
+          207
+        ],
+        "longest": 243,
+        "minimumLongest": 365,
+        "sourceRect": [
+          35,
+          80,
+          247,
+          209
+        ],
+        "alphaArea": 38425,
+        "minimumAlphaArea": 57638,
+        "sha256": "45c231a5a26907c18db6c44042e0b6416a59ef4fb4c96fc11fdf5f6b742bd021"
+      },
+      "chiveEgg": {
+        "file": "cooked-flat-v7-d.png",
+        "bounds": [
+          2,
+          2,
+          250,
+          212
+        ],
+        "longest": 248,
+        "minimumLongest": 372,
+        "sourceRect": [
+          301,
+          79,
+          252,
+          214
+        ],
+        "alphaArea": 36963,
+        "minimumAlphaArea": 55445,
+        "sha256": "45c231a5a26907c18db6c44042e0b6416a59ef4fb4c96fc11fdf5f6b742bd021"
+      },
+      "garlicScapePork": {
+        "file": "cooked-flat-v7-d.png",
+        "bounds": [
+          2,
+          2,
+          252,
+          211
+        ],
+        "longest": 250,
+        "minimumLongest": 375,
+        "sourceRect": [
+          571,
+          80,
+          254,
+          213
+        ],
+        "alphaArea": 38376,
+        "minimumAlphaArea": 57564,
+        "sha256": "45c231a5a26907c18db6c44042e0b6416a59ef4fb4c96fc11fdf5f6b742bd021"
+      },
+      "pepperDriedTofu": {
+        "file": "cooked-flat-v7-d.png",
+        "bounds": [
+          2,
+          2,
+          249,
+          212
+        ],
+        "longest": 247,
+        "minimumLongest": 371,
+        "sourceRect": [
+          845,
+          83,
+          251,
+          214
+        ],
+        "alphaArea": 38263,
+        "minimumAlphaArea": 57395,
+        "sha256": "45c231a5a26907c18db6c44042e0b6416a59ef4fb4c96fc11fdf5f6b742bd021"
+      },
+      "tomatoFish": {
+        "file": "cooked-flat-v7-d.png",
+        "bounds": [
+          2,
+          2,
+          259,
+          227
+        ],
+        "longest": 257,
+        "minimumLongest": 386,
+        "sourceRect": [
+          27,
+          333,
+          261,
+          229
+        ],
+        "alphaArea": 43700,
+        "minimumAlphaArea": 65550,
+        "sha256": "45c231a5a26907c18db6c44042e0b6416a59ef4fb4c96fc11fdf5f6b742bd021"
+      },
+      "taroChicken": {
+        "file": "cooked-flat-v7-d.png",
+        "bounds": [
+          2,
+          2,
+          257,
+          229
+        ],
+        "longest": 255,
+        "minimumLongest": 383,
+        "sourceRect": [
+          298,
+          328,
+          259,
+          231
+        ],
+        "alphaArea": 43106,
+        "minimumAlphaArea": 64659,
+        "sha256": "45c231a5a26907c18db6c44042e0b6416a59ef4fb4c96fc11fdf5f6b742bd021"
+      },
+      "oysterEgg": {
+        "file": "cooked-flat-v7-d.png",
+        "bounds": [
+          2,
+          2,
+          255,
+          223
+        ],
+        "longest": 253,
+        "minimumLongest": 380,
+        "sourceRect": [
+          569,
+          337,
+          257,
+          225
+        ],
+        "alphaArea": 41219,
+        "minimumAlphaArea": 61829,
+        "sha256": "45c231a5a26907c18db6c44042e0b6416a59ef4fb4c96fc11fdf5f6b742bd021"
+      },
+      "handTornCabbage": {
+        "file": "cooked-flat-v7-d.png",
+        "bounds": [
+          2,
+          2,
+          255,
+          224
+        ],
+        "longest": 253,
+        "minimumLongest": 380,
+        "sourceRect": [
+          839,
+          335,
+          257,
+          226
+        ],
+        "alphaArea": 43034,
+        "minimumAlphaArea": 64551,
+        "sha256": "45c231a5a26907c18db6c44042e0b6416a59ef4fb4c96fc11fdf5f6b742bd021"
+      },
+      "garlicWaterSpinach": {
+        "file": "cooked-flat-v7-d.png",
+        "bounds": [
+          2,
+          2,
+          257,
+          216
+        ],
+        "longest": 255,
+        "minimumLongest": 383,
+        "sourceRect": [
+          29,
+          613,
+          259,
+          218
+        ],
+        "alphaArea": 41983,
+        "minimumAlphaArea": 62975,
+        "sha256": "45c231a5a26907c18db6c44042e0b6416a59ef4fb4c96fc11fdf5f6b742bd021"
+      },
+      "vinegarMungSprout": {
+        "file": "cooked-flat-v7-d.png",
+        "bounds": [
+          2,
+          2,
+          252,
+          238
+        ],
+        "longest": 250,
+        "minimumLongest": 375,
+        "sourceRect": [
+          301,
+          599,
+          254,
+          240
+        ],
+        "alphaArea": 43928,
+        "minimumAlphaArea": 65892,
+        "sha256": "45c231a5a26907c18db6c44042e0b6416a59ef4fb4c96fc11fdf5f6b742bd021"
+      },
+      "cauliflowerCarrot": {
+        "file": "cooked-flat-v7-d.png",
+        "bounds": [
+          2,
+          2,
+          254,
+          230
+        ],
+        "longest": 252,
+        "minimumLongest": 378,
+        "sourceRect": [
+          568,
+          605,
+          256,
+          232
+        ],
+        "alphaArea": 41752,
+        "minimumAlphaArea": 62628,
+        "sha256": "45c231a5a26907c18db6c44042e0b6416a59ef4fb4c96fc11fdf5f6b742bd021"
+      },
+      "yamWoodEar": {
+        "file": "cooked-flat-v7-d.png",
+        "bounds": [
+          2,
+          2,
+          256,
+          234
+        ],
+        "longest": 254,
+        "minimumLongest": 381,
+        "sourceRect": [
+          839,
+          601,
+          258,
+          236
+        ],
+        "alphaArea": 43101,
+        "minimumAlphaArea": 64652,
+        "sha256": "45c231a5a26907c18db6c44042e0b6416a59ef4fb4c96fc11fdf5f6b742bd021"
+      },
+      "oysterTofuSoup": {
+        "file": "cooked-flat-v7-d.png",
+        "bounds": [
+          2,
+          2,
+          238,
+          233
+        ],
+        "longest": 236,
+        "minimumLongest": 354,
+        "sourceRect": [
+          35,
+          866,
+          240,
+          235
+        ],
+        "alphaArea": 42910,
+        "minimumAlphaArea": 64365,
+        "sha256": "45c231a5a26907c18db6c44042e0b6416a59ef4fb4c96fc11fdf5f6b742bd021"
+      },
+      "radishEggSoup": {
+        "file": "cooked-flat-v7-d.png",
+        "bounds": [
+          2,
+          2,
+          237,
+          231
+        ],
+        "longest": 235,
+        "minimumLongest": 353,
+        "sourceRect": [
+          307,
+          868,
+          239,
+          233
+        ],
+        "alphaArea": 42310,
+        "minimumAlphaArea": 63465,
+        "sha256": "45c231a5a26907c18db6c44042e0b6416a59ef4fb4c96fc11fdf5f6b742bd021"
+      },
+      "luffaShrimpSoup": {
+        "file": "cooked-flat-v7-d.png",
+        "bounds": [
+          2,
+          2,
+          237,
+          231
+        ],
+        "longest": 235,
+        "minimumLongest": 353,
+        "sourceRect": [
+          577,
+          868,
+          239,
+          233
+        ],
+        "alphaArea": 42285,
+        "minimumAlphaArea": 63428,
+        "sha256": "45c231a5a26907c18db6c44042e0b6416a59ef4fb4c96fc11fdf5f6b742bd021"
+      },
+      "sweetPotatoRice": {
+        "file": "cooked-flat-v7-d.png",
+        "bounds": [
+          2,
+          2,
+          245,
+          224
+        ],
+        "longest": 243,
+        "minimumLongest": 365,
+        "sourceRect": [
+          844,
+          875,
+          247,
+          226
+        ],
+        "alphaArea": 41776,
+        "minimumAlphaArea": 62664,
+        "sha256": "45c231a5a26907c18db6c44042e0b6416a59ef4fb4c96fc11fdf5f6b742bd021"
+      },
+      "milletRiceCongee": {
+        "file": "cooked-flat-v7-d.png",
+        "bounds": [
+          2,
+          2,
+          235,
+          231
+        ],
+        "longest": 233,
+        "minimumLongest": 350,
+        "sourceRect": [
+          36,
+          1128,
+          237,
+          233
+        ],
+        "alphaArea": 41910,
+        "minimumAlphaArea": 62865,
+        "sha256": "45c231a5a26907c18db6c44042e0b6416a59ef4fb4c96fc11fdf5f6b742bd021"
+      }
+    }
+  }
+}
