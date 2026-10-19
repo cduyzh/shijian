@@ -20,14 +20,15 @@ jobs:
         env:
           DEPLOY_WEBHOOK_URL: ${{ secrets.DEPLOY_WEBHOOK_URL }}
           DEPLOY_WEBHOOK_TOKEN: ${{ secrets.DEPLOY_WEBHOOK_TOKEN }}
-          EVENT_PATH: ${{ github.event_path }}
           EXPECTED_COMMIT: ${{ github.sha }}
           REPOSITORY: ${{ github.repository }}
         run: |
           node --input-type=module <<'NODE'
           import { readFile } from 'node:fs/promises';
 
-          const event = JSON.parse(await readFile(process.env.EVENT_PATH, 'utf8'));
+          const eventFile = process.env.GITHUB_EVENT_PATH || process.env.EVENT_PATH;
+          if (!eventFile) throw new Error('Could not resolve GitHub event payload path.');
+          const event = JSON.parse(await readFile(eventFile, 'utf8'));
           const release = event.release;
           if (!release || release.draft || release.prerelease) {
             throw new Error('Only a published stable release can deploy.');
