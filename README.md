@@ -43,6 +43,7 @@ Git 不保存用户菜单、浏览器存储或备份导出；部署凭据、托�
 
 ## 补充说明
 
+- [SEO 与 GEO 优化规范](docs/SEO_GEO_SPEC.md)
 - [产品设计与交互](docs/PRODUCT.md)
 - [本地保存与隐私](docs/PRIVACY.md)
 - [本地开发与预览](docs/LOCAL-DEVELOPMENT.md)

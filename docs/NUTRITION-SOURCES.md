@@ -139,3 +139,33 @@
 - [香港食安中心：烹煮及翻热](https://www.cfs.gov.hk/sc_chi/trade_zone/safe_kitchen/Cooking_and_reheating.html)，2026-10-14 整理时已重新读取：禽肉、肉丝、鱼片、虾仁和蛋充分熟制；最厚处用温度计核对更可靠。买去刺鲢鱼净肉仍需检查残留细刺，不凭“去刺”商品名称保证无刺。
 
 新增原料安全提示关联 `safetySourceIds`，新增菜谱包含 `updated / recipeStatus / cookedSourceIds`，公开做法参考与本地配方差异见 [成品图参考说明](COOKED-REFERENCES.md)。这些来源只支持熟制形态或一般安全原则，不承担新原料营养数值和采购价格的出处。
+
+## 2026-10-20 扩展：科学减脂知识库与轻食波波搭配转化
+
+针对小红书减脂创作者“轻食波波”（ID: `659e2b41000000002201370e`）最新 20 篇高赞视频，通过本地 CLI 工具 `cduyzhmediaforge` 完整下载无水印高清视频，并利用基于 macOS Apple Vision 框架的原生 OCR 逐帧提取文案台词与科学观点。本项目将其核心科学理念深度消化并映射至现有的 82 种食材、65 道家常菜以及科学专栏中。
+
+### 1. 新增权威文献与指南引用
+
+| ID | 权威来源与出版物 | 核心营养学机理与本应用依据 |
+| --- | --- | --- |
+| `natureMetabolism2024` | [Nature Metabolism 2024 · Resistant starch intake facilitates weight loss in humans by reshaping the gut microbiota](https://doi.org/10.1038/s42255-024-00988-y) | 随机双盲交叉临床试验证实：补充抗性淀粉显著促进超重/肥胖人群减重、减少内脏与皮下脂肪面积，通过富集双歧杆菌增加肠道短链脂肪酸（SCFAs），降低胰岛素抵抗与内毒素水平。解释了土豆、米饭等食物煮熟冷却回生（RS3）平缓餐后血糖峰值的机制。 |
+| `whoSodiumPotassium` | [WHO Guideline: Potassium intake for adults and children](https://www.who.int/publications/i/item/9789241504829) | 建议成人每日膳食钾摄入 ≥3510 mg/d，调节细胞内外水钠平衡。大餐放纵后体重暴涨 90% 以上源自水钠潴留与糖原结合水（1g 糖原绑定 3~4g 水），通过冬瓜、菠菜、海带、玉米等高钾低钠食材及充足饮水促进多余水分代谢。 |
+| `cnsFruitSugar` | [中国居民膳食指南（2022）常见水果 GI 与血糖负荷 GL 评价](https://dg.cnsoc.org/article/04/70JvPbFmTlyZbjoO67LeRg.html) | 建立“从夯到拉”水果分级评估；每日摄入 200~350g 整果，优选低 GI/高纤维水果（草莓、苹果、白肉柚子、猕猴桃），控制高升糖、高果糖密度水果（西瓜控量，榴莲、干枣、荔枝减脂期回避）。 |
+
+### 2. 科学科普专栏扩充（由 6 篇扩充至 12 篇）
+
+原有 6 篇保留并补全 `topic` 主题分类，新增 6 篇结构化深度科普：
+1. **抗性淀粉与控糖 (`resistantStarch`)**：土豆、米饭冷却老化回生形成 RS3，平缓餐后血糖峰值，刺激 GLP-1 饱腹激素。
+2. **瘦体重与代谢防御 (`proteinSatiety`)**：极低热量只吃白粥/水煮菜会导致 BMR 适应性衰退和肌肉分解；高生物价蛋白（虾、去皮禽肉、精瘦牛肉、大豆）拥有高达 20%~30% 的食物热效应（TEF），是保住基础代谢率与防止反弹的核心底线。
+3. **水钠潴留与代谢恢复 (`waterWeight`)**：科学解释大餐后暴增 2~3 斤源自糖原结合水与钠潴留，严控外卖高盐、摄入高钾蔬菜并在 48~72 小时内平稳排出。
+4. **好油与脂溶性维生素 (`fatAbsorption`)**：打破“水煮滴油不沾”误区，单餐使用 3~8g 菜籽油快炒或炝拌，促进维生素 A/D/E/K 吸收并刺激 CCK 释放延缓胃排空。
+5. **水果挑选与果糖负荷 (`fruitGlycemic`)**：分清低 GI 高纤维整果与高果糖炸弹，坚决不喝榨汁，保留咀嚼感与果胶纤维。
+6. **大体积饱腹机制 (`fiberVolume`)**：利用高水分、低热量蔬菜刺激胃壁张力感受器（Mechanoreceptors），在 400kcal 低能量下获得高度物理饱腹感。
+
+### 3. 正餐推荐组合扩充
+
+在 `recommendedMeals` 中扩充 4 组融合轻食波波科学减脂理念的正餐组合：
+- `shrimpTofu` + `handTornCabbage` + `oatRice`（低卡高蛋白大体积饱腹）
+- `potatoChicken` + `cucumberSalad` + `blackRiceMix`（抗性淀粉复合控糖与机械饱腹）
+- `pepperPork` + `garlicBroccoli` + `cornRice`（精瘦肉高维C高纤维均衡）
+- `mushroomChicken` + `stirLettuce` + `oatRice`（高钾促排排水恢复组合）
